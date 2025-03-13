@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Photography | Granite State Photo</title>
+    <meta name="description" content="Professional family portrait photography capturing authentic moments across New Hampshire's scenic landscapes.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Granite State Photo</a>
+            <nav>
+                <button class="mobile-menu-btn">≡</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="seasonal.html">Seasonal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Family Photography</h1>
+        <p>Preserving your family's precious moments against the stunning backdrops of New Hampshire's natural landscapes through all seasons.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Gallery Filter -->
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="portraits">Family Portraits</button>
+            <button class="filter-btn" data-filter="candid">Candid Moments</button>
+            <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+            <button class="filter-btn" data-filter="maternity">Maternity & Newborn</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Family Portraits -->
+            <div class="gallery-item" data-category="portraits">
+                <img src="images/gallery/family/family-portrait-1.jpg" alt="Family portrait by lake">
+                <div class="overlay">
+                    <h3>Lakeside Memories</h3>
+                    <p>Family portrait at Lake Winnipesaukee</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portraits">
+                <img src="images/gallery/family/family-portrait-2.jpg" alt="Family portrait in White Mountains">
+                <div class="overlay">
+                    <h3>Mountain Backdrop</h3>
+                    <p>Family session in the White Mountains</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portraits">
+                <img src="images/gallery/family/family-portrait-3.jpg" alt="Family portrait in field">
+                <div class="overlay">
+                    <h3>Golden Hour</h3>
+                    <p>Evening portrait session in Canterbury</p>
+                </div>
+            </div>
+            
+            <!-- Candid Moments -->
+            <div class="gallery-item" data-category="candid">
+                <img src="images/gallery/family/candid-1.jpg" alt="Family playing in leaves">
+                <div class="overlay">
+                    <h3>Autumn Joy</h3>
+                    <p>Candid moments in the fall foliage</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="candid">
+                <img src="images/gallery/family/candid-2.jpg" alt="Family hiking">
+                <div class="overlay">
+                    <h3>Adventure Awaits</h3>
+                    <p>Family hike on Mount Monadnock</p>
+                </div>
+            </div>
+            
+            <!-- Seasonal -->
+            <div class="gallery-item" data-category="seasonal">
+                <img src="images/gallery/family/seasonal-1.jpg" alt="Winter family portrait">
+                <div class="overlay">
+                    <h3>Winter Wonderland</h3>
+                    <p>Family session after fresh snowfall</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="seasonal">
+                <img src="images/gallery/family/seasonal-2.jpg" alt="Family apple picking">
+                <div class="overlay">
+                    <h3>Apple Harvest</h3>
+                    <p>Family time at a local orchard</p>
+                </div>
+            </div>
+            
+            <!-- Maternity & Newborn -->
+            <div class="gallery-item" data-category="maternity">
+                <img src="images/gallery/family/maternity-1.jpg" alt="Maternity photoshoot">
+                <div class="overlay">
+                    <h3>New Beginnings</h3>
+                    <p>Maternity session at Livingston Park</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="maternity">
+                <img src="images/gallery/family/newborn-1.jpg" alt="Newborn photography">
+                <div class="overlay">
+                    <h3>Welcome Little One</h3>
+                    <p>Newborn session with natural elements</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Capture Your Family's Unique Story</h2>
+            <p>From seasonal family portraits to capturing milestone moments, our sessions are designed to preserve your family's journey through the beautiful landscapes of New Hampshire. Each session is tailored to reflect your family's personality and connection.</p>
+            <a href="contact.html" class="btn">Book Your Family Session</a>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Granite State Photo</h3>
+                <p>Professional photography services capturing New Hampshire's families, sporting events, and portraits throughout all seasons.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">TW</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="seasonal.html">Seasonal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: info@granitestatephoto.com</li>
+                    <li>Address: Strafford, NH</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; 2025 Granite State Photo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait Photography | Granite State Photo</title>
+    <meta name="description" content="Professional portrait photography for individuals, professionals, and groups across New Hampshire.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Granite State Photo</a>
+            <nav>
+                <button class="mobile-menu-btn">≡</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="seasonal.html">Seasonal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Portrait Photography</h1>
+        <p>Professional portraits that capture personality and character, perfect for individuals, professionals, and special occasions.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Gallery Filter -->
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="individual">Individual</button>
+            <button class="filter-btn" data-filter="professional">Professional</button>
+            <button class="filter-btn" data-filter="group">Group</button>
+            <button class="filter-btn" data-filter="graduation">Graduation</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Individual Portraits -->
+            <div class="gallery-item" data-category="individual">
+                <img src="images/gallery/portrait/individual-1.jpg" alt="Individual portrait outdoors">
+                <div class="overlay">
+                    <h3>Natural Light Portrait</h3>
+                    <p>Individual session in White Mountains</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="individual">
+                <img src="images/gallery/portrait/individual-2.jpg" alt="Individual portrait studio">
+                <div class="overlay">
+                    <h3>Studio Portrait</h3>
+                    <p>Classic studio lighting techniques</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="individual">
+                <img src="images/gallery/portrait/individual-3.jpg" alt="Individual portrait creative">
+                <div class="overlay">
+                    <h3>Creative Portraiture</h3>
+                    <p>Artistic composition and lighting</p>
+                </div>
+            </div>
+            
+            <!-- Professional Portraits -->
+            <div class="gallery-item" data-category="professional">
+                <img src="images/gallery/portrait/professional-1.jpg" alt="Professional headshot">
+                <div class="overlay">
+                    <h3>Corporate Headshot</h3>
+                    <p>Professional profile for business use</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="professional">
+                <img src="images/gallery/portrait/professional-2.jpg" alt="Business casual portrait">
+                <div class="overlay">
+                    <h3>Business Casual</h3>
+                    <p>Modern professional imagery</p>
+                </div>
+            </div>
+            
+            <!-- Group Portraits -->
+            <div class="gallery-item" data-category="group">
+                <img src="images/gallery/portrait/group-1.jpg" alt="Small group portrait">
+                <div class="overlay">
+                    <h3>Friends Group</h3>
+                    <p>Casual group portraiture</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="group">
+                <img src="images/gallery/portrait/group-2.jpg" alt="Large group portrait">
+                <div class="overlay">
+                    <h3>Team Portrait</h3>
+                    <p>Professional group composition</p>
+                </div>
+            </div>
+            
+            <!-- Graduation Portraits -->
+            <div class="gallery-item" data-category="graduation">
+                <img src="images/gallery/portrait/graduation-1.jpg" alt="High school graduation">
+                <div class="overlay">
+                    <h3>High School Graduate</h3>
+                    <p>Commemorating academic achievement</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="graduation">
+                <img src="images/gallery/portrait/graduation-2.jpg" alt="College graduation">
+                <div class="overlay">
+                    <h3>College Graduate</h3>
+                    <p>UNH graduation celebration</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Portrait Sessions Tailored to You</h2>
+            <p>Whether you need professional headshots for your career, graduation portraits to commemorate your achievements, or artistic portraits to express your personality, our sessions are customized to capture exactly what makes you unique.</p>
+            <a href="contact.html" class="btn">Book Your Portrait Session</a>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Granite State Photo</h3>
+                <p>Professional photography services capturing New Hampshire's families, sporting events, and portraits throughout all seasons.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">TW</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="seasonal.html">Seasonal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: info@granitestatephoto.com</li>
+                    <li>Address: Strafford, NH</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; 2025 Granite State Photo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

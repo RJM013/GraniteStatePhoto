@@ -1,0 +1,235 @@
+/* responsive.css - Media queries and responsive styles */
+
+/* Large Devices (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .slice-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium Devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    
+    .about-image, .about-content {
+        flex: auto;
+        width: 100%;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .category-card {
+        flex: 0 0 calc(50% - 1.5rem);
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    .hero h1,
+    .page-header h1 {
+        font-size: 2.7rem;
+    }
+    
+    /* Start adjusting image positions on tablets */
+    .family-image {
+        object-position: center 40%;
+    }
+    
+    .about-section {
+        padding-bottom: 8rem;
+    }
+    
+    .about-section::after {
+        height: 150px;
+        background-size: 100% auto;
+    }
+}
+
+/* Small Devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    nav ul {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        flex-direction: column;
+        padding: 1rem 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    nav ul.show {
+        max-height: 300px;
+        display: block;
+    }
+    
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 0.75rem;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero h1,
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .season-tab {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Fullscreen categories responsive */
+    .fullscreen-categories {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+    }
+    
+    .category-slice {
+        height: 250px; /* Fixed height instead of viewport units */
+        min-height: 200px;
+    }
+    
+    .category-slice:hover {
+        flex: 1;
+        height: 300px; /* Fixed height on hover */
+    }
+    
+    .slice-title {
+        font-size: 2rem;
+    }
+    
+    .decorative-text {
+        font-size: 0.8rem;
+    }
+    
+    /* Image position adjustments for mobile view */
+    .family-image {
+        object-position: center 30%; /* Move image up to show faces */
+    }
+    
+    .sports-image {
+        object-position: center 40%; /* Adjust as needed */
+    }
+    
+    .portrait-image {
+        object-position: center 25%; /* Adjust as needed */
+    }
+    
+    .seasonal-image {
+        object-position: center 45%; /* Adjust as needed */
+    }
+    
+    .about-section {
+        padding-bottom: 7rem;
+    }
+    
+    .about-section::after {
+        height: 120px;
+        background-size: 130% auto;
+    }
+}
+
+/* Extra Small Devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    .hero h1,
+    .page-header h1 {
+        font-size: calc(1.5rem + 2vw);
+    }
+    
+    h2 {
+        font-size: calc(1.2rem + 1vw);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .category-card {
+        flex: 0 0 100%;
+    }
+    
+    .print-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-col {
+        flex: 0 0 100%;
+    }
+
+    .slice-title {
+        font-size: 1.8rem;
+    }
+
+    /* Better touch targets for mobile */
+    nav ul li a,
+    .btn,
+    .social-link {
+        padding: 0.75rem;
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-section {
+        padding-bottom: 6rem;
+    }
+    
+    .about-section::after {
+        height: 100px;
+        background-size: 160% auto;
+    }
+    
+    .about-section h2::before {
+        width: 60px;
+    }
+}

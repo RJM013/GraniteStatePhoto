@@ -1,0 +1,213 @@
+/* dividers.css - Section divider styles */
+
+.divider {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -1px; /* Fix gap issues */
+    pointer-events: none; /* Avoid interaction issues */
+    /* Make dividers full width */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.divider svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: var(--light-color);
+}
+
+.divider-dark svg {
+    fill: var(--dark-color);
+}
+
+.divider-primary svg {
+    fill: var(--primary-color);
+}
+
+.divider-secondary svg {
+    fill: var(--secondary-color);
+}
+
+.divider-top {
+    margin-bottom: -1px;
+    transform: rotate(180deg);
+}
+
+.divider-bottom {
+    margin-top: -1px;
+}
+
+/* Original divider types */
+.divider-slant {
+    height: 100px;
+}
+
+.divider-wave {
+    height: 150px;
+}
+
+.divider-triangle {
+    height: 120px;
+}
+
+.divider-curve {
+    height: 130px;
+}
+
+/* Custom SVG dividers */
+.divider-trees {
+    height: 120px;
+    background: url('../images/Dividers/trees.svg') repeat-x bottom;
+    background-size: auto 100%;
+}
+
+/* UPDATED: Mountains divider with integration into about section */
+.divider-mountains {
+    position: relative;
+    height: calc(8vw + 5rem); /* Dynamic sizing based on viewport width */
+    min-height: 80px; /* Minimum height on very small screens */
+    max-height: 200px; /* Maximum height on large screens */
+    overflow: visible !important; /* CRITICAL: Allow mountains to extend beyond container */
+    text-align: center;
+    margin-top: -2rem; /* Pull mountains into the about section */
+    z-index: 1; /* Keep mountains below text but above background */
+}
+
+/* Special styling for the about-mountains class */
+.about-mountains {
+    height: auto !important; /* Override the default height */
+    min-height: 0 !important; /* Remove minimum height constraint */
+    max-height: none !important; /* Remove maximum height constraint */
+    margin-top: 0 !important; /* Reset margin */
+    left: 0 !important; /* Reset horizontal positioning */
+    right: 0 !important;
+    margin-left: 0 !important; 
+    margin-right: 0 !important;
+    width: 100% !important; /* Full width of the section */
+}
+
+/* Style for the actual mountain image */
+.mountain-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: bottom center; /* Scale from the bottom center */
+    height: 100%;
+    width: auto;
+    max-width: none; /* Override any max-width constraints */
+    object-fit: contain;
+    object-position: bottom center;
+    transition: transform 0.3s ease; /* Smooth transition when scaling changes */
+}
+
+/* Style specifically for the mountain image in the about section */
+.about-mountains .mountain-image {
+    height: auto; /* Auto height based on SVG's aspect ratio */
+    width: 100%; /* Full width of container */
+    transform: translateX(-50%) scale(1.5); /* Center and scale up */
+}
+
+/* Inverted dividers */
+.divider-trees-top {
+    transform: rotate(180deg);
+}
+
+.divider-mountains-top {
+    transform: rotate(180deg);
+}
+
+/* Color modifiers for custom dividers */
+.divider-trees.divider-dark {
+    background-color: var(--dark-color);
+}
+
+.divider-trees.divider-primary {
+    background-color: var(--primary-color);
+}
+
+.divider-trees.divider-secondary {
+    background-color: var(--secondary-color);
+}
+
+.divider-mountains.divider-dark {
+    background-color: var(--dark-color);
+}
+
+.divider-mountains.divider-primary {
+    background-color: var(--primary-color);
+}
+
+.divider-mountains.divider-secondary {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .divider {
+        height: 100px;
+    }
+    
+    .divider-slant {
+        height: 70px;
+    }
+    
+    .divider-wave {
+        height: 100px;
+    }
+    
+    .divider-triangle {
+        height: 80px;
+    }
+    
+    .divider-curve {
+        height: 90px;
+    }
+    
+    .divider-trees {
+        height: 80px;
+        background-size: auto 80px;
+    }
+    
+    /* Mountain-specific adjustments */
+    .about-mountains .mountain-image {
+        transform: translateX(-50%) scale(1.2); /* Less scale on medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .divider {
+        height: 80px;
+    }
+    
+    .divider-slant {
+        height: 50px;
+    }
+    
+    .divider-wave {
+        height: 70px;
+    }
+    
+    .divider-triangle {
+        height: 60px;
+    }
+    
+    .divider-curve {
+        height: 70px;
+    }
+    
+    .divider-trees {
+        height: 60px;
+        background-size: auto 60px;
+    }
+    
+    .about-mountains .mountain-image {
+        transform: translateX(-50%) scale(1.0); /* No extra scale on small screens */
+    }
+}

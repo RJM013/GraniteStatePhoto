@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Photography | Granite State Photo</title>
+    <meta name="description" content="Professional sports photography capturing athletic achievements across New Hampshire - basketball, soccer, baseball, and hockey.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Granite State Photo</a>
+            <nav>
+                <button class="mobile-menu-btn">≡</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="seasonal.html">Seasonal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Sports Photography</h1>
+        <p>Capturing the energy, determination, and triumph of athletic achievements across New Hampshire's sporting communities.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Gallery Filter -->
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="basketball">Basketball</button>
+            <button class="filter-btn" data-filter="soccer">Soccer</button>
+            <button class="filter-btn" data-filter="baseball">Baseball</button>
+            <button class="filter-btn" data-filter="hockey">Hockey</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Basketball -->
+            <div class="gallery-item" data-category="basketball">
+                <img src="images/gallery/sports/basketball-1.jpg" alt="High School Basketball Game">
+                <div class="overlay">
+                    <h3>Championship Game</h3>
+                    <p>NHIAA Division I Finals - 2024</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="basketball">
+                <img src="images/gallery/sports/basketball-2.jpg" alt="Basketball Dunk">
+                <div class="overlay">
+                    <h3>The Winning Dunk</h3>
+                    <p>Concord High vs. Manchester Central</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="basketball">
+                <img src="images/gallery/sports/basketball-3.jpg" alt="Basketball Defense">
+                <div class="overlay">
+                    <h3>Defensive Standoff</h3>
+                    <p>Nashua North vs. Bedford High</p>
+                </div>
+            </div>
+            
+            <!-- Soccer -->
+            <div class="gallery-item" data-category="soccer">
+                <img src="images/gallery/sports/soccer-1.jpg" alt="Youth Soccer Match">
+                <div class="overlay">
+                    <h3>Youth Soccer Final</h3>
+                    <p>Granite State Soccer League</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="soccer">
+                <img src="images/gallery/sports/soccer-2.jpg" alt="Soccer Goal Celebration">
+                <div class="overlay">
+                    <h3>Victory Moment</h3>
+                    <p>NH High School Soccer Championships</p>
+                </div>
+            </div>
+            
+            <!-- Baseball -->
+            <div class="gallery-item" data-category="baseball">
+                <img src="images/gallery/sports/baseball-1.jpg" alt="Baseball Pitch">
+                <div class="overlay">
+                    <h3>Perfect Pitch</h3>
+                    <p>NH American Legion Baseball</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="baseball">
+                <img src="images/gallery/sports/baseball-2.jpg" alt="Baseball Team Victory">
+                <div class="overlay">
+                    <h3>Championship Celebration</h3>
+                    <p>Keene SwampBats - NECBL</p>
+                </div>
+            </div>
+            
+            <!-- Hockey -->
+            <div class="gallery-item" data-category="hockey">
+                <img src="images/gallery/sports/hockey-1.jpg" alt="Youth Hockey Game">
+                <div class="overlay">
+                    <h3>Youth Hockey Tournament</h3>
+                    <p>Manchester - Holiday Classic</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="hockey">
+                <img src="images/gallery/sports/hockey-2.jpg" alt="Hockey Goal">
+                <div class="overlay">
+                    <h3>Game-Winning Goal</h3>
+                    <p>High School Hockey Championships</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Showcase Your Athletes' Achievements</h2>
+            <p>From youth leagues to high school championships, we capture the defining moments of athletic excellence. Custom packages available for teams, individual players, and tournaments.</p>
+            <a href="contact.html" class="btn">Book Sports Coverage</a>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Granite State Photo</h3>
+                <p>Professional photography services capturing New Hampshire's families, sporting events, and portraits throughout all seasons.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">TW</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="seasonal.html">Seasonal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: info@granitestatephoto.com</li>
+                    <li>Address: Strafford, NH</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; 2025 Granite State Photo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
