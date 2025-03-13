@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/dividers.css">
+    <link rel="stylesheet" href="css/nav.css">
     
+    <script src="js/navigation.js"></script>
+    <script src="js/section-scroll.js"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,22 +27,48 @@
 </head>
 <body>
     <!-- Header and Navigation -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">Granite State Photo</a>
-            <nav>
-                <button class="mobile-menu-btn">≡</button>
-                <ul id="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="family.html">Family</a></li>
-                    <li><a href="sports.html">Sports</a></li>
-                    <li><a href="portrait.html">Portrait</a></li>
-                    <li><a href="seasonal.html">Seasonal</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<!-- Enhanced Header and Navigation -->
+<header class="enhanced-header">
+    <div class="container header-container">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <!-- Optional: Add small logo image -->
+                <!-- <img src="images/logo/small-logo.png" alt="Granite State Photo" class="logo-image"> -->
+                <span class="logo-text">Granite State Photo</span>
+            </a>
         </div>
-    </header>
+        
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <span class="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </span>
+            </button>
+            
+            <div class="nav-overlay"></div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                
+            
+                
+                <!-- Individual Service Pages -->
+                <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li>
+                <li class="nav-item"><a href="portrait.html" class="nav-link">Portrait</a></li>
+                <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
+                <li class="nav-item"><a href="seasonal.html" class="nav-link">Seasonal</a></li>
+                
+                <!-- Contact Page -->
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                
+                <!-- Book a Session CTA -->
+                <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -52,97 +81,570 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Full-screen Category Slices - No container wrapper -->
-        <div class="fullscreen-categories">
-            <!-- Family Category -->
-            <a href="family.html" class="category-slice family-slice" style="--slice-color: rgba(173, 216, 230, 0.3);">
-                <div class="slice-image">
-                    <img src="images/gallery/family/sunny_jay_fam.webp" alt="Family Photography" style="object-position: center 20%;">
+        
+
+
+
+       <!-- Enhanced Category Slices Section -->
+<div class="fullscreen-categories">
+    <div class="categories-header">
+        <h2>Our Photography Services</h2>
+    </div>
+    
+    <!-- Family Category -->
+    <a href="family.html" class="category-slice family-slice" style="--slice-color: rgba(173, 216, 230, 0.3);">
+        <div class="slice-image">
+            <img src="images/gallery/family/sunny_jay_fam.webp" alt="Family Photography" style="object-position: center 20%;">
+        </div>
+        <div class="slice-content">
+            <div class="slice-text-wrapper">
+                <div class="decorative-text">MEMORIES</div>
+                <h2 class="slice-title">FAMILY</h2>
+                <div class="decorative-text">PORTRAITS</div>
+                <div class="slice-cta">
+                    <a href="family.html" class="btn-slice">Learn More</a>
                 </div>
-                <div class="slice-content">
-                    <div class="slice-text-wrapper">
-                        <div class="decorative-text">MEMORIES</div>
-                        <h2 class="slice-title">FAMILY</h2>
-                        <div class="decorative-text">PORTRAITS</div>
+            </div>
+        </div>
+    </a>
+    
+    <!-- Sports Category -->
+    <a href="sports.html" class="category-slice sports-slice" style="--slice-color: rgba(255, 200, 200, 0.3);">
+        <div class="slice-image">
+            <img src="images/gallery/sports/sports-main.jpg" alt="Sports Photography" style="object-position: center 40%;">
+        </div>
+        <div class="slice-content">
+            <div class="slice-text-wrapper">
+                <div class="decorative-text">ACTION</div>
+                <h2 class="slice-title">SPORTS</h2>
+                <div class="decorative-text">MOMENTS</div>
+                <div class="slice-cta">
+                    <a href="sports.html" class="btn-slice">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </a>
+    
+    <!-- Portrait Category -->
+    <a href="portrait.html" class="category-slice portrait-slice" style="--slice-color: rgba(255, 255, 255, 0.2);">
+        <div class="slice-image">
+            <img src="images/gallery/portrait/portrait-main.jpg" alt="Portrait Photography" style="object-position: center 25%;">
+        </div>
+        <div class="slice-content">
+            <div class="slice-text-wrapper">
+                <div class="decorative-text">STUDIO</div>
+                <h2 class="slice-title">PORTRAIT</h2>
+                <div class="decorative-text">PERSONAL</div>
+                <div class="slice-cta">
+                    <a href="portrait.html" class="btn-slice">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </a>
+    
+    <!-- Seasonal Category -->
+    <a href="seasonal.html" class="category-slice seasonal-slice" style="--slice-color: rgba(144, 238, 144, 0.3);">
+        <div class="slice-image">
+            <img src="images/gallery/seasonal/seasonal-main.jpg" alt="Seasonal Photography" style="object-position: center 45%;">
+        </div>
+        <div class="slice-content">
+            <div class="slice-text-wrapper">
+                <div class="decorative-text">NEW HAMPSHIRE</div>
+                <h2 class="slice-title">SEASONAL</h2>
+                <div class="decorative-text">BEAUTY</div>
+                <div class="slice-cta">
+                    <a href="seasonal.html" class="btn-slice">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+<!-- About Section with 3 Columns -->
+<!-- About Section with 3 Columns -->
+<section class="about">
+    <div class="section-header">
+        <h2 class="section-title">About Granite State Photo</h2>
+        <p class="section-subtitle">Professional photography services based in Strafford, New Hampshire</p>
+    </div>
+    
+    
+    <div class="container about-container">
+        <div class="about-columns">
+            <!-- Left Column - First Image (Vertical) -->
+            <div class="about-column about-image">
+                <div class="content-card">
+                    <img src="images/about/aboutus.jpeg" alt="Photographer in New Hampshire landscape" class="about-img-direct">
+                </div>
+            </div>
+            
+            <!-- Middle Column - Text Content -->
+            <div class="about-column about-text">
+                <div class="content-card text-card">
+                    <p>Granite State Photo is a family friendly professional photography service based in Strafford, New Hampshire. We specialize in capturing family portraits, sports events, and the natural beauty of New Hampshire throughout all seasons.</p>
+                    
+                    <a href="contact.html" class="btn">Contact Us</a>
+                </div>
+            </div>
+            
+            <!-- Right Column - Second Image (Horizontal) -->
+            <div class="about-column about-image">
+                <div class="content-card">
+                    <img src="images/about/portrait_w_zoey_BW.JPG" alt="Photography session in progress" class="about-img-direct">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mountain background with semi-transparent effect -->
+    <div class="mountain-background">
+        <img src="images/Dividers/mountain.svg" alt="Mountain divider" class="mountain-image">
+    </div>
+</section>
+
+    
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="section-header">
+        <h2 class="section-title">Client Stories</h2>
+        <p class="section-subtitle">Here's what our clients are saying about their experience with Granite State Photo</p>
+    </div>
+        <div class="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        Working with Granite State Photo for our family portraits was an amazing experience. They captured our family's personality perfectly, and the autumn foliage backdrop was breathtaking.
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
-            </a>
-            
-            <!-- Sports Category -->
-            <a href="sports.html" class="category-slice sports-slice" style="--slice-color: rgba(255, 200, 200, 0.3);">
-                <div class="slice-image">
-                    <img src="images/gallery/sports/sports-main.jpg" alt="Sports Photography" style="object-position: center 40%;">
-                </div>
-                <div class="slice-content">
-                    <div class="slice-text-wrapper">
-                        <div class="decorative-text">ACTION</div>
-                        <h2 class="slice-title">SPORTS</h2>
-                        <div class="decorative-text">MOMENTS</div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <!-- Replace with actual client image or use initials -->
+                        <div class="author-initials">SK</div>
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah K.</h4>
+                        <p>Family Portrait Session</p>
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <!-- Portrait Category -->
-            <a href="portrait.html" class="category-slice portrait-slice" style="--slice-color: rgba(255, 255, 255, 0.2);">
-                <div class="slice-image">
-                    <img src="images/gallery/portrait/portrait-main.jpg" alt="Portrait Photography" style="object-position: center 25%;">
-                </div>
-                <div class="slice-content">
-                    <div class="slice-text-wrapper">
-                        <div class="decorative-text">STUDIO</div>
-                        <h2 class="slice-title">PORTRAIT</h2>
-                        <div class="decorative-text">PERSONAL</div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        The sports photos of my son's baseball championship were incredible! They captured all the action and emotion of the game. We'll cherish these memories forever.
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
-            </a>
-            
-            <!-- Seasonal Category -->
-            <a href="seasonal.html" class="category-slice seasonal-slice" style="--slice-color: rgba(144, 238, 144, 0.3);">
-                <div class="slice-image">
-                    <img src="images/gallery/seasonal/seasonal-main.jpg" alt="Seasonal Photography" style="object-position: center 45%;">
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <div class="author-initials">JM</div>
+                    </div>
+                    <div class="author-info">
+                        <h4>James M.</h4>
+                        <p>Sports Event Photography</p>
+                    </div>
                 </div>
-                <div class="slice-content">
-                    <div class="slice-text-wrapper">
-                        <div class="decorative-text">NEW HAMPSHIRE</div>
-                        <h2 class="slice-title">SEASONAL</h2>
-                        <div class="decorative-text">BEAUTY</div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        Our winter session in the snow was absolutely magical. Granite State Photo went above and beyond to capture New Hampshire's beauty along with our special moments.
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <div class="author-initials">AL</div>
+                    </div>
+                    <div class="author-info">
+                        <h4>Amber L.</h4>
+                        <p>Seasonal Winter Session</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Simple pagination dots -->
+        <div class="testimonial-pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Private Gallery Section -->
+<section class="private-gallery">
+    <div class="container">
+        <div class="gallery-card">
+            <div class="gallery-card-icon">
+                <i class="fas fa-lock-open"></i>
+            </div>
+            <h2>Access Your Private Gallery</h2>
+            <p>Enter your unique session code below to view your personal photo collection.</p>
+            <form action="gallery.html" method="get" class="gallery-form">
+                <div class="input-group">
+                    <input type="text" name="gallery-code" placeholder="Enter your code here" required>
+                    <button type="submit" class="btn">View Photos</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about our photography services</p>
+    </div>
+        <div class="faq-container">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I book a photography session?</h3>
+                    <div class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Booking a session is easy! Simply use our <a href="contact.html">contact form</a> or call us directly. We'll discuss your needs, select a date that works for both of us, and confirm your booking with a deposit.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What areas of New Hampshire do you serve?</h3>
+                    <div class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>We're based in Strafford, NH but serve clients throughout the Granite State. We regularly work in Portsmouth, Manchester, Concord, Lake Winnipesaukee area, and the White Mountains. For locations farther away, a travel fee may apply.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How long until I receive my photos?</h3>
+                    <div class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>For standard sessions, you'll receive your private online gallery within 2 weeks. For sports events and larger sessions, it may take up to 3 weeks. Rush processing is available for an additional fee if you need your photos sooner.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What should we wear for our family photo session?</h3>
+                    <div class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>We recommend coordinating colors rather than matching exactly. Choose a complementary color palette with 2-3 colors and avoid large logos, distracting patterns, or neon colors. After booking, we'll send you a detailed style guide with suggestions specific to your session type and location.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer prints and other photo products?</h3>
+                    <div class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer a variety of high-quality prints, canvas wraps, albums, and digital packages. You can order directly through your private online gallery, where you'll see all available options and pricing.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What happens if there's bad weather on the day of our outdoor session?</h3>
+                    <div class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>New Hampshire weather can be unpredictable! If there's inclement weather on your session day, we'll reschedule to the next available date that works for both of us. We keep a close eye on forecasts and will be in touch 24-48 hours before your session if weather looks concerning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add this script to the end of your page or integrate into your main JS file -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all FAQ items
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    // Add click event listener to each question
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Toggle active class on the current item
+            item.classList.toggle('active');
+            
+            // Optional: Close other items when opening a new one
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+        });
+    });
+});
+</script>
+    
+<!-- Pricing & Session Information Section -->
+<section class="pricing-section">
+    <div class="section-header">
+        <h2 class="section-title">Our Photography Sessions</h2>
+        <p class="section-subtitle">Professional photography packages tailored to your needs</p>
+    </div>
+        <div class="pricing-tabs">
+            <button class="pricing-tab active" data-target="family-pricing">Family</button>
+            <button class="pricing-tab" data-target="portrait-pricing">Portrait</button>
+            <button class="pricing-tab" data-target="sports-pricing">Sports</button>
+            <button class="pricing-tab" data-target="seasonal-pricing">Seasonal</button>
+        </div>
+        
+        <div class="pricing-content">
+            <!-- Family Photography Packages -->
+            <div class="pricing-panel active" id="family-pricing">
+                <div class="pricing-cards">
+                    <!-- Basic Family Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Essential Family</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">249</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>45-minute session</li>
+                                <li>1 location of your choice</li>
+                                <li>20+ professionally edited images</li>
+                                <li>Digital download gallery</li>
+                                <li>Print release for personal use</li>
+                                <li>Up to 5 people (extra $25/person)</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="contact.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Family Package -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Premium Family</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">399</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>75-minute session</li>
+                                <li>Up to 2 locations</li>
+                                <li>40+ professionally edited images</li>
+                                <li>Digital download gallery</li>
+                                <li>Print release for personal use</li>
+                                <li>Up to 8 people (extra $20/person)</li>
+                                <li>Outfit change option</li>
+                                <li>10 professionally printed 4×6 photos</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="contact.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Extended Family Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Extended Family</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">599</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>90-minute session</li>
+                                <li>Up to 2 locations</li>
+                                <li>60+ professionally edited images</li>
+                                <li>Digital download gallery</li>
+                                <li>Print release for personal use</li>
+                                <li>Up to 15 people (extra $15/person)</li>
+                                <li>Multiple grouping options</li>
+                                <li>One 8×10 mounted family print</li>
+                                <li>15 professionally printed 4×6 photos</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="contact.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portrait Photography Packages -->
+            <div class="pricing-panel" id="portrait-pricing">
+                <!-- Portrait pricing cards would go here - similar structure to family -->
+                <div class="pricing-cards">
+                    <!-- Basic Portrait Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Standard Portrait</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">199</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>30-minute session</li>
+                                <li>1 outfit</li>
+                                <li>15+ professionally edited images</li>
+                                <li>Digital download gallery</li>
+                                <li>Print release for personal use</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="contact.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional portrait packages would go here -->
+                </div>
+            </div>
+            
+            <!-- Sports Photography Packages -->
+            <div class="pricing-panel" id="sports-pricing">
+                <!-- Sports pricing info would go here -->
+            </div>
+            
+            <!-- Seasonal Photography Packages -->
+            <div class="pricing-panel" id="seasonal-pricing">
+                <!-- Seasonal pricing info would go here -->
+            </div>
+        </div>
+        
+        <div class="pricing-note">
+            <div class="note-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <p>All packages include a pre-session consultation to discuss your vision and preferences. Travel fees may apply for locations more than 30 miles from Strafford. Contact us for custom packages or special requests.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Add this script to the end of your page or integrate into your main JS file -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all pricing tabs and panels
+    const pricingTabs = document.querySelectorAll('.pricing-tab');
+    const pricingPanels = document.querySelectorAll('.pricing-panel');
+    
+    // Add click event listener to each tab
+    pricingTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs
+            pricingTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Get target panel ID
+            const targetId = tab.getAttribute('data-target');
+            
+            // Hide all panels
+            pricingPanels.forEach(panel => panel.classList.remove('active'));
+            
+            // Show target panel
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+});
+</script>
+
+<!-- Instagram Feed Section -->
+<section class="instagram-section">
+    <div class="container">
+        <div class="instagram-header">
+            <h2 class="section-title">Follow Our Journey</h2>
+            <p class="section-subtitle">Stay updated with our latest sessions and New Hampshire's seasonal beauty</p>
+            <a href="https://www.instagram.com/granite_state_photo/#" target="_blank" class="instagram-link">
+                <i class="fab fa-instagram"></i> @granite_state_photo
+            </a>
+        </div>
+        
+        <div class="instagram-feed">
+            <!-- These would be dynamically populated in a production environment -->
+            <!-- For mockup purposes using placeholder images -->
+            <a href="#" class="instagram-item">
+                <img src="images/gallery/instagram/insta6.jpg" alt="Basketball Photo 1">
+                <div class="instagram-overlay">
+                    <div class="instagram-meta">
+                        <i class="fas fa-heart"></i> 36
                     </div>
                 </div>
             </a>
         </div>
-
-        <!-- About Section - Three column layout with mountain integration -->
-        <section class="about-section">
-            <div class="container">
-                <h2>About Granite State Photo</h2>
-                <div class="about three-column">
-                    <div class="about-image about-image-left">
-                        <img src="images/about/aboutus.jpeg" alt="Photographer at work">
-                    </div>
-                    
-                    <div class="about-content">
-                        <p>Granite State Photo was founded with a deep appreciation for New Hampshire's natural splendor and the families who call it home. From the laughter of children playing in autumn leaves to the serene beauty of the White Mountains, our mission is to preserve your most cherished moments.</p>
-                        <p>With 2 years of experience and even more passion, we bring both technical expertise and a heartfelt understanding of what makes a moment worth remembering. Our approach blends candid photography with thoughtful composition to create images that tell your unique story.</p>
-                        <p>As proud New Hampshire natives, we intimately know the hidden gems and scenic vistas that make the perfect backdrop for your portraits through all four of our beautiful seasons.</p>
-                        <p>Our sports photography captures the intensity, determination, and triumph of athletic achievements. From high school championships to youth leagues, we're there to document those split-second moments that athletes and their families will treasure for years to come.</p>
-                        <a href="contact.html" class="btn">Start Your Story</a>
-                    </div>
-                    
-                    <div class="about-image about-image-right">
-                        <img src="images/about/landscape.jpeg" alt="New Hampshire landscape photography">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mountain Divider integration - inside the about section -->
-            <div class="divider divider-mountains about-mountains">
-                <img src="images/Dividers/mountain.svg" alt="Mountain divider" class="mountain-image">
-            </div>
-        </section>
-    </main>
-    
-    <!-- Remove the standalone mountain divider since we're using the integrated one -->
-    
+    </div>
+</section>
     <!-- Footer -->
     <footer>
         <div class="container footer-container">

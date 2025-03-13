@@ -76,7 +76,7 @@
     max-height: 200px; /* Maximum height on large screens */
     overflow: visible !important; /* CRITICAL: Allow mountains to extend beyond container */
     text-align: center;
-    margin-top: -2rem; /* Pull mountains into the about section */
+    margin-top: -4rem; /* Pull mountains into the about section */
     z-index: 1; /* Keep mountains below text but above background */
 }
 

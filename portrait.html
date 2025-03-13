@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/nav.css">
+    
+    <script src="js/navigation.js"></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,19 +23,43 @@
     <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header and Navigation -->
-    <header>
+    <header class="enhanced-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">Granite State Photo</a>
-            <nav>
-                <button class="mobile-menu-btn">≡</button>
-                <ul id="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="family.html">Family</a></li>
-                    <li><a href="sports.html">Sports</a></li>
-                    <li><a href="portrait.html">Portrait</a></li>
-                    <li><a href="seasonal.html">Seasonal</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <!-- Optional: Add small logo image -->
+                    <!-- <img src="images/logo/small-logo.png" alt="Granite State Photo" class="logo-image"> -->
+                    <span class="logo-text">Granite State Photo</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle Navigation">
+                    <span class="hamburger">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                </button>
+                
+                <div class="nav-overlay"></div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    
+                
+                    
+                    <!-- Individual Service Pages -->
+                    <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li>
+                    <li class="nav-item"><a href="portrait.html" class="nav-link">Portrait</a></li>
+                    <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
+                    <li class="nav-item"><a href="seasonal.html" class="nav-link">Seasonal</a></li>
+                    
+                    <!-- Contact Page -->
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    
+                    <!-- Book a Session CTA -->
+                    <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
                 </ul>
             </nav>
         </div>
