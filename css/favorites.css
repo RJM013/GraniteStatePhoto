@@ -1,0 +1,393 @@
+/* favorites.css - Custom styles for the portfolio highlights page */
+
+/* Portfolio Introduction Section */
+.portfolio-intro {
+    padding: 4rem 0;
+    background-color: white;
+    position: relative;
+}
+
+.portfolio-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    opacity: 0.7;
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.intro-content.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.intro-text h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.intro-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.intro-quote {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+blockquote {
+    position: relative;
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    color: var(--text-color);
+    font-style: italic;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    font-size: 4rem;
+    color: var(--primary-color);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 1rem;
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* Masonry Gallery Section */
+.favorites-gallery {
+    padding: 2rem 0 5rem;
+    background-color: var(--light-color);
+}
+
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.masonry-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.masonry-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.masonry-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Sizing adjustments for variety */
+.masonry-item.small {
+    /* Default size - no special treatment */
+}
+
+.masonry-item.medium {
+    /* Default size - no special treatment */
+}
+
+.masonry-item.large {
+    /* Will take up more space naturally due to larger image */
+}
+
+.masonry-item.vertical {
+    /* Will take up more vertical space due to image dimensions */
+}
+
+.masonry-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.4), transparent);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+}
+
+.masonry-item:hover .overlay {
+    background: linear-gradient(to top, rgba(106, 138, 115, 0.9), rgba(106, 138, 115, 0.5), transparent);
+    padding-bottom: 2rem;
+}
+
+.masonry-item .overlay h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.4rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.masonry-item .overlay p {
+    margin: 0 0 0.8rem;
+    font-size: 0.95rem;
+    opacity: 0.95;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Behind the Shots Section */
+.behind-shots {
+    padding: 5rem 0;
+    background-color: white;
+    position: relative;
+}
+
+.behind-shots::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/textures/subtle-dots.png');
+    opacity: 0.04;
+    pointer-events: none;
+}
+
+.story-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background-color: var(--light-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.story-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story-icon {
+    width: 75px;
+    height: 75px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 15px rgba(255, 153, 79, 0.3);
+}
+
+.story-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.story-card p {
+    color: var(--text-color);
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* Lightbox Styling */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-caption {
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+    .masonry-gallery {
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+    
+    .story-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .favorites-gallery,
+    .portfolio-intro,
+    .behind-shots {
+        padding: 3rem 0;
+    }
+    
+    .story-cards {
+        gap: 1.5rem;
+    }
+    
+    .story-card {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+    
+    .story-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .lightbox-img {
+        max-height: 70vh;
+    }
+}

@@ -1,0 +1,323 @@
+/* seasonal.css - Custom styles for the seasonal page */
+
+/* Season Tab Styling */
+.season-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.season-tab {
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.season-tab:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.season-tab:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.season-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Season Info Styling */
+.season-info {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.season-info.active {
+    display: block;
+}
+
+.season-content {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.season-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.season-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.season-image:hover img {
+    transform: scale(1.05);
+}
+
+.season-description {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.season-description h2 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.season-description h3 {
+    margin: 1.5rem 0 0.8rem;
+    color: var(--primary-color);
+}
+
+.season-description ul {
+    padding-left: 1.5rem;
+}
+
+.season-description li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* Season accent colors */
+.spring-accent {
+    color: #88B04B; /* Fresh green */
+}
+
+.summer-accent {
+    color: #F18F01; /* Warm orange */
+}
+
+.fall-accent {
+    color: #C74A00; /* Rusty red */
+}
+
+.winter-accent {
+    color: #5F9EA0; /* Cool teal */
+}
+
+/* Gallery Filter Styling */
+.gallery-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    border-radius: 4px;
+}
+
+.filter-btn:hover {
+    background-color: rgba(106, 138, 115, 0.1);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Seasonal Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 1.5rem 1rem 1rem;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    background: linear-gradient(to top, rgba(106, 138, 115, 0.9), transparent);
+}
+
+.gallery-item .overlay h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.2rem;
+}
+
+.gallery-item .overlay p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Lightbox Styling */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-caption {
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 992px) {
+    .season-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .season-image, .season-description {
+        flex: 1 1 100%;
+    }
+    
+    .season-tab {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .season-tab, .filter-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .season-tabs, .gallery-filter {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        gap: 0.3rem;
+    }
+    
+    .season-tab, .filter-btn {
+        flex: 1;
+        white-space: nowrap;
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .season-tab:first-child, .season-tab:last-child {
+        border-radius: 4px;
+    }
+    
+    .lightbox-img {
+        max-height: 70vh;
+    }
+}

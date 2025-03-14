@@ -653,13 +653,30 @@ h2::after {
     color: var(--primary-color);
 }
 
-/* CTA Section */
+/* CTA Section Enhancement - Apply to all pages */
+
+/* Improved CTA Section with better contrast */
 .cta-section {
     background-color: var(--secondary-color);
     color: white;
     padding: 4rem 0;
     text-align: center;
     margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Add a darker overlay to ensure text readability */
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
 .cta-section h2 {
@@ -667,6 +684,7 @@ h2::after {
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cta-section h2::after {
@@ -683,8 +701,56 @@ h2::after {
 .cta-section p {
     max-width: 800px;
     margin: 0 auto 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+/* Enhanced button with better contrast */
+.cta-section .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .btn:hover {
+    background-color: #e88e40; /* Slightly darker than var(--accent-color) */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Alternative Button Style for Light Backgrounds */
+.btn-dark {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-color);
+}
+
+/* Optional gradient background for more visual interest */
+.cta-gradient {
+    background: linear-gradient(135deg, var(--secondary-color), #0e3b57);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .cta-section {
+        padding: 3rem 1rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+}
 /* Footer */
 footer {
     background-color: var(--dark-color);

@@ -8,11 +8,14 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dividers.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/sports.css">
     
-    <script src="js/navigation.js"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,15 +24,17 @@
     
     <!-- Favicon -->
     <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+    
+    <!-- Deferred Scripts -->
+    <script src="js/navigation.js" defer></script>
+    <script src="js/section-scroll.js" defer></script>
 </head>
 <body>
-    <!-- Header and Navigation -->
+    <!-- Enhanced Header and Navigation -->
     <header class="enhanced-header">
         <div class="container header-container">
             <div class="logo-container">
                 <a href="index.html" class="logo">
-                    <!-- Optional: Add small logo image -->
-                    <!-- <img src="images/logo/small-logo.png" alt="Granite State Photo" class="logo-image"> -->
                     <span class="logo-text">Granite State Photo</span>
                 </a>
             </div>
@@ -47,19 +52,12 @@
                 
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    
-                
-                    
-                    <!-- Individual Service Pages -->
                     <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li>
                     <li class="nav-item"><a href="portrait.html" class="nav-link">Portrait</a></li>
                     <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
                     <li class="nav-item"><a href="seasonal.html" class="nav-link">Seasonal</a></li>
-                    
-                    <!-- Contact Page -->
+                    <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    
-                    <!-- Book a Session CTA -->
                     <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
                 </ul>
             </nav>
@@ -73,93 +71,292 @@
     </section>
 
     <!-- Main Content -->
-    <main class="container">
-        <!-- Gallery Filter -->
-        <div class="gallery-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="basketball">Basketball</button>
-            <button class="filter-btn" data-filter="soccer">Soccer</button>
-            <button class="filter-btn" data-filter="baseball">Baseball</button>
-            <button class="filter-btn" data-filter="hockey">Hockey</button>
-        </div>
+    <main>
+        <!-- Sports Gallery Section -->
+        <section class="sports-gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Game Day Highlights</h2>
+                    <p class="section-subtitle">Browse our collection of dynamic action shots from New Hampshire's sporting events</p>
+                </div>
 
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
-            <!-- Basketball -->
-            <div class="gallery-item" data-category="basketball">
-                <img src="images/gallery/sports/basketball-1.jpg" alt="High School Basketball Game">
-                <div class="overlay">
-                    <h3>Championship Game</h3>
-                    <p>NHIAA Division I Finals - 2024</p>
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="basketball">Basketball</button>
+                    <button class="filter-btn" data-filter="soccer">Soccer</button>
+                    <button class="filter-btn" data-filter="baseball">Baseball</button>
+                    <button class="filter-btn" data-filter="hockey">Hockey</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Basketball -->
+                    <div class="gallery-item" data-category="basketball">
+                        <img src="images/gallery/sports/basketball-1.jpg" alt="High School Basketball Game">
+                        <div class="overlay">
+                            <h3>Championship Game</h3>
+                            <p>NHIAA Division I Finals - 2024</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="basketball">
+                        <img src="images/gallery/sports/basketball-2.jpg" alt="Basketball Dunk">
+                        <div class="overlay">
+                            <h3>The Winning Dunk</h3>
+                            <p>Concord High vs. Manchester Central</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="basketball">
+                        <img src="images/gallery/sports/basketball-3.jpg" alt="Basketball Defense">
+                        <div class="overlay">
+                            <h3>Defensive Standoff</h3>
+                            <p>Nashua North vs. Bedford High</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Soccer -->
+                    <div class="gallery-item" data-category="soccer">
+                        <img src="images/gallery/sports/soccer-1.jpg" alt="Youth Soccer Match">
+                        <div class="overlay">
+                            <h3>Youth Soccer Final</h3>
+                            <p>Granite State Soccer League</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="soccer">
+                        <img src="images/gallery/sports/soccer-2.jpg" alt="Soccer Goal Celebration">
+                        <div class="overlay">
+                            <h3>Victory Moment</h3>
+                            <p>NH High School Soccer Championships</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Baseball -->
+                    <div class="gallery-item" data-category="baseball">
+                        <img src="images/gallery/sports/baseball-1.jpg" alt="Baseball Pitch">
+                        <div class="overlay">
+                            <h3>Perfect Pitch</h3>
+                            <p>NH American Legion Baseball</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="baseball">
+                        <img src="images/gallery/sports/baseball-2.jpg" alt="Baseball Team Victory">
+                        <div class="overlay">
+                            <h3>Championship Celebration</h3>
+                            <p>Keene SwampBats - NECBL</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Hockey -->
+                    <div class="gallery-item" data-category="hockey">
+                        <img src="images/gallery/sports/hockey-1.jpg" alt="Youth Hockey Game">
+                        <div class="overlay">
+                            <h3>Youth Hockey Tournament</h3>
+                            <p>Manchester - Holiday Classic</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="hockey">
+                        <img src="images/gallery/sports/hockey-2.jpg" alt="Hockey Goal">
+                        <div class="overlay">
+                            <h3>Game-Winning Goal</h3>
+                            <p>High School Hockey Championships</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="gallery-item" data-category="basketball">
-                <img src="images/gallery/sports/basketball-2.jpg" alt="Basketball Dunk">
-                <div class="overlay">
-                    <h3>The Winning Dunk</h3>
-                    <p>Concord High vs. Manchester Central</p>
+        </section>
+
+        <!-- Sports Coverage Section -->
+        <section class="sports-coverage-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Sports Coverage</h2>
+                    <p class="section-subtitle">Specialized photography for various sports across New Hampshire</p>
+                </div>
+                
+                <div class="sports-grid">
+                    <div class="sport-card">
+                        <div class="sport-icon">
+                            <i class="fas fa-basketball"></i>
+                        </div>
+                        <h3>Basketball</h3>
+                        <p>From fast breaks to clutch three-pointers, we capture the intensity and emotion of basketball games at all levels. Our high-speed photography freezes the action at the perfect moment.</p>
+                        <ul class="sport-features">
+                            <li>Youth leagues</li>
+                            <li>High school</li>
+                            <li>College</li>
+                            <li>Championship events</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sport-card">
+                        <div class="sport-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h3>Soccer</h3>
+                        <p>We follow the action across the field to document every goal, save, and celebration. Our photography captures both the technical skill and the passion that makes soccer so exciting.</p>
+                        <ul class="sport-features">
+                            <li>Youth development</li>
+                            <li>Club teams</li>
+                            <li>School competitions</li>
+                            <li>Tournament coverage</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sport-card">
+                        <div class="sport-icon">
+                            <i class="fas fa-baseball-ball"></i>
+                        </div>
+                        <h3>Baseball</h3>
+                        <p>America's pastime deserves special attention to detail. We capture the perfect pitch, the clutch hit, and the game-saving catch with crisp, clear imagery that preserves the moment.</p>
+                        <ul class="sport-features">
+                            <li>Little League</li>
+                            <li>High school varsity</li>
+                            <li>American Legion</li>
+                            <li>Collegiate summer leagues</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sport-card">
+                        <div class="sport-icon">
+                            <i class="fas fa-hockey-puck"></i>
+                        </div>
+                        <h3>Hockey</h3>
+                        <p>The speed and intensity of hockey demands specialized photography skills. We're positioned to capture the breakaways, the saves, and the celebrations that make hockey so exciting.</p>
+                        <ul class="sport-features">
+                            <li>Youth hockey</li>
+                            <li>High school</li>
+                            <li>Adult leagues</li>
+                            <li>Tournament events</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="gallery-item" data-category="basketball">
-                <img src="images/gallery/sports/basketball-3.jpg" alt="Basketball Defense">
-                <div class="overlay">
-                    <h3>Defensive Standoff</h3>
-                    <p>Nashua North vs. Bedford High</p>
+        </section>
+        
+        <!-- Game Day Experience Section -->
+        <section class="gameday-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">The Game Day Experience</h2>
+                    <p class="section-subtitle">How we capture the complete story of your sporting event</p>
+                </div>
+                
+                <div class="gameday-content">
+                    <div class="gameday-image">
+                        <img src="images/gallery/sports/gameday-coverage.jpg" alt="Photographer at sporting event">
+                    </div>
+                    
+                    <div class="gameday-info">
+                        <div class="gameday-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Action Shots</h3>
+                                <p>We position ourselves to capture the key moments of play using high-speed cameras that freeze the action with crystal clarity.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gameday-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Emotion & Reactions</h3>
+                                <p>Beyond just the play itself, we document the emotion—the celebrations, determination, and team camaraderie that make sports special.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gameday-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Team Photography</h3>
+                                <p>Before or after the game, we capture professional team photos, individual player portraits, and coach/player interactions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gameday-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Award Ceremonies</h3>
+                                <p>For tournament and championship events, we stay to document the awards, trophies, and recognition of achievement.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Soccer -->
-            <div class="gallery-item" data-category="soccer">
-                <img src="images/gallery/sports/soccer-1.jpg" alt="Youth Soccer Match">
-                <div class="overlay">
-                    <h3>Youth Soccer Final</h3>
-                    <p>Granite State Soccer League</p>
+        </section>
+        
+        <!-- Team Packages Section -->
+        <section class="team-packages-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Team Photography Packages</h2>
+                    <p class="section-subtitle">Custom options for teams, leagues, and tournaments</p>
+                </div>
+                
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Single Game</h3>
+                            <p class="package-price">Starting at $299</p>
+                        </div>
+                        <div class="package-content">
+                            <ul>
+                                <li>Complete game coverage</li>
+                                <li>30+ action photos</li>
+                                <li>Digital download gallery</li>
+                                <li>Individual player shots</li>
+                            </ul>
+                            <a href="contact.html" class="btn package-btn">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card featured">
+                        <div class="package-badge">Most Popular</div>
+                        <div class="package-header">
+                            <h3>Tournament Package</h3>
+                            <p class="package-price">Starting at $799</p>
+                        </div>
+                        <div class="package-content">
+                            <ul>
+                                <li>Coverage of up to 5 games</li>
+                                <li>100+ action photos</li>
+                                <li>Team portraits</li>
+                                <li>Award ceremony coverage</li>
+                                <li>Digital download gallery</li>
+                            </ul>
+                            <a href="contact.html" class="btn package-btn">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Season Package</h3>
+                            <p class="package-price">Custom Pricing</p>
+                        </div>
+                        <div class="package-content">
+                            <ul>
+                                <li>Select regular season games</li>
+                                <li>Playoff coverage</li>
+                                <li>Team photos - start/end of season</li>
+                                <li>Individual player portraits</li>
+                                <li>Special team discounts for players</li>
+                            </ul>
+                            <a href="contact.html" class="btn package-btn">Get Quote</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="gallery-item" data-category="soccer">
-                <img src="images/gallery/sports/soccer-2.jpg" alt="Soccer Goal Celebration">
-                <div class="overlay">
-                    <h3>Victory Moment</h3>
-                    <p>NH High School Soccer Championships</p>
-                </div>
-            </div>
-            
-            <!-- Baseball -->
-            <div class="gallery-item" data-category="baseball">
-                <img src="images/gallery/sports/baseball-1.jpg" alt="Baseball Pitch">
-                <div class="overlay">
-                    <h3>Perfect Pitch</h3>
-                    <p>NH American Legion Baseball</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="baseball">
-                <img src="images/gallery/sports/baseball-2.jpg" alt="Baseball Team Victory">
-                <div class="overlay">
-                    <h3>Championship Celebration</h3>
-                    <p>Keene SwampBats - NECBL</p>
-                </div>
-            </div>
-            
-            <!-- Hockey -->
-            <div class="gallery-item" data-category="hockey">
-                <img src="images/gallery/sports/hockey-1.jpg" alt="Youth Hockey Game">
-                <div class="overlay">
-                    <h3>Youth Hockey Tournament</h3>
-                    <p>Manchester - Holiday Classic</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="hockey">
-                <img src="images/gallery/sports/hockey-2.jpg" alt="Hockey Goal">
-                <div class="overlay">
-                    <h3>Game-Winning Goal</h3>
-                    <p>High School Hockey Championships</p>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- CTA Section with Fixed Styling -->
+    <section class="cta-section cta-gradient">
         <div class="container">
             <h2>Showcase Your Athletes' Achievements</h2>
             <p>From youth leagues to high school championships, we capture the defining moments of athletic excellence. Custom packages available for teams, individual players, and tournaments.</p>
@@ -183,9 +380,9 @@
                 <h3>Granite State Photo</h3>
                 <p>Professional photography services capturing New Hampshire's families, sporting events, and portraits throughout all seasons.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link">FB</a>
-                    <a href="#" class="social-link">IG</a>
-                    <a href="#" class="social-link">TW</a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -212,7 +409,127 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/navigation.js"></script>
-    <script src="js/gallery.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Header scroll effect
+        const enhancedHeader = document.querySelector('.enhanced-header');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                enhancedHeader.classList.add('scrolled');
+            } else {
+                enhancedHeader.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navOverlay = document.querySelector('.nav-overlay');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+                document.body.classList.toggle('menu-open');
+            });
+            
+            if (navOverlay) {
+                navOverlay.addEventListener('click', function() {
+                    document.body.classList.remove('menu-open');
+                });
+            }
+            
+            // Close menu when clicking on a link (mobile)
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    document.body.classList.remove('menu-open');
+                });
+            });
+        }
+        
+        // Gallery filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        if (filterBtns.length > 0 && galleryItems.length > 0) {
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+        
+        // Lightbox functionality
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        
+        if (galleryImages.length > 0 && lightbox && lightboxImg && lightboxCaption) {
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+            
+            galleryImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    
+                    const overlay = img.nextElementSibling;
+                    if (overlay) {
+                        const title = overlay.querySelector('h3');
+                        const description = overlay.querySelector('p');
+                        
+                        if (title && description) {
+                            lightboxCaption.textContent = `${title.textContent} - ${description.textContent}`;
+                        }
+                    }
+                    
+                    lightbox.style.display = 'flex';
+                });
+            });
+            
+            if (lightboxClose) {
+                lightboxClose.addEventListener('click', () => {
+                    lightbox.style.display = 'none';
+                });
+            }
+            
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+        }
+        
+        // Animate sections on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.section-title, .section-subtitle, .sport-card, .gameday-feature, .package-card, .gallery-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight * 0.85) {
+                    element.classList.add('animate-in');
+                }
+            });
+        };
+        
+        // Run animation check on load and scroll
+        animateOnScroll();
+        window.addEventListener('scroll', animateOnScroll);
+    });
+    </script>
 </body>
 </html>

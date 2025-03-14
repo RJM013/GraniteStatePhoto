@@ -356,3 +356,233 @@
         font-size: 1.2rem;
     }
 }
+
+/* Mobile Navigation Fixes - Add these to your nav.css file */
+
+/* Make sure the mobile menu toggle is visible and working */
+.nav-toggle {
+    display: none; /* Initially hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px; /* Increased tap target */
+    height: 40px; /* Increased tap target */
+    position: relative;
+    z-index: 1002;
+    padding: 5px; /* Ensure no padding issues */
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px; /* Slightly thicker for better visibility */
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Overlay fixes */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+/* Critical fix - ensure mobile menu is properly positioned */
+@media screen and (max-width: 992px) {
+    /* Show mobile toggle */
+    .nav-toggle {
+        display: block;
+    }
+    
+    /* Mobile menu styling */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Start off-screen */
+        width: 280px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 0 2rem;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1001;
+        overflow-y: auto;
+    }
+    
+    /* Critical - this was likely the issue */
+    /* When menu is open, move it back on screen */
+    body.menu-open .nav-menu {
+        right: 0;
+    }
+    
+    /* Show overlay when menu is open */
+    body.menu-open .nav-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Hamburger animation when menu is open */
+    body.menu-open .hamburger-line:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    
+    body.menu-open .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    body.menu-open .hamburger-line:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    
+    /* Mobile menu item styling */
+    .nav-item {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1rem 1.5rem;
+        color: var(--text-color);
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(106, 138, 115, 0.1);
+    }
+    
+    /* Prevent body scrolling when menu is open */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Fix for dropdown in mobile */
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .has-dropdown.dropdown-open .dropdown-menu {
+        max-height: 300px;
+    }
+    
+    /* Fix for CTA button in mobile menu */
+    .nav-cta {
+        margin-top: 1rem;
+        border-bottom: none;
+    }
+    
+    .btn-nav {
+        display: block;
+        margin: 0 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Smoother transition animations for small devices */
+@media (prefers-reduced-motion: no-preference) {
+    .nav-menu,
+    .nav-overlay,
+    .hamburger-line {
+        transition-duration: 0.3s;
+    }
+}
+
+/* Support for old browsers - fallbacks */
+@supports not (position: fixed) {
+    .nav-menu,
+    .nav-overlay {
+        position: absolute;
+    }
+}
+
+/* 
+ * DEBUGGING STYLES
+ * Add these temporary styles to help diagnose mobile navigation issues
+ * Remove them after fixing the problem
+ */
+
+/* Make sure navigation elements are visible and obvious */
+.nav-toggle {
+    display: none; /* Initially hidden */
+    background-color: rgba(255, 0, 0, 0.2) !important; /* Highlight for debugging */
+    border: 1px solid red !important;
+}
+
+@media screen and (max-width: 992px) {
+    /* Debug highlight for hamburger */
+    .nav-toggle {
+        display: block;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* Ensure menu is visible when open */
+    body.menu-open .nav-menu {
+        right: 0 !important;
+        border-left: 3px solid red !important; /* Make it obvious */
+    }
+    
+    /* Highlight overlay when visible */
+    body.menu-open .nav-overlay {
+        border: 2px solid green !important;
+        opacity: 0.7 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Test class - manually add to body to check if CSS applies */
+body.test-menu-open .nav-menu {
+    right: 0 !important;
+    border-left: 3px solid blue !important;
+}
+
+/* If right-to-left direction is causing problems */
+.nav-menu {
+    direction: ltr !important;
+}
+
+/* Force menu to show - temporary debug tool */
+.force-show {
+    right: 0 !important;
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}

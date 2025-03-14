@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/dividers.css">
     <link rel="stylesheet" href="css/nav.css">
-    
+    <link rel="stylesheet" href="css/categories.css">
+
     <script src="js/navigation.js"></script>
+
     <script src="js/section-scroll.js"></script>
+    <script src="js/categories.js"></script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,19 +55,12 @@
             
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                
-            
-                
-                <!-- Individual Service Pages -->
                 <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li>
                 <li class="nav-item"><a href="portrait.html" class="nav-link">Portrait</a></li>
                 <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
                 <li class="nav-item"><a href="seasonal.html" class="nav-link">Seasonal</a></li>
-                
-                <!-- Contact Page -->
+                <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                
-                <!-- Book a Session CTA -->
                 <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
             </ul>
         </nav>
@@ -82,78 +79,96 @@
     <!-- Main Content -->
     <main>
         
+<!-- Private Gallery Section -->
+<section class="private-gallery">
+    <div class="container">
+        <div class="gallery-card">
+            <div class="gallery-card-icon">
+                <i class="fas fa-lock-open"></i>
+            </div>
+            <h2>Access Your Private Gallery</h2>
+            <p>Enter your unique session code below to view your personal photo collection.</p>
+            <form action="gallery.html" method="get" class="gallery-form">
+                <div class="input-group">
+                    <input type="text" name="gallery-code" placeholder="Enter your code here" required>
+                    <button type="submit" class="btn">View Photos</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
 
-
-       <!-- Enhanced Category Slices Section -->
-<div class="fullscreen-categories">
-    <div class="categories-header">
+ <!-- Updated HTML structure for the Categories Section -->
+<!-- CATEGORIES SECTION - CLEAN VERSION -->
+<div class="gs-categories">
+    <div class="gs-categories-header">
         <h2>Our Photography Services</h2>
     </div>
     
     <!-- Family Category -->
-    <a href="family.html" class="category-slice family-slice" style="--slice-color: rgba(173, 216, 230, 0.3);">
-        <div class="slice-image">
-            <img src="images/gallery/family/sunny_jay_fam.webp" alt="Family Photography" style="object-position: center 20%;">
+    <a href="family.html" class="gs-category family">
+        <div class="gs-category-image">
+            <img src="images/gallery/family/sunny_jay_fam.webp" alt="Family Photography">
         </div>
-        <div class="slice-content">
-            <div class="slice-text-wrapper">
-                <div class="decorative-text">MEMORIES</div>
-                <h2 class="slice-title">FAMILY</h2>
-                <div class="decorative-text">PORTRAITS</div>
-                <div class="slice-cta">
-                    <a href="family.html" class="btn-slice">Learn More</a>
+        <div class="gs-category-content">
+            <div class="gs-category-text">
+                <div class="gs-category-tagline">MEMORIES</div>
+                <h2 class="gs-category-title">FAMILY</h2>
+                <div class="gs-category-tagline">PORTRAITS</div>
+                <div class="gs-category-cta">
+                    <span class="gs-button">Learn More</span>
                 </div>
             </div>
         </div>
     </a>
     
     <!-- Sports Category -->
-    <a href="sports.html" class="category-slice sports-slice" style="--slice-color: rgba(255, 200, 200, 0.3);">
-        <div class="slice-image">
-            <img src="images/gallery/sports/sports-main.jpg" alt="Sports Photography" style="object-position: center 40%;">
+    <a href="sports.html" class="gs-category sports">
+        <div class="gs-category-image">
+            <img src="images/gallery/sports/basketball/actionshot.jpg" alt="Sports Photography">
         </div>
-        <div class="slice-content">
-            <div class="slice-text-wrapper">
-                <div class="decorative-text">ACTION</div>
-                <h2 class="slice-title">SPORTS</h2>
-                <div class="decorative-text">MOMENTS</div>
-                <div class="slice-cta">
-                    <a href="sports.html" class="btn-slice">Learn More</a>
+        <div class="gs-category-content">
+            <div class="gs-category-text">
+                <div class="gs-category-tagline">ACTION</div>
+                <h2 class="gs-category-title">SPORTS</h2>
+                <div class="gs-category-tagline">MOMENTS</div>
+                <div class="gs-category-cta">
+                    <span class="gs-button">Learn More</span>
                 </div>
             </div>
         </div>
     </a>
     
     <!-- Portrait Category -->
-    <a href="portrait.html" class="category-slice portrait-slice" style="--slice-color: rgba(255, 255, 255, 0.2);">
-        <div class="slice-image">
-            <img src="images/gallery/portrait/portrait-main.jpg" alt="Portrait Photography" style="object-position: center 25%;">
+    <a href="portrait.html" class="gs-category portrait">
+        <div class="gs-category-image">
+            <img src="images/gallery/portrait/studio/portrait_w_zoey_BW.JPG" alt="Portrait Photography">
         </div>
-        <div class="slice-content">
-            <div class="slice-text-wrapper">
-                <div class="decorative-text">STUDIO</div>
-                <h2 class="slice-title">PORTRAIT</h2>
-                <div class="decorative-text">PERSONAL</div>
-                <div class="slice-cta">
-                    <a href="portrait.html" class="btn-slice">Learn More</a>
+        <div class="gs-category-content">
+            <div class="gs-category-text">
+                <div class="gs-category-tagline">STUDIO</div>
+                <h2 class="gs-category-title">PORTRAIT</h2>
+                <div class="gs-category-tagline">PERSONAL</div>
+                <div class="gs-category-cta">
+                    <span class="gs-button">Learn More</span>
                 </div>
             </div>
         </div>
     </a>
     
     <!-- Seasonal Category -->
-    <a href="seasonal.html" class="category-slice seasonal-slice" style="--slice-color: rgba(144, 238, 144, 0.3);">
-        <div class="slice-image">
-            <img src="images/gallery/seasonal/seasonal-main.jpg" alt="Seasonal Photography" style="object-position: center 45%;">
+    <a href="seasonal.html" class="gs-category seasonal">
+        <div class="gs-category-image">
+            <img src="images/gallery/seasonal/summer/beach-fishing.jpg" alt="Seasonal Photography">
         </div>
-        <div class="slice-content">
-            <div class="slice-text-wrapper">
-                <div class="decorative-text">NEW HAMPSHIRE</div>
-                <h2 class="slice-title">SEASONAL</h2>
-                <div class="decorative-text">BEAUTY</div>
-                <div class="slice-cta">
-                    <a href="seasonal.html" class="btn-slice">Learn More</a>
+        <div class="gs-category-content">
+            <div class="gs-category-text">
+                <div class="gs-category-tagline">NEW HAMPSHIRE</div>
+                <h2 class="gs-category-title">SEASONAL</h2>
+                <div class="gs-category-tagline">BEAUTY</div>
+                <div class="gs-category-cta">
+                    <span class="gs-button">Learn More</span>
                 </div>
             </div>
         </div>
@@ -307,24 +322,7 @@
     </div>
 </section>
 
-<!-- Private Gallery Section -->
-<section class="private-gallery">
-    <div class="container">
-        <div class="gallery-card">
-            <div class="gallery-card-icon">
-                <i class="fas fa-lock-open"></i>
-            </div>
-            <h2>Access Your Private Gallery</h2>
-            <p>Enter your unique session code below to view your personal photo collection.</p>
-            <form action="gallery.html" method="get" class="gallery-form">
-                <div class="input-group">
-                    <input type="text" name="gallery-code" placeholder="Enter your code here" required>
-                    <button type="submit" class="btn">View Photos</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+
 
 <!-- FAQ Section -->
 <!-- Fixed FAQ Section with Correct Structure -->
@@ -686,76 +684,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/navigation.js"></script>
     <script src="js/dividers.js"></script>
-    <script>
-    // Mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('#nav-menu');
-        
-        if (mobileMenuBtn && navMenu) {
-            mobileMenuBtn.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-            });
-        }
-        
-        // Ensure the fullscreen categories section has appropriate height
-        const setFullHeight = () => {
-            const categoriesElement = document.querySelector('.fullscreen-categories');
-            if (categoriesElement) {
-                // For desktop screens
-                if (window.innerWidth > 768) {
-                    // Don't exceed 800px height or 90% of viewport height, whichever is smaller
-                    const maxHeight = Math.min(800, window.innerHeight * 0.9);
-                    categoriesElement.style.height = `${maxHeight}px`;
-                } else {
-                    // On mobile, remove the height constraint
-                    categoriesElement.style.height = 'auto';
-                    
-                    // Make sure all category slices have consistent height
-                    const slices = document.querySelectorAll('.category-slice');
-                    slices.forEach(slice => {
-                        // Fixed height rather than percentage of viewport
-                        slice.style.height = '250px';
-                    });
-                }
-            }
-        };
-        
-        // Set height initially and on resize
-        setFullHeight();
-        window.addEventListener('resize', setFullHeight);
-        
-        // Let's add a fix to help ensure the image object-position styles are honored
-        const adjustImagePositions = () => {
-            // These are the positions we want to enforce
-            const positionMap = {
-                'family': 'center 20%',
-                'sports': 'center 40%',
-                'portrait': 'center 25%',
-                'seasonal': 'center 45%'
-            };
-            
-            // Apply positions directly to make sure they're honored
-            document.querySelectorAll('.slice-image img').forEach(img => {
-                const parentSlice = img.closest('.category-slice');
-                if (parentSlice) {
-                    // Determine which category this is
-                    Object.keys(positionMap).forEach(category => {
-                        if (parentSlice.classList.contains(`${category}-slice`)) {
-                            img.style.objectPosition = positionMap[category];
-                        }
-                    });
-                }
-            });
-        };
-        
-        // Run once on load and again after a small delay to make sure it applies
-        adjustImagePositions();
-        setTimeout(adjustImagePositions, 500);
-    });
-    </script>
+    
 </body>
 </html>

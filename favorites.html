@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Photography | Granite State Photo</title>
-    <meta name="description" content="Professional family portrait photography capturing authentic moments across New Hampshire's scenic landscapes.">
+    <title>Portfolio Highlights | Granite State Photo</title>
+    <meta name="description" content="A curated collection of our favorite photography moments across New Hampshire - from breathtaking landscapes to captivating portraits and thrilling sports action.">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/dividers.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/family.css">
+    <link rel="stylesheet" href="css/favorites.css">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -66,135 +66,184 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Family Photography</h1>
-        <p>Preserving your family's precious moments against the stunning backdrops of New Hampshire's natural landscapes through all seasons.</p>
+        <h1>Portfolio Highlights</h1>
+        <p>A curated collection of our photographer's favorite shots that capture the essence of New Hampshire's beauty and character.</p>
     </section>
 
     <!-- Main Content -->
     <main>
-        <section class="family-gallery-section">
+        <!-- Portfolio Introduction -->
+        <section class="portfolio-intro">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Our Family Portfolio</h2>
-                    <p class="section-subtitle">Browse through our collection of authentic family moments captured across New Hampshire</p>
-                </div>
-
-                <!-- Gallery Filter -->
-                <div class="gallery-filter">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="portraits">Family Portraits</button>
-                    <button class="filter-btn" data-filter="candid">Candid Moments</button>
-                    <button class="filter-btn" data-filter="seasonal">Seasonal</button>
-                    <button class="filter-btn" data-filter="maternity">Maternity & Newborn</button>
-                </div>
-
-                <!-- Gallery Grid -->
-                <div class="gallery-grid">
-                    <!-- Family Portraits -->
-                    <div class="gallery-item" data-category="portraits">
-                        <img src="images/gallery/family/family-portrait-1.jpg" alt="Family portrait by lake">
-                        <div class="overlay">
-                            <h3>Lakeside Memories</h3>
-                            <p>Family portrait at Lake Winnipesaukee</p>
-                        </div>
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h2>Our Favorite Moments</h2>
+                        <p>Every photographer has those special images—the ones that capture something truly magical. Whether it's perfect light, a genuine emotion, or a once-in-a-lifetime moment, these are the photographs that remind us why we love what we do.</p>
+                        <p>This collection represents our personal favorites from across all our photography categories. Each image has a story, a special quality that made us pause and appreciate the privilege of preserving these moments for our clients.</p>
                     </div>
-                    <div class="gallery-item" data-category="portraits">
-                        <img src="images/gallery/family/family-portrait-2.jpg" alt="Family portrait in White Mountains">
-                        <div class="overlay">
-                            <h3>Mountain Backdrop</h3>
-                            <p>Family session in the White Mountains</p>
-                        </div>
+                    <div class="intro-quote">
+                        <blockquote>
+                            "Photography is the art of frozen time... the ability to store emotion and feelings within a frame."
+                            <cite>— Meshack Otieno</cite>
+                        </blockquote>
                     </div>
-                    <div class="gallery-item" data-category="portraits">
-                        <img src="images/gallery/family/family-portrait-3.jpg" alt="Family portrait in field">
+                </div>
+            </div>
+        </section>
+
+        <!-- Masonry Gallery Section -->
+        <section class="favorites-gallery">
+            <div class="container">
+                <div class="masonry-gallery">
+                    <!-- Each item has a unique size class: small, medium, large, or vertical -->
+                    
+                    <!-- Family Photography -->
+                    <div class="masonry-item medium">
+                        <img src="images/gallery/favorites/family-sunset.jpg" alt="Family silhouette at sunset">
                         <div class="overlay">
                             <h3>Golden Hour</h3>
-                            <p>Evening portrait session in Canterbury</p>
+                            <p>Family session at Lake Winnipesaukee</p>
+                            <span class="category-tag">Family</span>
                         </div>
                     </div>
                     
-                    <!-- Candid Moments -->
-                    <div class="gallery-item" data-category="candid">
-                        <img src="images/gallery/family/candid-1.jpg" alt="Family playing in leaves">
+                    <div class="masonry-item vertical">
+                        <img src="images/gallery/favorites/daddy-daughter.jpg" alt="Father and daughter playing">
                         <div class="overlay">
-                            <h3>Autumn Joy</h3>
-                            <p>Candid moments in the fall foliage</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="candid">
-                        <img src="images/gallery/family/candid-2.jpg" alt="Family hiking">
-                        <div class="overlay">
-                            <h3>Adventure Awaits</h3>
-                            <p>Family hike on Mount Monadnock</p>
+                            <h3>Daddy's Girl</h3>
+                            <p>Candid father-daughter moment</p>
+                            <span class="category-tag">Family</span>
                         </div>
                     </div>
                     
-                    <!-- Seasonal -->
-                    <div class="gallery-item" data-category="seasonal">
-                        <img src="images/gallery/family/seasonal-1.jpg" alt="Winter family portrait">
+                    <!-- Portrait Photography -->
+                    <div class="masonry-item large">
+                        <img src="images/gallery/favorites/senior-portrait.jpg" alt="High school senior portrait">
                         <div class="overlay">
-                            <h3>Winter Wonderland</h3>
-                            <p>Family session after fresh snowfall</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="seasonal">
-                        <img src="images/gallery/family/seasonal-2.jpg" alt="Family apple picking">
-                        <div class="overlay">
-                            <h3>Apple Harvest</h3>
-                            <p>Family time at a local orchard</p>
+                            <h3>Future Bright</h3>
+                            <p>Senior portrait in White Mountains</p>
+                            <span class="category-tag">Portrait</span>
                         </div>
                     </div>
                     
-                    <!-- Maternity & Newborn -->
-                    <div class="gallery-item" data-category="maternity">
-                        <img src="images/gallery/family/maternity-1.jpg" alt="Maternity photoshoot">
+                    <div class="masonry-item small">
+                        <img src="images/gallery/favorites/business-headshot.jpg" alt="Professional headshot">
+                        <div class="overlay">
+                            <h3>Executive Presence</h3>
+                            <p>Corporate portrait with natural light</p>
+                            <span class="category-tag">Portrait</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Sports Photography -->
+                    <div class="masonry-item medium">
+                        <img src="images/gallery/favorites/basketball-moment.jpg" alt="Basketball winning shot">
+                        <div class="overlay">
+                            <h3>The Victory Shot</h3>
+                            <p>Championship-winning basket</p>
+                            <span class="category-tag">Sports</span>
+                        </div>
+                    </div>
+                    
+                    <div class="masonry-item large">
+                        <img src="images/gallery/favorites/soccer-dive.jpg" alt="Soccer goalkeeper dive">
+                        <div class="overlay">
+                            <h3>Perfect Save</h3>
+                            <p>Tournament-saving goal stop</p>
+                            <span class="category-tag">Sports</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Seasonal Photography -->
+                    <div class="masonry-item vertical">
+                        <img src="images/gallery/favorites/autumn-bridge.jpg" alt="Covered bridge in fall">
+                        <div class="overlay">
+                            <h3>Autumn Passage</h3>
+                            <p>Historic covered bridge in peak foliage</p>
+                            <span class="category-tag">Seasonal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="masonry-item small">
+                        <img src="images/gallery/favorites/winter-wonderland.jpg" alt="Snowy forest scene">
+                        <div class="overlay">
+                            <h3>Silent Woods</h3>
+                            <p>Fresh snow in White Mountain National Forest</p>
+                            <span class="category-tag">Seasonal</span>
+                        </div>
+                    </div>
+                    
+                    <!-- More favorite images -->
+                    <div class="masonry-item medium">
+                        <img src="images/gallery/favorites/spring-blossoms.jpg" alt="Child in spring blossoms">
+                        <div class="overlay">
+                            <h3>Spring Joy</h3>
+                            <p>Cherry blossoms at Portsmouth Harbor</p>
+                            <span class="category-tag">Seasonal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="masonry-item large">
+                        <img src="images/gallery/favorites/mountain-family.jpg" alt="Family on mountain summit">
+                        <div class="overlay">
+                            <h3>Summit Achievement</h3>
+                            <p>Family hike to Mt. Major</p>
+                            <span class="category-tag">Family</span>
+                        </div>
+                    </div>
+                    
+                    <div class="masonry-item vertical">
+                        <img src="images/gallery/favorites/graduate-toss.jpg" alt="Graduate tossing cap">
                         <div class="overlay">
                             <h3>New Beginnings</h3>
-                            <p>Maternity session at Livingston Park</p>
+                            <p>UNH graduation celebration</p>
+                            <span class="category-tag">Portrait</span>
                         </div>
                     </div>
-                    <div class="gallery-item" data-category="maternity">
-                        <img src="images/gallery/family/newborn-1.jpg" alt="Newborn photography">
+                    
+                    <div class="masonry-item small">
+                        <img src="images/gallery/favorites/baseball-slide.jpg" alt="Baseball player sliding into base">
                         <div class="overlay">
-                            <h3>Welcome Little One</h3>
-                            <p>Newborn session with natural elements</p>
+                            <h3>Safe!</h3>
+                            <p>Game-winning slide into home</p>
+                            <span class="category-tag">Sports</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Family Session Information -->
-        <section class="family-info-section">
+        <!-- Behind the Shots Section -->
+        <section class="behind-shots">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Our Family Photography Approach</h2>
-                    <p class="section-subtitle">Authentic, natural moments that tell your family's unique story</p>
+                    <h2 class="section-title">Behind the Shots</h2>
+                    <p class="section-subtitle">A glimpse into our creative process and approach</p>
                 </div>
                 
-                <div class="info-columns">
-                    <div class="info-column">
-                        <div class="info-icon">
+                <div class="story-cards">
+                    <div class="story-card">
+                        <div class="story-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>The Decisive Moment</h3>
+                        <p>As photographers, we're constantly watching for that perfect split second when everything aligns—the light, the expression, the composition. Many of our favorite images came from patiently waiting and being ready when that decisive moment arrived.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-icon">
                             <i class="fas fa-heart"></i>
                         </div>
-                        <h3>Relaxed Sessions</h3>
-                        <p>Our sessions focus on creating a comfortable environment where your family can be themselves. No stiff poses or forced smiles - just genuine moments and connections.</p>
+                        <h3>Emotional Connection</h3>
+                        <p>The photos that resonate most with us aren't necessarily the most technically perfect—they're the ones that capture genuine emotion and connection. We focus on creating an environment where real moments can unfold naturally.</p>
                     </div>
                     
-                    <div class="info-column">
-                        <div class="info-icon">
-                            <i class="fas fa-mountain"></i>
+                    <div class="story-card">
+                        <div class="story-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3>Stunning Locations</h3>
-                        <p>From lakeside beaches to mountain vistas, we'll help you select the perfect New Hampshire backdrop that complements your family's style and creates lasting memories.</p>
-                    </div>
-                    
-                    <div class="info-column">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Perfect Timing</h3>
-                        <p>We schedule sessions during the golden hour - shortly after sunrise or before sunset - when the light is soft and flattering, creating magical portraits of your loved ones.</p>
+                        <h3>Creative Vision</h3>
+                        <p>Sometimes our favorite images come from taking creative risks or seeing potential in unexpected places. We're always looking for fresh perspectives and unique ways to tell our clients' stories through photography.</p>
                     </div>
                 </div>
             </div>
@@ -204,9 +253,9 @@
     <!-- CTA Section with Fixed Styling -->
     <section class="cta-section cta-gradient">
         <div class="container">
-            <h2>Capture Your Family's Unique Story</h2>
-            <p>From seasonal family portraits to capturing milestone moments, our sessions are designed to preserve your family's journey through the beautiful landscapes of New Hampshire. Each session is tailored to reflect your family's personality and connection.</p>
-            <a href="contact.html" class="btn">Book Your Family Session</a>
+            <h2>Create Your Own Favorite Moments</h2>
+            <p>Let us help you capture images that you'll treasure for generations. Our personalized photography sessions are designed to reflect your unique story and create lasting memories.</p>
+            <a href="contact.html" class="btn">Book Your Session Today</a>
         </div>
     </section>
 
@@ -239,6 +288,7 @@
                     <li><a href="sports.html">Sports</a></li>
                     <li><a href="portrait.html">Portrait</a></li>
                     <li><a href="seasonal.html">Seasonal</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -293,33 +343,8 @@
             });
         }
         
-        // Gallery filter
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        
-        if (filterBtns.length > 0 && galleryItems.length > 0) {
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    btn.classList.add('active');
-                    
-                    const filter = btn.getAttribute('data-filter');
-                    
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        }
-        
         // Lightbox functionality
-        const galleryImages = document.querySelectorAll('.gallery-item img');
+        const galleryImages = document.querySelectorAll('.masonry-item img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCaption = document.getElementById('lightbox-caption');
@@ -335,9 +360,10 @@
                     if (overlay) {
                         const title = overlay.querySelector('h3');
                         const description = overlay.querySelector('p');
+                        const category = overlay.querySelector('.category-tag');
                         
-                        if (title && description) {
-                            lightboxCaption.textContent = `${title.textContent} - ${description.textContent}`;
+                        if (title && description && category) {
+                            lightboxCaption.textContent = `${title.textContent} - ${description.textContent} (${category.textContent})`;
                         }
                     }
                     
@@ -360,7 +386,7 @@
         
         // Animate sections on scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.section-title, .section-subtitle, .info-column, .gallery-item');
+            const elements = document.querySelectorAll('.section-title, .section-subtitle, .masonry-item, .story-card, .intro-content');
             
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
@@ -377,6 +403,5 @@
         window.addEventListener('scroll', animateOnScroll);
     });
     </script>
-    
 </body>
 </html>

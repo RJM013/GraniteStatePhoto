@@ -1,0 +1,379 @@
+/* 
+ * Categories Section - Clean Version
+ * All styles prefixed with gs- to avoid conflicts
+ */
+
+/* Main container */
+.gs-categories {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+/* Header */
+.gs-categories-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    color: white;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.gs-categories-header h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Category items */
+.gs-category {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    transition: flex 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.gs-category:first-child {
+    border-left: none;
+}
+
+.gs-category:last-child {
+    border-right: none;
+}
+
+/* Images */
+.gs-category-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gs-category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.7s ease;
+}
+
+/* Set specific image positions */
+.gs-category.family .gs-category-image img {
+    object-position: center 20%;
+}
+
+.gs-category.sports .gs-category-image img {
+    object-position: center 40%;
+}
+
+.gs-category.portrait .gs-category-image img {
+    object-position: center 25%;
+}
+
+.gs-category.seasonal .gs-category-image img {
+    object-position: center 45%;
+}
+
+/* Content overlay */
+.gs-category-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.gs-category-text {
+    background: rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    border-radius: 4px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+/* Overlay color variations */
+.gs-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.gs-category.family::before {
+    background-color: rgba(92, 92, 92, 0.3);
+}
+
+.gs-category.sports::before {
+    background-color:rgba(92, 92, 92, 0.3);
+}
+
+
+.gs-category.portrait::before {
+    background-color: rgba(92, 92, 92, 0.3);
+}
+
+.gs-category.seasonal::before {
+    background-color: rgba(92, 92, 92, 0.3);
+}
+
+/* Typography */
+.gs-category-title {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    margin: 0.5rem 0;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.gs-category-tagline {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.85);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+}
+
+/* Button */
+.gs-category-cta {
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease 0.2s;
+}
+
+.gs-button {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gs-button:hover {
+    background-color: rgba(255, 153, 79, 0.8);
+    border-color: rgba(255, 153, 79, 0.8);
+    transform: translateY(-2px);
+}
+
+/* Hover effects */
+.gs-category:hover {
+    flex: 1.8;
+    z-index: 6;
+}
+
+.gs-category:hover .gs-category-image img {
+    filter: saturate(1.1) brightness(1.05);
+    transform: scale(1.05);
+}
+
+.gs-category:hover .gs-category-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gs-category:hover::before {
+    opacity: 0.7;
+}
+
+.gs-category:hover .gs-category-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Touch device class added by JS */
+.gs-category.tapped .gs-category-image img {
+    filter: saturate(1.1) brightness(1.05);
+}
+
+.gs-category.tapped .gs-category-text, 
+.gs-category.tapped .gs-category-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .gs-categories {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .gs-category {
+        height: 250px;
+        flex: none;
+    }
+    
+    .gs-category:hover {
+        flex: none;
+    }
+    
+    .gs-category-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .gs-category-cta {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .gs-category-title {
+        font-size: 2rem;
+    }
+}
+
+/* Small screen adjustments */
+@media screen and (max-width: 576px) {
+    .gs-category-title {
+        font-size: 1.8rem;
+    }
+    
+    .gs-category-tagline {
+        font-size: 0.85rem;
+    }
+}
+
+/* 
+ * Categories Section - UPDATED FIXES
+ * Addressing mobile cramping and bottom space issues
+ */
+
+/* Fix the bottom spacing issue */
+.gs-categories {
+    margin: 0; /* Remove margin to fix the space issue */
+    border-bottom: none; /* Ensure no border adding space */
+    margin-top: -2rem; /* Negative margin to connect with section above */
+}
+
+/* Make sure container aligns perfectly with content */
+.gs-categories::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Fix potential overflow issues */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Improved mobile styling */
+@media screen and (max-width: 768px) {
+    /* More space for mobile categories */
+    .gs-category {
+        height: 300px; /* Taller for better proportions */
+        margin-bottom: 0; /* Remove any margin between stacked categories */
+    }
+    
+    /* Simplified text overlay for mobile */
+    .gs-category-text {
+        padding: 1rem; /* Less padding */
+        max-width: 90%; /* Don't take full width */
+        background: rgba(0,0,0,0.5); /* Darker background for better readability */
+    }
+    
+    /* Smaller text on mobile */
+    .gs-category-title {
+        font-size: 1.8rem;
+        margin: 0.3rem 0; /* Less margin */
+    }
+    
+    .gs-category-tagline {
+        font-size: 0.8rem;
+        letter-spacing: 2px; /* Slightly less spacing */
+    }
+    
+    /* Better button on mobile */
+    .gs-button {
+        padding: 0.5rem 1.5rem; /* Wider button for easier tapping */
+        font-size: 0.9rem; /* Slightly larger text */
+    }
+    
+    /* Fix header on mobile */
+    .gs-categories-header {
+        position: relative; /* Position relative instead of absolute */
+        background: var(--primary-color); /* Solid background */
+        padding: 0.8rem 0; /* Vertical padding only */
+    }
+    
+    /* No bottom spacing on container */
+    .gs-categories {
+        margin-bottom: 0;
+    }
+}
+
+/* Extra small screen improvements */
+@media screen and (max-width: 576px) {
+    .gs-category {
+        height: 250px; /* Slightly shorter on very small screens */
+    }
+    
+    .gs-category-text {
+        padding: 0.8rem; /* Even less padding */
+        max-width: 85%; /* Slightly narrower */
+    }
+    
+    .gs-category-title {
+        font-size: 1.6rem; /* Smaller title */
+    }
+}
+
+/* Force container to sit flush with adjacent elements */
+.gs-categories + * {
+    margin-top: 0; /* Remove margin from next element */
+}
+
+/* Force the container to have no bottom space */
+.gs-categories {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+
+/* Make sure images fill the entire category */
+.gs-category-image img {
+    display: block; /* Block prevents mysterious space */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}

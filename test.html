@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories Test Page</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Basic container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Test header */
+        .test-header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Simple categories styles */
+        .fullscreen-categories {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .categories-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+            color: white;
+            z-index: 10;
+        }
+        
+        .category-slice {
+            position: relative;
+            flex: 1;
+            height: 100%;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.5s ease;
+        }
+        
+        .category-slice:hover {
+            flex: 1.5;
+        }
+        
+        .slice-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slice-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .category-slice:hover .slice-image img {
+            transform: scale(1.1);
+        }
+        
+        .slice-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slice-text-wrapper {
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .slice-title {
+            font-size: 2rem;
+            color: white;
+            margin: 10px 0;
+        }
+        
+        .decorative-text {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+        
+        .slice-cta {
+            margin-top: 15px;
+        }
+        
+        .btn-slice {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-slice:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .fullscreen-categories {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .category-slice {
+                height: 250px;
+            }
+            
+            .category-slice:hover {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1>Categories Test Page</h1>
+        <p>This is a standalone test page to verify the categories section works correctly.</p>
+    </div>
+    
+    <div class="container">
+        <!-- Basic test version of the categories section -->
+        <div class="fullscreen-categories">
+            <div class="categories-header">
+                <h2>Our Photography Services</h2>
+            </div>
+            
+            <!-- Category 1 -->
+            <a href="#" class="category-slice">
+                <div class="slice-image">
+                    <img src="https://source.unsplash.com/random/800x600/?family" alt="Family Photography">
+                </div>
+                <div class="slice-content">
+                    <div class="slice-text-wrapper">
+                        <div class="decorative-text">MEMORIES</div>
+                        <h2 class="slice-title">FAMILY</h2>
+                        <div class="decorative-text">PORTRAITS</div>
+                        <div class="slice-cta">
+                            <a href="#" class="btn-slice">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Category 2 -->
+            <a href="#" class="category-slice">
+                <div class="slice-image">
+                    <img src="https://source.unsplash.com/random/800x600/?sports" alt="Sports Photography">
+                </div>
+                <div class="slice-content">
+                    <div class="slice-text-wrapper">
+                        <div class="decorative-text">ACTION</div>
+                        <h2 class="slice-title">SPORTS</h2>
+                        <div class="decorative-text">MOMENTS</div>
+                        <div class="slice-cta">
+                            <a href="#" class="btn-slice">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Category 3 -->
+            <a href="#" class="category-slice">
+                <div class="slice-image">
+                    <img src="https://source.unsplash.com/random/800x600/?portrait" alt="Portrait Photography">
+                </div>
+                <div class="slice-content">
+                    <div class="slice-text-wrapper">
+                        <div class="decorative-text">STUDIO</div>
+                        <h2 class="slice-title">PORTRAIT</h2>
+                        <div class="decorative-text">PERSONAL</div>
+                        <div class="slice-cta">
+                            <a href="#" class="btn-slice">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Category 4 -->
+            <a href="#" class="category-slice">
+                <div class="slice-image">
+                    <img src="https://source.unsplash.com/random/800x600/?seasons" alt="Seasonal Photography">
+                </div>
+                <div class="slice-content">
+                    <div class="slice-text-wrapper">
+                        <div class="decorative-text">NEW HAMPSHIRE</div>
+                        <h2 class="slice-title">SEASONAL</h2>
+                        <div class="decorative-text">BEAUTY</div>
+                        <div class="slice-cta">
+                            <a href="#" class="btn-slice">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Simple script to log if the categories section exists
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = document.querySelector('.fullscreen-categories');
+            console.log('Categories section found:', !!categories);
+            
+            if (categories) {
+                const rect = categories.getBoundingClientRect();
+                console.log('Categories dimensions:', {
+                    width: rect.width,
+                    height: rect.height
+                });
+            }
+        });
+    </script>
+</body>
+</html>
