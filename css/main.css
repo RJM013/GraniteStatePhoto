@@ -5,12 +5,14 @@
     --primary-color: #6A8A73; /* Muted Forest Green */
     --secondary-color: #14527B; /* Deep Blue */
     --accent-color: #FF994F; /* Warm Sunset Orange */
-    --dark-color: #201F24; /* Deep Charcoal Black */
+    --dark-color: #D3D3D3; /* Deep Charcoal Black */
     --light-color: #F8F1E9; /* Soft Cream White */
     --neutral-color: #A9A9A9; /* Soft Gray */
     --text-color: #201F24; /* Deep Charcoal for text */
     --spacing: 2rem;
 }
+
+/*  --dark-color: #201F24; /* Deep Charcoal Black */ */
 
 * {
     margin: 0;
