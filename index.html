@@ -623,6 +623,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the header element
+    const header = document.querySelector('.enhanced-header');
+    
+    // Set the scroll threshold (how far down before the header changes)
+    const scrollThreshold = 50;
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', function() {
+        // Check if we've scrolled past the threshold
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Check initial scroll position (in case page is refreshed while scrolled down)
+    if (window.scrollY > scrollThreshold) {
+        header.classList.add('scrolled');
+    }
+});
+</script>
+
 <!-- Instagram Feed Section -->
 <section class="instagram-section">
     <div class="container">
