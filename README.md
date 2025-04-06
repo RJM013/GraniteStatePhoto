@@ -1,6 +1,6 @@
-# Granite State Photo Website
+# 603 In Focus Website
 
-A professional photography website showcasing family portraits, sports action shots, nature landscapes, and seasonal photography across New Hampshire.
+This repository contains the source code for the 603 In Focus photography website. The site showcases various photography services offered, including family portraits, sports events, individual headshots, and seasonal shoots across New Hampshire.
 
 ## Project Structure
 
@@ -156,4 +156,4 @@ Before the form will work properly:
 
 ## License
 
-All rights reserved © 2025 Granite State Photo
+All rights reserved © 2025 603 In Focus
