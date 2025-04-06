@@ -5,7 +5,7 @@
     --primary-color: #6A8A73; /* Muted Forest Green */
     --secondary-color: #14527B; /* Deep Blue */
     --accent-color: #FF994F; /* Warm Sunset Orange */
-    --dark-color: #D3D3D3; /* Deep Charcoal Black */
+    --dark-color: #201F24; /* Deep Charcoal Black */
     --light-color: #F8F1E9; /* Soft Cream White */
     --neutral-color: #A9A9A9; /* Soft Gray */
     --text-color: #201F24; /* Deep Charcoal for text */
@@ -25,7 +25,6 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .logo {
@@ -61,9 +60,9 @@ header {
     background-color: var(--dark-color);
     color: white;
     padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    /* position: sticky; */ /* Commented out - Handled by enhanced-header */
+    /* top: 0; */ /* Commented out - Handled by enhanced-header */
+    /* z-index: 100; */ /* Commented out - Handled by enhanced-header */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -756,7 +755,7 @@ h2::after {
 /* Footer */
 footer {
     background-color: var(--dark-color);
-    color: var(--text-color);
+    color: var(--light-color);
     padding: 3rem 0 2rem;
 }
 
@@ -777,6 +776,7 @@ footer {
     margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.5rem;
+    color: white;
 }
 
 .footer-col h3::after {
@@ -798,11 +798,13 @@ footer {
 }
 
 .footer-col ul li a {
-    color: var(--secondary-color);
+    color: var(--light-color);
+    opacity: 0.8;
 }
 
 .footer-col ul li a:hover {
     color: var(--accent-color);
+    opacity: 1;
 }
 
 .social-links {
@@ -1622,7 +1624,7 @@ textarea {
 }
 
 .pricing-footer .btn {
-    width: 100%;
+    /* width: 100%; */ /* Removed to allow button to size naturally */
 }
 
 /* Pricing Note */
@@ -1863,339 +1865,6 @@ textarea {
     transform: translateY(-3px);
 }
 
-/* Enhanced Sticky Navigation */
-.enhanced-header {
-    background-color: var(--dark-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    padding: 0.5rem 0;
-}
-
-/* Scrolled state styling */
-.enhanced-header.scrolled {
-    padding: 0.3rem 0;
-    background-color: rgba(157, 157, 157, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-/* Enhanced Logo Container */
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-/* Improved Logo Styling */
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 0.3rem 0;
-}
-
-.logo-image {
-    height: 200px;
-    width: auto;
-    margin-right: 0.75rem;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.logo-text {
-    font-family: 'Georgia', serif;
-    font-size: 2rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Subtle hover effect */
-.logo:hover .logo-image {
-    transform: scale(1.05);
-}
-
-.logo:hover .logo-text {
-    color: var(--accent-color);
-}
-
-/* Adjust logo size when scrolled */
-.scrolled .logo-image {
-    height: 200px;
-}
-
-.scrolled .logo-text {
-    font-size: 1.7rem;
-}
-
-/* Navigation items alignment */
-.nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    position: relative;
-    margin: 0 0.3rem;
-}
-
-.nav-link {
-    display: inline-block;
-    padding: 0.75rem 1rem;
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-/* Add subtle underline animation */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0.5rem;
-    left: 1rem;
-    right: 1rem;
-    height: 2px;
-    background-color: var(--accent-color);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    transform: scaleX(1);
-}
-
-/* CTA Button Enhancement */
-.btn-nav {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    margin-left: 1rem;
-    box-shadow: 0 4px 10px rgba(255, 153, 79, 0.3);
-}
-
-.btn-nav:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(106, 138, 115, 0.3);
-}
-/* 
- * Enhanced Logo & Navigation Styling
- * Optimized for all screen sizes and scroll states
- */
-
-/* Basic Header Structure */
-.enhanced-header {
-    background-color: var(--dark-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    padding: 0.8rem 0;
-}
-
-.enhanced-header.scrolled {
-    padding: 0.4rem 0;
-    background-color: rgba(32, 31, 36, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-/* Logo Container and Alignment */
-.logo-container {
-    display: flex;
-    align-items: center;
-    max-width: 50%;
-    height: auto;
-    margin-right: 1rem;
-}
-
-/* Base Logo Styling */
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 0;
-}
-
-/* Logo Image - Large Desktop */
-.logo-image {
-    height: 210px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    margin-right: 0.5rem !important;
-    transition: all 0.3s ease !important;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
-    object-fit: contain !important;
-}
-
-/* Logo Text - If visible alongside image */
-.logo-text {
-    font-family: 'Georgia', serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    /* Uncomment below if you want to show the text alongside the image */
-    /* visibility: visible !important; */
-    /* Hide if logo image already contains company name */
-    visibility: hidden;
-    font-size: 0;
-}
-
-/* Scrolled State - Logo Size Reduction */
-.enhanced-header.scrolled .logo-image {
-    height: 200px !important;
-}
-
-/* Hover Effects */
-.logo:hover .logo-image {
-    transform: scale(1.03);
-    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4)) !important;
-}
-
-.logo:hover .logo-text {
-    color: var(--accent-color);
-}
-
-/* Navigation Menu */
-.nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    position: relative;
-    margin: 0 0.3rem;
-}
-
-.nav-link {
-    display: inline-block;
-    padding: 0.75rem 1rem;
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-/* Underline Animation for Nav Links */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0.5rem;
-    left: 1rem;
-    right: 1rem;
-    height: 2px;
-    background-color: var(--accent-color);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    transform: scaleX(1);
-}
-
-/* CTA Button */
-.btn-nav {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    margin-left: 1rem;
-    box-shadow: 0 4px 10px rgba(255, 153, 79, 0.3);
-    white-space: nowrap;
-}
-
-.btn-nav:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(106, 138, 115, 0.3);
-}
-
-/* Mobile Menu Toggle */
-.nav-toggle, 
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1002;
-}
-
-.hamburger {
-    width: 30px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.hamburger-line {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-/* Mobile Menu Overlay */
-.nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(3px);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
 /* ======== RESPONSIVE BREAKPOINTS ======== */
 
 /* Large Desktop (1200px and up) */
@@ -2203,24 +1872,12 @@ textarea {
     .logo-image {
         height: 250px !important;
     }
-    
-    .enhanced-header.scrolled .logo-image {
-        height: 200px !important;
-    }
 }
 
 /* Desktop (992px - 1200px) */
 @media screen and (max-width: 1200px) and (min-width: 993px) {
     .logo-image {
         height: 180px !important;
-    }
-    
-    .enhanced-header.scrolled .logo-image {
-        height: 65px !important;
-    }
-    
-    .nav-link {
-        padding: 0.75rem 0.8rem;
     }
 }
 
@@ -2238,10 +1895,6 @@ textarea {
     /* Adjust logo size */
     .logo-image {
         height: 130px !important;
-    }
-    
-    .enhanced-header.scrolled .logo-image {
-        height: 60px !important;
     }
     
     /* Mobile menu styling */
@@ -2332,10 +1985,6 @@ textarea {
         height: 65px;
     }
     
-    .enhanced-header.scrolled .logo-image {
-        height: 55px;
-    }
-    
     .header-container {
         padding: 0.2rem 0;
     }
@@ -2345,10 +1994,6 @@ textarea {
 @media screen and (max-width: 575px) {
     .logo-image {
         height: 55px;
-    }
-    
-    .enhanced-header.scrolled .logo-image {
-        height: 45px;
     }
     
     .header-container {
@@ -2365,10 +2010,6 @@ textarea {
 @media screen and (max-width: 375px) {
     .logo-image {
         height: 45px;
-    }
-    
-    .enhanced-header.scrolled .logo-image {
-        height: 40px;
     }
 }
 

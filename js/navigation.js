@@ -22,6 +22,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // 1. Shrink header on scroll
+    
+    // Debounce utility function
+    function debounce(func, wait, immediate) {
+        let timeout;
+        return function executedFunction() {
+            const context = this;
+            const args = arguments;
+            const later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            const callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
+
     function handleScroll() {
         if (header) {
             if (window.scrollY > 30) {
@@ -32,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initial call and event listener for scroll
+    // Initial call and event listener for scroll (debounced)
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', debounce(handleScroll, 15)); // Debounce scroll handler (15ms delay)
     
     // 2. FIXED Mobile menu toggle - Replace with new implementation
     // Clone and replace to remove any existing event listeners

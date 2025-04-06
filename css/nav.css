@@ -5,30 +5,34 @@
     background-color: var(--dark-color);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+    width: 100%;
 }
 
 /* Add this class with JavaScript when scrolling down */
 .enhanced-header.scrolled {
-    padding: 0.5rem 0;
-    background-color: rgba(32, 31, 36, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 0.4rem 0;
+    background-color: rgba(32, 31, 36, 0.98);
+  /*  backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);*/
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Logo Styling */
 .logo-container {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo {
@@ -36,19 +40,22 @@
     align-items: center;
     text-decoration: none;
     color: white;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .logo-image {
-    height: 36px;
+    height: 45px;
+    width: auto;
     margin-right: 0.75rem;
+    transition: height 0.3s ease;
 }
 
 .logo-text {
     font-family: 'Georgia', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: font-size 0.3s ease, color 0.3s ease;
+    color: white;
 }
 
 .logo:hover {
@@ -56,12 +63,20 @@
 }
 
 .scrolled .logo-text {
-    font-size: 1.4rem; /* Slightly smaller when scrolled */
+    font-size: 1.3rem;
+}
+
+/* Add rule for scrolled logo image */
+.scrolled .logo-image {
+    height: 35px;
 }
 
 /* Main Navigation */
 .main-nav {
     position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav-menu {
@@ -79,8 +94,8 @@
 
 .nav-link {
     display: inline-block;
-    padding: 0.75rem 1rem;
-    color: var(--secondary-color);
+    padding: 0.7rem 0.9rem;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -187,10 +202,11 @@
     background: none;
     border: none;
     cursor: pointer;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     position: relative;
     z-index: 1002;
+    padding: 5px;
 }
 
 .hamburger {
@@ -205,7 +221,7 @@
 .hamburger-line {
     display: block;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: white;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -220,6 +236,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
@@ -238,7 +255,7 @@
         right: -300px;
         width: 280px;
         height: 100vh;
-        background-color: white;
+        background-color: var(--dark-color);
         flex-direction: column;
         align-items: flex-start;
         padding: 5rem 0 2rem;
@@ -264,7 +281,7 @@
     
     /* Hamburger Animation */
     body.menu-open .hamburger-line:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
     
     body.menu-open .hamburger-line:nth-child(2) {
@@ -272,20 +289,20 @@
     }
     
     body.menu-open .hamburger-line:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
     
     /* Mobile Menu Item Styling */
     .nav-item {
         width: 100%;
         margin: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .nav-link {
         display: block;
         padding: 1rem 1.5rem;
-        color: var(--text-color);
+        color: white;
     }
     
     .nav-link::after {
@@ -294,51 +311,22 @@
     
     .nav-link:hover,
     .nav-link.active {
-        background-color: rgba(106, 138, 115, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--accent-color);
     }
     
     /* CTA Button in Mobile Menu */
     .nav-cta {
         margin-top: 1rem;
         border-bottom: none;
+        width: 100%;
+        padding: 0 1.5rem;
     }
     
     .btn-nav {
         display: block;
-        margin: 0 1.5rem;
+        margin: 0;
         text-align: center;
-    }
-    
-    /* Mobile Dropdown */
-    .dropdown-indicator {
-        position: absolute;
-        right: 1.5rem;
-        top: 1rem;
-    }
-    
-    .dropdown-menu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        max-height: 0;
-        overflow: hidden;
-        border-radius: 0;
-        transition: max-height 0.3s ease;
-    }
-    
-    .has-dropdown.dropdown-open .dropdown-menu {
-        max-height: 300px;
-    }
-    
-    .dropdown-link {
-        padding-left: 2.5rem;
-    }
-    
-    .dropdown-link:hover {
-        padding-left: 2.8rem;
     }
 }
 
@@ -355,172 +343,19 @@
     .scrolled .logo-text {
         font-size: 1.2rem;
     }
-}
-
-/* Mobile Navigation Fixes - Add these to your nav.css file */
-
-/* Make sure the mobile menu toggle is visible and working */
-.nav-toggle {
-    display: none; /* Initially hidden on desktop */
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 40px; /* Increased tap target */
-    height: 40px; /* Increased tap target */
-    position: relative;
-    z-index: 1002;
-    padding: 5px; /* Ensure no padding issues */
-}
-
-/* Hamburger icon styling */
-.hamburger {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 8px 0;
-}
-
-.hamburger-line {
-    display: block;
-    width: 100%;
-    height: 3px; /* Slightly thicker for better visibility */
-    background-color: white;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Overlay fixes */
-.nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-}
-
-/* Critical fix - ensure mobile menu is properly positioned */
-@media screen and (max-width: 992px) {
-    /* Show mobile toggle */
-    .nav-toggle {
-        display: block;
-    }
     
-    /* Mobile menu styling */
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -300px; /* Start off-screen */
-        width: 280px;
-        height: 100vh;
-        background-color: white;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5rem 0 2rem;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease;
-        z-index: 1001;
-        overflow-y: auto;
-    }
-    
-    /* Critical - this was likely the issue */
-    /* When menu is open, move it back on screen */
-    body.menu-open .nav-menu {
-        right: 0;
-    }
-    
-    /* Show overlay when menu is open */
-    body.menu-open .nav-overlay {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    /* Hamburger animation when menu is open */
-    body.menu-open .hamburger-line:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
-    }
-    
-    body.menu-open .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    body.menu-open .hamburger-line:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
-    }
-    
-    /* Mobile menu item styling */
-    .nav-item {
-        width: 100%;
-        margin: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    .nav-link {
-        display: block;
-        padding: 1rem 1.5rem;
-        color: var(--text-color);
-    }
-    
-    .nav-link::after {
-        display: none;
-    }
-    
-    .nav-link:hover,
-    .nav-link.active {
-        background-color: rgba(106, 138, 115, 0.1);
-    }
-    
-    /* Prevent body scrolling when menu is open */
-    body.menu-open {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
-    
-    /* Fix for dropdown in mobile */
-    .dropdown-menu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-    
-    .has-dropdown.dropdown-open .dropdown-menu {
-        max-height: 300px;
-    }
-    
-    /* Fix for CTA button in mobile menu */
-    .nav-cta {
-        margin-top: 1rem;
-        border-bottom: none;
-    }
-    
-    .btn-nav {
-        display: block;
-        margin: 0 1.5rem;
-        text-align: center;
+    .logo-image {
+        height: 40px;
     }
 }
 
-/* Smoother transition animations for small devices */
+/* Smoother transition animations */
 @media (prefers-reduced-motion: no-preference) {
     .nav-menu,
     .nav-overlay,
-    .hamburger-line {
+    .hamburger-line,
+    .nav-link,
+    .btn-nav {
         transition-duration: 0.3s;
     }
 }

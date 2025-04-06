@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Gallery | 603 In Focus</title>
+    <meta name="description" content="Your private photo gallery.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/gallery-page.css"> <!-- You'll need to create this CSS file -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Add basic styles for the gallery page here or in gallery-page.css -->
+    <style>
+        .private-gallery-content {
+            padding: 3rem 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1; /* Make images square-ish */
+            object-fit: cover;
+        }
+        .download-btn-individual {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 2;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .download-btn-individual {
+            opacity: 1;
+        }
+        .download-btn-individual i {
+            margin-right: 0.3em;
+        }
+        #gallery-status p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+        }
+        .error-message {
+            color: #c0392b; /* Red color for errors */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header class="enhanced-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo/image0.png" alt="603 In Focus" class="logo-image">
+                    <span class="logo-text">603 In Focus</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle Navigation">
+                    <span class="hamburger">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                </button>
+
+                <div class="nav-overlay"></div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="portrait.html" class="nav-link">Headshots</a></li>
+                    <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
+                    <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li>
+                    <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="private-gallery-content">
+            <div class="container">
+                <h1 id="gallery-title">Your Private Gallery</h1>
+                <!-- Optional: Add a global download button -->
+                <!-- <button id="download-all-btn" class="btn" style="margin-bottom: 1.5rem;">Download All (ZIP)</button> -->
+
+                <div id="gallery-status">
+                    <p>Loading photos...</p>
+                </div>
+
+                <div class="gallery-grid" id="gallery-grid-container">
+                    <!-- Images will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>603 In Focus</h3>
+                <p>Professional photography services capturing New Hampshire's families, sporting events, and portraits throughout all seasons.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">TW</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: info@603infocus.com</li>
+                    <li>Address: Strafford, NH</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; 2025 603 In Focus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryGrid = document.getElementById('gallery-grid-container');
+            const galleryStatus = document.getElementById('gallery-status');
+            const galleryTitle = document.getElementById('gallery-title');
+
+            // --- Configuration ---
+            // Replace with your actual API Gateway endpoint URL
+            const API_ENDPOINT = 'https://ys25iaf7y4qcjqscqlcjrvon7y0immdi.lambda-url.us-east-2.on.aws/'; // Use the provided Lambda Function URL
+            // ---------------------
+
+            // Get gallery code from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const galleryCode = urlParams.get('gallery-code');
+
+            if (!galleryCode) {
+                galleryStatus.innerHTML = '<p class="error-message">Error: No gallery code provided in the URL.</p>';
+                galleryTitle.textContent = 'Error Loading Gallery';
+                return;
+            }
+
+             // Basic input sanitization/validation (optional but recommended)
+            const sanitizedCode = galleryCode.replace(/[^a-zA-Z0-9-_]/g, ''); // Allow letters, numbers, hyphen, underscore
+            if (sanitizedCode !== galleryCode || galleryCode.length === 0 || galleryCode.length > 50) { // Basic checks
+                 galleryStatus.innerHTML = '<p class="error-message">Error: Invalid gallery code format.</p>';
+                 galleryTitle.textContent = 'Error Loading Gallery';
+                 return;
+             }
+
+
+            galleryTitle.textContent = `Gallery: ${sanitizedCode}`; // Display the sanitized code
+            galleryStatus.innerHTML = '<p>Loading photos...</p>'; // Initial loading message
+
+            // Fetch photos from the backend API
+            fetch(`${API_ENDPOINT}?code=${sanitizedCode}`) // Use sanitized code
+                .then(response => {
+                    if (!response.ok) {
+                        // Attempt to read error message from response body if possible
+                        return response.json().then(errData => {
+                           throw new Error(errData.message || errData.error || `HTTP error! Status: ${response.status}`);
+                        }).catch(() => {
+                           // If reading JSON fails, throw a generic error
+                           throw new Error(`HTTP error! Status: ${response.status}`);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(photoUrls => {
+                    galleryStatus.innerHTML = ''; // Clear loading/error message
+
+                    if (photoUrls && photoUrls.length > 0) {
+                        photoUrls.forEach(url => {
+                            const galleryItem = document.createElement('div');
+                            galleryItem.className = 'gallery-item'; // Use existing gallery styles if possible
+
+                            const img = document.createElement('img');
+                            img.src = url; // Use the presigned URL directly
+                            img.alt = 'Private gallery photo';
+                            img.loading = 'lazy'; // Lazy load images
+
+                            // Add an individual download link
+                            const downloadLink = document.createElement('a');
+                            downloadLink.href = url; // URL includes download disposition from Lambda
+                            downloadLink.className = 'btn download-btn-individual'; // Style this button
+                            downloadLink.innerHTML = '<i class="fas fa-download"></i>'; // Just icon for smaller button
+                            downloadLink.title = "Download Photo"; // Tooltip
+                            // downloadLink.setAttribute('download', ''); // Let the Content-Disposition handle filename
+
+                            galleryItem.appendChild(img);
+                            galleryItem.appendChild(downloadLink);
+                            galleryGrid.appendChild(galleryItem);
+                        });
+                        // TODO: Implement endless scroll here if needed later
+                        // You would typically detect when the user scrolls near the bottom
+                        // and if there are more photos (requires pagination in the API),
+                        // fetch the next batch and append them.
+                    } else {
+                         galleryStatus.innerHTML = '<p>No photos found for this gallery code.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching gallery photos:', error);
+                    galleryStatus.innerHTML = `<p class="error-message">Error loading gallery: ${error.message}. Please check the code or try again later.</p>`;
+                });
+
+             // --- Optional: Download All Button ---
+             // const downloadAllBtn = document.getElementById('download-all-btn');
+             // if (downloadAllBtn) {
+             //     downloadAllBtn.addEventListener('click', () => {
+             //         alert('Download All feature not yet implemented. Needs backend support to create a ZIP.');
+             //         // This would require a separate backend process:
+             //         // 1. API call triggers a Lambda function.
+             //         // 2. Lambda fetches all presigned URLs for the code.
+             //         // 3. Downloads images from S3 to Lambda's temporary storage.
+             //         // 4. Creates a ZIP file.
+             //         // 5. Uploads the ZIP to a temporary location in S3.
+             //         // 6. Returns a presigned URL for the ZIP file.
+             //         // 7. Frontend initiates download using the ZIP URL.
+             //     });
+             // }
+        });
+    </script>
+</body>
+</html>
