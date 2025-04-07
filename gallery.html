@@ -26,7 +26,7 @@
     <!-- Add basic styles for the gallery page here or in gallery-page.css -->
     <style>
         .private-gallery-content {
-            padding: 3rem 0;
+            padding: 3rem 1rem; /* Add padding for mobile */
         }
         .gallery-grid {
             display: grid;
@@ -60,6 +60,9 @@
             border-radius: 3px;
             opacity: 0;
             transition: opacity 0.3s ease;
+            text-decoration: none; /* Ensure it looks like a button */
+            display: inline-flex; /* Align icon and text */
+            align-items: center;
         }
         .gallery-item:hover .download-btn-individual {
             opacity: 1;
@@ -76,6 +79,38 @@
             color: #c0392b; /* Red color for errors */
             font-weight: bold;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr; /* Single column layout */
+                gap: 1.5rem; /* Increase gap slightly for touch */
+            }
+             .gallery-item img {
+                 aspect-ratio: 4 / 3; /* Adjust aspect ratio for mobile if needed */
+             }
+            .download-btn-individual {
+                opacity: 1; /* Always visible on mobile */
+                padding: 0.6rem 1rem; /* Slightly larger tap target */
+                font-size: 0.9rem;
+                bottom: 15px; /* Adjust position slightly */
+                right: 15px;
+            }
+             /* Add text to the download button on mobile */
+             .download-btn-individual::after {
+                 content: " Download"; /* Add text */
+                 display: inline; /* Show the text */
+                 margin-left: 0.3em;
+             }
+             .download-btn-individual i {
+                margin-right: 0; /* Remove right margin if text is added */
+             }
+
+             h1#gallery-title {
+                 font-size: 1.8rem; /* Adjust title size */
+             }
+        }
+
     </style>
 </head>
 <body>
