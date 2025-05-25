@@ -469,119 +469,92 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="section-subtitle">Professional photography packages tailored to your needs</p>
     </div>
         <div class="pricing-tabs">
-            <button class="pricing-tab active" data-target="family-pricing" style="display: none;">Family</button>
-            <button class="pricing-tab active" data-target="portrait-pricing">Portrait</button>
+            <button class="pricing-tab" data-target="family-pricing" style="display: none;">Family</button>
+            <button class="pricing-tab active" data-target="graduation-pricing">Graduation</button>
+            <button class="pricing-tab" data-target="portrait-pricing">Portrait</button>
             <button class="pricing-tab" data-target="sports-pricing">Sports</button>
             <button class="pricing-tab" data-target="seasonal-pricing" style="display: none;">Seasonal</button>
         </div>
         
         <div class="pricing-content">
-            <!-- Family Photography Packages -->
-            <div class="pricing-panel active" id="family-pricing" style="display: none;">
+            <div class="pricing-panel" id="portrait-pricing">
                 <div class="pricing-cards">
-                    <!-- Basic Family Package -->
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Essential Family</h3>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">249</span>
-                            </div>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li>45-minute session</li>
-                                <li>1 location of your choice</li>
-                                <li>20+ professionally edited images</li>
-                                <li>Digital download gallery</li>
-                                <li>Print release for personal use</li>
-                                <li>Up to 5 people (extra $25/person)</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
-                            <a href="contact.html" class="btn">Book Now</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Premium Family Package -->
                     <div class="pricing-card featured">
                         <div class="pricing-badge">Most Popular</div>
                         <div class="pricing-header">
-                            <h3>Premium Family</h3>
+                            <h3>Professional Headshots</h3>
                             <div class="pricing-price">
                                 <span class="currency">$</span>
-                                <span class="amount">399</span>
+                                <span class="amount">175</span>
                             </div>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li>75-minute session</li>
-                                <li>Up to 2 locations</li>
-                                <li>40+ professionally edited images</li>
-                                <li>Digital download gallery</li>
-                                <li>Print release for personal use</li>
-                                <li>Up to 8 people (extra $20/person)</li>
-                                <li>Outfit change option</li>
-                                <li>10 professionally printed 4×6 photos</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
                             <a href="contact.html" class="btn">Book Now</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Extended Family Package -->
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Extended Family</h3>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">599</span>
-                            </div>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li>90-minute session</li>
-                                <li>Up to 2 locations</li>
-                                <li>60+ professionally edited images</li>
-                                <li>Digital download gallery</li>
-                                <li>Print release for personal use</li>
-                                <li>Up to 15 people (extra $15/person)</li>
-                                <li>Multiple grouping options</li>
-                                <li>One 8×10 mounted family print</li>
-                                <li>15 professionally printed 4×6 photos</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
-                            <a href="contact.html" class="btn">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Portrait Photography Packages -->
-            <div class="pricing-panel active" id="portrait-pricing">
-                <div class="pricing-cards">
-                    <!-- Essential Headshot Package -->
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Essential Headshot</h3>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">150</span>
-                            </div>
                         </div>
                         <div class="pricing-features">
                             <ul>
                                 <li>30-minute session</li>
-                                <li>1 professionally retouched image</li>
-                                <li>Online selection gallery</li>
-                                <li>Additional images $50 each</li>
-                                <li>Print release for personal use</li>
+                                <li>1 outfit, 1 background</li>
+                                <li>5 retouched, high resolution images</li>
+                                <li>Commerical use license</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Business Branding</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">350</span>
+                            </div>
                             <a href="contact.html" class="btn">Book Now</a>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>60-minute session</li>
+                                <li>Multiple outfits & backgrounds</li>
+                                <li>15+ images, including detail & candid shots</li>
+                                <li>Ideal for personal or small business branding</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-extras">
+                            <h4>Add-ons</h4>
+                            <ul>
+                                <li>Group Rates (3+ people) <span class="extra-price"></span></li>
+                                <li>Hair & Makeup referral <span class="extra-price"></span></li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <!-- graduation Photography Packages -->
+            <div class="pricing-panel active" id="graduation-pricing">
+                <div class="pricing-cards">
+                    <!-- Essential Headshot Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Senior Portrait</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">225</span>
+                            </div>
+                            <a href="contact.html" class="btn">Book Now</a>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>45-minute outdoor session</li>
+                                <li>2 outfit changes</li>
+                                <li>15 edited images</li>
+                                <li>Digital gallery & print release</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
                         </div>
                     </div>
                     
@@ -589,49 +562,59 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="pricing-card featured">
                         <div class="pricing-badge">Most Popular</div>
                         <div class="pricing-header">
-                            <h3>Premium Headshot</h3>
+                            <h3>Premium Session</h3>
                             <div class="pricing-price">
                                 <span class="currency">$</span>
-                                <span class="amount">250</span>
+                                <span class="amount">350</span>
                             </div>
+                            <a href="contact.html" class="btn">Book Now</a>
                         </div>
                         <div class="pricing-features">
                             <ul>
-                                <li>60-minute session</li>
-                                <li>3 professionally retouched images</li>
-                                <li>Multiple background options</li>
-                                <li>Outfit change option</li>
-                                <li>Online selection gallery</li>
-                                <li>Print release for personal use</li>
+                                <li>90-minute session</li>
+                                <li>3 outfit changes</li>
+                                <li>2 locations</li>
+                                <li>30+ edited images</li>
+                                <li>Yearbook photo included</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-extras">
+                            <h4>Add-ons</h4>
+                            <ul>
+                                <li>Additional outfit/location <span class="extra-price">+$50</span></li>
+                                <li>Rush editing (72 hour delivery) <span class="extra-price">+$75</span></li>
+                                <li>8 x 10 profession print <span class="extra-price">+$25</span></li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="contact.html" class="btn">Book Now</a>
                         </div>
                     </div>
 
                     <!-- Corporate Team Package -->
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Corporate Team</h3>
+                            <h3>Graduation Mini Session</h3>
                             <div class="pricing-price">
                                 <span class="currency">$</span>
-                                <span class="amount">100</span>
-                                <span class="per-person">/ person</span>
+                                <span class="amount">150</span>
                             </div>
+                            <a href="contact.html" class="btn">Book Now</a>
                         </div>
                         <div class="pricing-features">
                             <ul>
-                                <li>On-site at your office</li>
-                                <li>Minimum 5 people</li>
-                                <li>10-minute session per employee</li>
-                                <li>1 professionally retouched image per person</li>
-                                <li>Group rates available</li>
-                                <li>Digital download gallery</li>
+                                <li>30-minute session at school or local landmark</li>
+                                <li>10 edited images</li>
+                                <li>print release</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-extras">
+                            <h4>Add-ons</h4>
+                            <ul>
+                                <li>Friends/siblings <span class="extra-price">+$25/person</span></li>
+                                <li>Print package <span class="extra-price">$60+</span></li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="contact.html" class="btn">Get Quote</a>
                         </div>
                     </div>
                 </div>
@@ -743,7 +726,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="note-icon">
                 <i class="fas fa-info-circle"></i>
             </div>
-            <p>All packages include a pre-session consultation to discuss your vision and preferences. Travel fees may apply for locations more than 30 miles from Strafford. Contact us for custom packages or special requests.</p>
+            <p>$50 deposit due at booking. Turnaround times are generally 1-2 weeks. All sessions include light retouching and online web gallery. Travel within 25 miles of Concord, NH included in pricing.</p>
         </div>
     </div>
 </section>

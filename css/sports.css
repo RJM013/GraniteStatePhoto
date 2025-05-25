@@ -74,6 +74,15 @@
     transition: transform 0.5s ease;
 }
 
+/* Vertical gallery item styling */
+.gallery-item.vertical {
+    grid-row: span 2;
+}
+
+.gallery-item.vertical img {
+    height: 600px;
+}
+
 .gallery-item:hover img {
     transform: scale(1.08);
 }

@@ -40,6 +40,12 @@
     cursor: pointer;
 }
 
+.gallery-item.vertical {
+    aspect-ratio: 2/3 !important;
+    grid-row: span 2;
+    /* Will take up more vertical space due to image dimensions */
+}
+
 .gallery-item img {
     width: 100%;
     height: 100%;
