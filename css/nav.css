@@ -15,8 +15,6 @@
 .enhanced-header.scrolled {
     padding: 0.4rem 0;
     background-color: rgba(32, 31, 36, 0.98);
-  /*  backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);*/
 }
 
 .header-container {
@@ -66,7 +64,6 @@
     font-size: 1.3rem;
 }
 
-/* Add rule for scrolled logo image */
 .scrolled .logo-image {
     height: 35px;
 }
@@ -148,65 +145,17 @@
     box-shadow: 0 6px 12px rgba(106, 138, 115, 0.3);
 }
 
-/* Dropdown Menu Styling */
-.dropdown-indicator {
-    margin-left: 0.3rem;
-    font-size: 0.7rem;
-    transition: transform 0.3s ease;
-}
-
-.has-dropdown:hover .dropdown-indicator {
-    transform: rotate(180deg);
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    background-color: white;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    padding: 0.5rem 0;
-    z-index: 100;
-}
-
-.has-dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-link {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-.dropdown-link:hover {
-    background-color: rgba(106, 138, 115, 0.1);
-    color: var(--primary-color);
-    padding-left: 1.75rem;
-}
-
 /* Hamburger Menu Button (Mobile) */
 .nav-toggle {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     position: relative;
     z-index: 1002;
-    padding: 5px;
+    padding: 10px;
 }
 
 .hamburger {
@@ -221,7 +170,7 @@
 .hamburger-line {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: white;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -366,58 +315,4 @@
     .nav-overlay {
         position: absolute;
     }
-}
-
-/* 
- * DEBUGGING STYLES
- * Add these temporary styles to help diagnose mobile navigation issues
- * Remove them after fixing the problem
- */
-
-/* Make sure navigation elements are visible and obvious */
-.nav-toggle {
-    display: none; /* Initially hidden */
-    background-color: rgba(255, 0, 0, 0.2) !important; /* Highlight for debugging */
-    border: 1px solid red !important;
-}
-
-@media screen and (max-width: 992px) {
-    /* Debug highlight for hamburger */
-    .nav-toggle {
-        display: block;
-        min-width: 44px;
-        min-height: 44px;
-    }
-
-    /* Ensure menu is visible when open */
-    body.menu-open .nav-menu {
-        right: 0 !important;
-        border-left: 3px solid red !important; /* Make it obvious */
-    }
-    
-    /* Highlight overlay when visible */
-    body.menu-open .nav-overlay {
-        border: 2px solid green !important;
-        opacity: 0.7 !important;
-        visibility: visible !important;
-    }
-}
-
-/* Test class - manually add to body to check if CSS applies */
-body.test-menu-open .nav-menu {
-    right: 0 !important;
-    border-left: 3px solid blue !important;
-}
-
-/* If right-to-left direction is causing problems */
-.nav-menu {
-    direction: ltr !important;
-}
-
-/* Force menu to show - temporary debug tool */
-.force-show {
-    right: 0 !important;
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
+} 
