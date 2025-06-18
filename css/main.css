@@ -79,6 +79,8 @@ header {
     color: white;
 }
 
+/* Commented out basic navigation styles - using enhanced navigation from nav.css */
+/*
 nav ul {
     display: flex;
     list-style: none;
@@ -100,6 +102,7 @@ nav ul li a.active {
     background-color: var(--primary-color);
     color: var(--light-color);
 }
+*/
 
 .mobile-menu-btn {
     display: none;
@@ -552,21 +555,17 @@ h2::after {
 }
 
 /* First (vertical) image */
-.about-column:first-of-type .about-img-direct {
-    max-height: 400px;
-    width: auto;
-    object-fit: cover;
-}
-
-/* Second (horizontal) image */
-.about-column:last-of-type .about-img-direct {
-    max-height: 300px;
+.about-column:first-of-type .about-img-direct,
+.about-column:last-of-type .about-img-direct,
+.about-column:last-of-type .about-img-direct2 {
+    max-height: 350px;
     width: auto;
     object-fit: cover;
 }
 
 /* General image styling */
-.about-img-direct {
+.about-img-direct,
+.about-img-direct2 {
     max-width: 100%;
     display: block;
     border-radius: 4px;
@@ -2102,10 +2101,23 @@ textarea {
     .about-text {
         flex-basis: 100%;
         margin-top: 1rem;
+        order: -1; /* Move text to top on tablets */
     }
     
     .about {
         padding-bottom: 10rem;
+    }
+    
+    .about-columns {
+        gap: 1.5rem; /* Tighter spacing on tablets */
+    }
+    
+    .content-card {
+        padding: 1.25rem; /* Slightly reduced padding */
+    }
+    
+    .text-card {
+        padding: 1.5rem;
     }
     
     .fullscreen-categories {
@@ -2133,7 +2145,8 @@ textarea {
     }
     
     .about-column:first-of-type .about-img-direct,
-    .about-column:last-of-type .about-img-direct {
+    .about-column:last-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct2 {
         max-height: 350px;
     }
 }
@@ -2160,6 +2173,45 @@ textarea {
     
     section {
         padding: 3.5rem 0;
+    }
+    
+    /* About section mobile improvements */
+    .about {
+        padding: 4rem 0 8rem;
+    }
+    
+    .about-columns {
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .about-column {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .about-text {
+        order: -1;
+        margin-bottom: 1.5rem;
+    }
+    
+    .content-card {
+        padding: 1rem;
+    }
+    
+    .text-card {
+        padding: 1.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+    
+    .about-text .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
     }
     
     .section-divider {
@@ -2263,7 +2315,8 @@ textarea {
     }
     
     .about-column:first-of-type .about-img-direct,
-    .about-column:last-of-type .about-img-direct {
+    .about-column:last-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct2 {
         max-height: 300px;
     }
     
@@ -2274,9 +2327,57 @@ textarea {
     .about-title {
         width: 80%;
     }
+    
+    .about-columns {
+        gap: 0.75rem;
+        margin: 1rem 0;
+    }
+    
+    .content-card {
+        padding: 0.75rem;
+    }
+    
+    .text-card {
+        padding: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
+    /* About section small mobile improvements */
+    .about {
+        padding: 3rem 0 6rem;
+    }
+    
+    .about-columns {
+        gap: 0.5rem;
+        margin: 0.75rem 0;
+    }
+    
+    .content-card {
+        padding: 0.5rem;
+    }
+    
+    .text-card {
+        padding: 1rem;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .about-text .btn {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .about-column:first-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct2 {
+        max-height: 250px; /* Smaller images on very small screens */
+    }
+    
     .category-slice {
         height: 250px;
     }

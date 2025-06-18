@@ -107,7 +107,8 @@ html {
     
     /* Image adjustments */
     .about-column:first-of-type .about-img-direct,
-    .about-column:last-of-type .about-img-direct {
+    .about-column:last-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct2 {
         max-height: 350px; /* Consistent height on medium screens */
     }
 }
@@ -212,6 +213,55 @@ html {
     /* Section spacing */
     section {
         padding: 3.5rem 0;
+    }
+    
+    /* About section mobile improvements */
+    .about {
+        padding: 4rem 0 8rem;
+    }
+    
+    .about-columns {
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .about-column {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .about-text {
+        order: -1;
+        margin-bottom: 1.5rem;
+    }
+    
+    .content-card {
+        padding: 1rem;
+    }
+    
+    .text-card {
+        padding: 1.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+    
+    .about-text .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        width: auto;
+        max-width: none;
+    }
+    
+    .about-column:first-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct2 {
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
     }
     
     .section-divider {
@@ -329,9 +379,39 @@ html {
         width: 80%;
     }
     
+    /* About section mobile enhancements */
+    .about-columns {
+        gap: 0.75rem;
+        margin: 1rem 0;
+    }
+    
+    .content-card {
+        padding: 0.75rem;
+    }
+    
+    .text-card {
+        padding: 1.25rem;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .about-text .btn {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 200px;
+    }
+    
     .about-column:first-of-type .about-img-direct,
-    .about-column:last-of-type .about-img-direct {
-        max-height: 300px; /* Adjust for smaller screens */
+    .about-column:last-of-type .about-img-direct,
+    .about-column:last-of-type .about-img-direct2 {
+        max-height: 250px; /* Smaller images on very small screens */
+        width: 100%;
+        object-fit: cover;
     }
     
     /* Mountain background fix */
