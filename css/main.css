@@ -1921,18 +1921,10 @@ textarea {
 /* ======== RESPONSIVE BREAKPOINTS ======== */
 
 /* Large Desktop (1200px and up) */
-@media screen and (min-width: 1201px) {
-    .logo-image {
-        height: 250px !important;
-    }
-}
+/* Logo sizing handled in nav.css */
 
 /* Desktop (992px - 1200px) */
-@media screen and (max-width: 1200px) and (min-width: 993px) {
-    .logo-image {
-        height: 180px !important;
-    }
-}
+/* Logo sizing handled in nav.css */
 
 /* Tablet (768px - 992px) */
 @media screen and (max-width: 992px) {
@@ -1945,10 +1937,7 @@ textarea {
         align-items: center;
     }
     
-    /* Adjust logo size */
-    .logo-image {
-        height: 130px !important;
-    }
+    /* Logo sizing handled in nav.css */
     
     /* Mobile menu styling */
     .nav-menu {
@@ -2034,9 +2023,7 @@ textarea {
 
 /* Small Tablet (576px - 768px) */
 @media screen and (max-width: 768px) {
-    .logo-image {
-        height: 65px;
-    }
+    /* Logo sizing handled in nav.css */
     
     .header-container {
         padding: 0.2rem 0;
@@ -2045,9 +2032,7 @@ textarea {
 
 /* Mobile (575px and below) */
 @media screen and (max-width: 575px) {
-    .logo-image {
-        height: 55px;
-    }
+    /* Logo sizing handled in nav.css */
     
     .header-container {
         padding: 0.15rem 0;
@@ -2060,11 +2045,7 @@ textarea {
 }
 
 /* Extra Small Mobile (375px and below) */
-@media screen and (max-width: 375px) {
-    .logo-image {
-        height: 45px;
-    }
-}
+/* Logo sizing handled in nav.css */
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {

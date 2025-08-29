@@ -13,7 +13,7 @@
 
 /* Add this class with JavaScript when scrolling down */
 .enhanced-header.scrolled {
-    padding: 0.4rem 0;
+    padding: 0.8rem 0; /* Reduced from 1rem to maintain proportions with moderate logo */
     background-color: rgba(32, 31, 36, 0.98);
 }
 
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 0;
+    padding: 1.2rem 0; /* Reduced from 1.5rem to better accommodate moderate logo size */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -42,10 +42,12 @@
 }
 
 .logo-image {
-    height: 45px;
+    height: 100px; /* Reduced from 120px to a more moderate size */
+    max-height: 100px; /* Adjusted max-height to match new size */
     width: auto;
-    margin-right: 0.75rem;
+    margin-right: 0; /* Removed margin since it's just an image now */
     transition: height 0.3s ease;
+    object-fit: contain; /* Ensures image maintains aspect ratio */
 }
 
 .logo-text {
@@ -65,7 +67,7 @@
 }
 
 .scrolled .logo-image {
-    height: 35px;
+    height: 75px; /* Adjusted from 90px to maintain proportions with smaller logo */
 }
 
 /* Main Navigation */
@@ -198,6 +200,14 @@
         display: block;
     }
     
+    .logo-image {
+        height: 100px; /* Slightly smaller on tablets but still prominent */
+    }
+    
+    .scrolled .logo-image {
+        height: 80px;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 0;
@@ -282,7 +292,16 @@
 /* Small Screen Adjustments */
 @media screen and (max-width: 576px) {
     .header-container {
-        padding: 0.8rem 0;
+        padding: 1.2rem 0; /* Adjusted for mobile with larger logo */
+    }
+    
+    .logo-image {
+        height: 80px; /* Smaller on mobile but still visible and prominent */
+        padding-left: 1rem;
+    }
+    
+    .scrolled .logo-image {
+        height: 70px;
     }
     
     .logo-text {
@@ -291,10 +310,6 @@
     
     .scrolled .logo-text {
         font-size: 1.2rem;
-    }
-    
-    .logo-image {
-        height: 40px;
     }
 }
 
