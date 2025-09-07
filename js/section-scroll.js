@@ -209,25 +209,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setupSectionTransitions();
     
-    // Adding click functionality to testimonial pagination dots
-    const testimonialDots = document.querySelectorAll('.testimonial-pagination .dot');
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    
-    if (testimonialDots.length > 0 && testimonialCards.length > 0) {
-        testimonialDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                // Remove active class from all dots
-                testimonialDots.forEach(d => d.classList.remove('active'));
-                
-                // Add active class to clicked dot
-                dot.classList.add('active');
-                
-                // Calculate which card to scroll to
-                const cardToShow = testimonialCards[index] || testimonialCards[0];
-                
-                // Scroll to that card
-                cardToShow.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            });
-        });
-    }
+    // Testimonial functionality moved to testimonials.js
 });

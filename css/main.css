@@ -26,6 +26,7 @@ body {
     color: var(--text-color);
     background-color: var(--light-color);
     overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: 120px; /* Space for fixed header */
 }
 
 h1, h2, h3, h4, h5, h6, .logo {
@@ -108,13 +109,15 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-    height: 80vh;
+    height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero/bwhero.jpg') center/cover no-repeat;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     color: white;
+    padding-bottom: 3rem;
+    margin-top: -12px; /* Negative margin to make flush with fixed header */
 }
 
 .hero-content {
@@ -128,12 +131,18 @@ nav ul li a.active {
 
 .hero h1 {
     font-size: 3rem;
+    font-weight: bold;
     margin-bottom: 1rem;
+    line-height: 0.9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
     font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 2rem;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* Page Header */
@@ -1184,48 +1193,71 @@ textarea {
     pointer-events: none;
 }
 
-.testimonial-slider {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 1rem 0.5rem 2rem;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-}
-
-.testimonial-slider::-webkit-scrollbar {
-    display: none;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .testimonial-card {
-    flex: 0 0 auto;
-    width: calc(100% - 2rem);
-    max-width: 500px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-    transition: all 0.3s ease;
-    scroll-snap-align: center;
-    position: relative;
     border-top: 5px solid var(--primary-color);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
-    will-change: transform, opacity;
-    min-height: 100px;
-}
-
-.testimonial-card.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+/* Large screen optimizations */
+@media screen and (min-width: 1200px) {
+    .testimonial-grid {
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+    
+    .testimonial-card {
+        padding: 2.5rem;
+        min-height: 450px;
+    }
+}
+
+/* Tablet breakpoint - single column for better readability */
+@media screen and (max-width: 900px) and (min-width: 801px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* Medium tablet breakpoint - 2 columns with larger spacing */
+@media screen and (max-width: 1199px) and (min-width: 901px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2.5rem 0;
+    }
+    
+    .testimonial-card {
+        padding: 2.25rem;
+        min-height: 425px;
+    }
 }
 
 .quote-icon {
@@ -1285,26 +1317,6 @@ textarea {
     opacity: 0.7;
 }
 
-.testimonial-pagination {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ddd;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background-color: var(--primary-color);
-    transform: scale(1.2);
-}
 
 /* FAQ Section */
 .faq-section {
@@ -2035,9 +2047,26 @@ textarea {
     }
 }
 
+/* Fix for narrow testimonial cards in small tablet range (577px - 768px) */
+@media screen and (max-width: 768px) and (min-width: 577px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    
+    .testimonial-card {
+        max-width: 100%;
+        padding: 2rem;
+        min-height: 350px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .hero {
-        height: 60vh;
+        height: 70vh;
         background-position: center 20%;
         min-height: 400px;
     }
@@ -2106,6 +2135,7 @@ textarea {
         margin-top: -5rem;
         padding-top: 7rem;
     }
+    
     
     .fullscreen-categories {
         flex-direction: column;
@@ -2180,10 +2210,21 @@ textarea {
     
     .testimonial-card {
         padding: 1.5rem;
+        max-width: 100%;
     }
     
     .testimonial-text {
         font-size: 1rem;
+    }
+    
+    .testimonial-navigation {
+        margin: 1.5rem 0 1rem;
+    }
+    
+    .testimonial-nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
     }
     
     .instagram-feed {
@@ -2191,40 +2232,26 @@ textarea {
     }
 }
 
-@media screen and (max-width: 680px) {
-    .about-column {
-        flex-basis: 100%;
+@media screen and (max-width: 801px) {
+    /* Testimonial mobile improvements */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+        max-width: none;
+        width: 100%;
     }
     
-    .about-column:first-of-type .about-img-direct,
-    .about-column:last-of-type .about-img-direct,
-    .about-column:last-of-type .about-img-direct2 {
-        max-height: 300px;
-    }
-    
-    .about {
-        padding-bottom: 8rem;
-    }
-    
-    .about-title {
-        width: 80%;
-    }
-    
-    .about-columns {
-        gap: 0.75rem;
-        margin: 1rem 0;
-    }
-    
-    .content-card {
-        padding: 0.75rem;
-    }
-    
-    .text-card {
-        padding: 1.25rem;
+    .testimonial-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+        min-height: 350px;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 576px) {
+
+@media screen and (max-width: 768px) {
     /* About section small mobile improvements */
     .about {
         padding: 3rem 0 6rem;
@@ -2241,6 +2268,38 @@ textarea {
     
     .text-card {
         padding: 1rem;
+    }
+    
+    /* Testimonial small mobile improvements */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 0;
+        max-width: none;
+        width: 100%;
+    }
+    
+    .testimonial-card {
+        padding: 1.25rem;
+        min-height: 300px;
+        width: 100%;
+    }
+}
+
+/* Extra small mobile breakpoint */
+@media screen and (max-width: 480px) {
+    .testimonial-grid {
+        gap: 0.75rem;
+        padding: 0.75rem 0;
+        max-width: none;
+        width: 100%;
+    }
+    
+    .testimonial-card {
+        padding: 1rem;
+        min-height: 280px;
+        border-radius: 10px;
+        width: 100%;
     }
     
     .about-text p {

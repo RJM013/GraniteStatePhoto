@@ -132,7 +132,7 @@ html {
     
     /* Hero section improvements */
     .hero {
-        height: 60vh;
+        height: 70vh;
         background-position: center 30%; /* Better positioning for mobile */
     }
     
@@ -297,7 +297,6 @@ html {
     
     .testimonial-card {
         padding: 1.5rem;
-        width: calc(50% - 2rem);
     }
     
     .testimonial-text {

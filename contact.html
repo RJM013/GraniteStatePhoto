@@ -53,13 +53,16 @@
                 
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <!-- <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li> -->
                     <li class="nav-item"><a href="senior.html" class="nav-link">Seniors</a></li>
                     <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
+                    <li class="nav-item"><a href="portrait.html" class="nav-link">Headshots</a></li>
+                    <!-- <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li> -->
+                    
+                    
                     <!-- <li class="nav-item"><a href="seasonal.html" class="nav-link">Seasonal</a></li> -->
                     <!-- <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li> -->
                    <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
-                   <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li>
+                   <!-- <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li> -->
                    <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
                     <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
                 </ul>
@@ -69,8 +72,8 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Connect With Us</h1>
-        <p>Reach out to discuss capturing your family's unique story, sporting events, professional portraits, or seasonal photography.</p>
+        <h1>Book a Session</h1>
+        <p>Reach out to discuss capturing your senior portraits, sports photography, headshots, or other photography needs.</p>
     </section>
 
     <!-- Contact Section -->
@@ -121,15 +124,19 @@
                         <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
-                        <label for="service-type">Service Interested In</label>
-                        <select id="service-type" name="service-type">
+                        <label for="service-type">Service Interested In *</label>
+                        <select id="service-type" name="service-type" required>
                             <option value="">Please select...</option>
                             <option value="senior">Senior Portraits</option>
                             <option value="sports">Sports Photography</option>
-                            <option value="portrait">Portrait Photography</option>
-
-                            
+                            <option value="headshots">Headshots</option>
                             <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="package-type">Package Interested In</label>
+                        <select id="package-type" name="package-type">
+                            <option value="">Please select a service first...</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -150,28 +157,27 @@
                 <h3>603 In Focus</h3>
                 <p>Professional photography services capturing New Hampshire's sporting events, senior portraits, and headshots throughout all seasons.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61564338803827" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/603infocus/" class="social-link"><i class="fab fa-instagram"></i></a>
                 </div>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <p> <a href="contact.html" style="color: var(--accent-color);">Click here to contact us!</a> </p>
+                </ul>
             </div>
             <div class="footer-col">
                 <h3>Explore</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="family.html">Family</a></li>
+                    <li><a href="senior.html">Seniors</a></li>
                     <li><a href="sports.html">Sports</a></li>
-                    <li><a href="portrait.html">Senior Portrait</a></li>
-                    <li><a href="seasonal.html">Seasonal</a></li>
+                    <li><a href="portrait.html">Headshots</a></li>
+                    <li><a href="packages.html">Packages</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <ul>
-                    <li>Email: <a href="mailto:rjmulligan@me.com">rjmulligan@me.com</a></li>
-                    <li>Address: Strafford, NH</li>
-                </ul>
-            </div>
+
         </div>
         <div class="copyright container">
             <p>&copy; 2025 603 In Focus. All rights reserved.</p>
@@ -179,5 +185,65 @@
     </footer>
     <!-- JavaScript -->
     <script src="js/navigation.js"></script>
+    <script>
+        // Package data structure matching packages.html
+        const packageData = {
+            senior: [
+                { value: 'mini-session', text: 'Mini Session - $150', price: 150 },
+                { value: 'standard-session', text: 'Standard Session - $225', price: 225 },
+                { value: 'premium-session', text: 'Premium Session - $350', price: 350 }
+            ],
+            sports: [
+                { value: 'athlete-spotlight', text: 'Athlete Spotlight - $199', price: 199 },
+                { value: 'game-day-coverage', text: 'Game Day Coverage - $299', price: 299 },
+                { value: 'media-day', text: 'Media Day - $499', price: 499 }
+            ],
+            headshots: [
+                { value: 'professional-headshots', text: 'Professional Headshots - $175', price: 175 },
+                { value: 'business-branding', text: 'Business Branding - $350', price: 350 }
+            ],
+            other: [
+                { value: 'custom', text: 'Custom Package - Contact for Pricing', price: 0 }
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceSelect = document.getElementById('service-type');
+            const packageSelect = document.getElementById('package-type');
+
+            serviceSelect.addEventListener('change', function() {
+                const selectedService = this.value;
+                
+                // Clear existing options
+                packageSelect.innerHTML = '';
+                
+                if (selectedService === '') {
+                    // No service selected
+                    packageSelect.innerHTML = '<option value="">Please select a service first...</option>';
+                    packageSelect.disabled = true;
+                } else if (packageData[selectedService]) {
+                    // Add default option
+                    packageSelect.innerHTML = '<option value="">Please select a package...</option>';
+                    
+                    // Add packages for selected service
+                    packageData[selectedService].forEach(pkg => {
+                        const option = document.createElement('option');
+                        option.value = pkg.value;
+                        option.textContent = pkg.text;
+                        packageSelect.appendChild(option);
+                    });
+                    
+                    packageSelect.disabled = false;
+                } else {
+                    // Fallback for unknown services
+                    packageSelect.innerHTML = '<option value="">No packages available</option>';
+                    packageSelect.disabled = true;
+                }
+            });
+
+            // Initialize package select as disabled
+            packageSelect.disabled = true;
+        });
+    </script>
 </body>
 </html>

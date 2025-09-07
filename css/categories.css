@@ -88,6 +88,10 @@
     object-position: center 25%;
 }
 
+.gs-category.senior .gs-category-image img {
+    object-position: center 30%;
+}
+
 .gs-category.seasonal .gs-category-image img {
     object-position: center 45%;
 }
@@ -139,6 +143,10 @@
 
 
 .gs-category.portrait::before {
+    background-color: rgba(92, 92, 92, 0.3);
+}
+
+.gs-category.senior::before {
     background-color: rgba(92, 92, 92, 0.3);
 }
 

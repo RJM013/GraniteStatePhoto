@@ -14,12 +14,15 @@ html, body {
 /* Main Header */
 .enhanced-header {
     background-color: var(--dark-color);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 9999;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    transition: padding 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
     width: 100%;
+    padding: 1rem 0;
 }
 
 /* Add this class with JavaScript when scrolling down */
@@ -32,11 +35,12 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 1rem; /* Added horizontal padding for mobile */
+    padding: 0 1.5rem; /* Increased horizontal padding for better spacing */
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
+    min-height: 70px; /* Ensure consistent height */
 }
 
 /* Ensure button stays visible at max width */
@@ -64,12 +68,13 @@ html, body {
 }
 
 .logo-image {
-    height: 100px; /* Reduced from 120px to a more moderate size */
-    max-height: 100px; /* Adjusted max-height to match new size */
+    height: 85px; /* Optimized size for better header proportion */
+    max-height: 85px;
     width: auto;
-    margin-right: 0; /* Removed margin since it's just an image now */
-    transition: height 0.3s ease;
-    object-fit: contain; /* Ensures image maintains aspect ratio */
+    margin-right: 0;
+    transition: all 0.3s ease;
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 .logo-text {
@@ -89,7 +94,7 @@ html, body {
 }
 
 .scrolled .logo-image {
-    height: 75px; /* Adjusted from 90px to maintain proportions with smaller logo */
+    height: 60px; /* Compact size when scrolled */
 }
 
 /* Main Navigation */
@@ -249,11 +254,11 @@ body.menu-open .nav-toggle::before {
     }
     
     .logo-image {
-        height: 100px; /* Slightly smaller on tablets but still prominent */
+        height: 80px; /* Slightly smaller on tablets but still prominent */
     }
     
     .scrolled .logo-image {
-        height: 80px;
+        height: 65px;
     }
     
     .nav-menu {
@@ -342,16 +347,16 @@ body.menu-open .nav-toggle::before {
 /* Small Screen Adjustments */
 @media screen and (max-width: 576px) {
     .header-container {
-        padding: 1rem 0.75rem; /* Reduced padding for small screens */
+        padding: 0 0.75rem; /* Only horizontal padding for small screens */
     }
     
     .logo-image {
-        height: 80px; /* Smaller on mobile but still visible and prominent */
+        height: 70px; /* Smaller on mobile but still visible and prominent */
         max-width: 100%; /* Ensure logo doesn't overflow */
     }
     
     .scrolled .logo-image {
-        height: 70px;
+        height: 55px;
     }
     
     .logo-text {
@@ -366,15 +371,15 @@ body.menu-open .nav-toggle::before {
 /* Extra Small Screens */
 @media screen and (max-width: 375px) {
     .header-container {
-        padding: 0.75rem 0.5rem; /* Even smaller padding for very small screens */
+        padding: 0 0.5rem; /* Only horizontal padding for very small screens */
     }
     
     .logo-image {
-        height: 70px; /* Smaller logo for very small screens */
+        height: 60px; /* Smaller logo for very small screens */
     }
     
     .scrolled .logo-image {
-        height: 60px;
+        height: 45px;
     }
     
     .nav-menu {
