@@ -1,5 +1,16 @@
 /* Enhanced Navigation Styles */
 
+/* Prevent horizontal overflow */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Main Header */
 .enhanced-header {
     background-color: var(--dark-color);
@@ -21,9 +32,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 0; /* Reduced from 1.5rem to better accommodate moderate logo size */
+    padding: 1.2rem 1rem; /* Added horizontal padding for mobile */
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure button stays visible at max width */
+@media screen and (min-width: 1200px) {
+    .header-container {
+        padding-right: 2rem; /* Extra right padding for large screens */
+    }
 }
 
 /* Logo Styling */
@@ -31,6 +51,8 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    min-width: 0; /* Allow container to shrink if needed */
+    max-width: 50%; /* Prevent logo from taking too much space */
 }
 
 .logo {
@@ -76,6 +98,7 @@
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+    min-width: 0; /* Allow flex item to shrink */
 }
 
 .nav-menu {
@@ -160,22 +183,46 @@
     padding: 10px;
 }
 
+/* Alternative: Font Awesome Icon Hamburger (uncomment to use instead of CSS lines)
+.nav-toggle .hamburger {
+    display: none;
+}
+
+.nav-toggle::before {
+    content: '\f0c9'; // Font Awesome hamburger icon
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+body.menu-open .nav-toggle::before {
+    content: '\f00d'; // Font Awesome X icon
+    transform: rotate(180deg);
+}
+*/
+
 .hamburger {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 8px 0;
+    justify-content: center; /* Center the lines */
+    align-items: center;
+    padding: 8px 0; /* Reduced padding to ensure lines fit */
+    gap: 4px; /* Use gap instead of margin for better control */
 }
 
 .hamburger-line {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: white;
+    display: block !important;
+    width: 24px !important; /* Fixed width instead of 100% */
+    height: 3px !important; /* Slightly thicker lines for better visibility */
+    background-color: white !important;
     border-radius: 2px;
     transition: all 0.3s ease;
+    opacity: 1 !important; /* Ensure lines are visible */
+    flex-shrink: 0; /* Prevent lines from shrinking */
 }
 
 /* Overlay for Mobile Menu */
@@ -197,7 +244,8 @@
 /* Responsive Design - Tablet and Below */
 @media screen and (max-width: 992px) {
     .nav-toggle {
-        display: block;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .logo-image {
@@ -212,7 +260,7 @@
         position: fixed;
         top: 0;
         right: -300px;
-        width: 280px;
+        width: min(280px, 85vw); /* Responsive width - max 280px or 85% of viewport */
         height: 100vh;
         background-color: var(--dark-color);
         flex-direction: column;
@@ -222,6 +270,7 @@
         transition: right 0.3s ease;
         z-index: 1001;
         overflow-y: auto;
+        box-sizing: border-box;
     }
     
     /* When Menu is Open */
@@ -240,15 +289,16 @@
     
     /* Hamburger Animation */
     body.menu-open .hamburger-line:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
     
     body.menu-open .hamburger-line:nth-child(2) {
         opacity: 0;
+        transform: scaleX(0);
     }
     
     body.menu-open .hamburger-line:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
     
     /* Mobile Menu Item Styling */
@@ -292,12 +342,12 @@
 /* Small Screen Adjustments */
 @media screen and (max-width: 576px) {
     .header-container {
-        padding: 1.2rem 0; /* Adjusted for mobile with larger logo */
+        padding: 1rem 0.75rem; /* Reduced padding for small screens */
     }
     
     .logo-image {
         height: 80px; /* Smaller on mobile but still visible and prominent */
-        padding-left: 1rem;
+        max-width: 100%; /* Ensure logo doesn't overflow */
     }
     
     .scrolled .logo-image {
@@ -310,6 +360,31 @@
     
     .scrolled .logo-text {
         font-size: 1.2rem;
+    }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 375px) {
+    .header-container {
+        padding: 0.75rem 0.5rem; /* Even smaller padding for very small screens */
+    }
+    
+    .logo-image {
+        height: 70px; /* Smaller logo for very small screens */
+    }
+    
+    .scrolled .logo-image {
+        height: 60px;
+    }
+    
+    .nav-menu {
+        width: min(260px, 90vw); /* Wider menu for very small screens */
+    }
+    
+    /* Force hamburger to show on very small screens */
+    .nav-toggle {
+        display: block !important;
+        visibility: visible !important;
     }
 }
 

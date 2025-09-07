@@ -104,14 +104,7 @@ nav ul li a.active {
 }
 */
 
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+/* Mobile menu button styles moved to nav.css */
 
 /* Hero Section */
 .hero {
@@ -1928,97 +1921,7 @@ textarea {
 
 /* Tablet (768px - 992px) */
 @media screen and (max-width: 992px) {
-    /* Show mobile menu toggle */
-    .nav-toggle,
-    .mobile-menu-btn {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    /* Logo sizing handled in nav.css */
-    
-    /* Mobile menu styling */
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -300px;
-        width: 280px;
-        height: 100vh;
-        background-color: var(--dark-color);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 6rem 0 2rem;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
-        transition: right 0.3s ease;
-        z-index: 1001;
-        overflow-y: auto;
-    }
-    
-    /* When menu is open */
-    body.menu-open {
-        overflow: hidden;
-    }
-    
-    body.menu-open .nav-menu {
-        right: 0;
-    }
-    
-    body.menu-open .nav-overlay {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    /* Hamburger Animation */
-    body.menu-open .hamburger-line:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
-    }
-    
-    body.menu-open .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    body.menu-open .hamburger-line:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
-    }
-    
-    /* Mobile Menu Items */
-    .nav-item {
-        width: 100%;
-        margin: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-link {
-        display: block;
-        padding: 1rem 1.5rem;
-        color: var(--secondary-color);
-    }
-    
-    .nav-link::after {
-        display: none;
-    }
-    
-    .nav-link:hover {
-        background-color: rgba(106, 138, 115, 0.2);
-    }
-    
-    /* Mobile CTA Button */
-    .nav-cta {
-        margin-top: 1rem;
-        border-bottom: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0 1.5rem;
-    }
-    
-    .btn-nav {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-    }
+    /* Navigation styles handled in nav.css */
 }
 
 /* Small Tablet (576px - 768px) */
@@ -2148,9 +2051,7 @@ textarea {
         padding: 0 1.5rem;
     }
     
-    .mobile-menu-btn {
-        display: block;
-    }
+    /* Mobile menu button styles handled in nav.css */
     
     section {
         padding: 3.5rem 0;
