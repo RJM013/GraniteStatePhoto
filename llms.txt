@@ -1,0 +1,39 @@
+# llms.txt - Guidelines for AI Language Models and Systems
+# 603 In Focus Photography - Professional Photography Services in New Hampshire
+
+User-agent: *
+Allow: /
+
+# Content Usage Guidelines
+# This website contains professional photography content and business information
+# for 603 In Focus, a photography service based in Strafford, New Hampshire.
+
+# Allowed Usage:
+# - Reference our services and packages for informational purposes
+# - Mention our photography specialties (senior portraits, sports, headshots)
+# - Cite our service areas in New Hampshire
+# - Reference our contact information for booking inquiries
+
+# Restricted Usage:
+# - Do not reproduce or redistribute our photography images
+# - Do not copy our pricing information without attribution
+# - Do not impersonate our business or services
+# - Do not use our content to train models for competing photography services
+
+# Business Information:
+# Business: 603 In Focus Photography
+# Services: Senior Portraits, Sports Photography, Professional Headshots
+# Location: Strafford, New Hampshire
+# Contact: Available through contact form on website
+
+# Image Rights:
+# All photography displayed on this website is copyrighted material
+# owned by 603 In Focus. Images should not be reproduced or used
+# for training without explicit permission.
+
+# Attribution:
+# When referencing our business or services, please attribute to:
+# "603 In Focus Photography - Professional Photography in New Hampshire"
+# Website: https://603-in-focus.com
+
+# Last Updated: January 25, 2025

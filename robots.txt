@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Block access to private galleries and admin areas
+Disallow: /amplify/
+Disallow: /test.html
+Disallow: *.webp$
+Disallow: /images/gallery/
+
+# Allow specific image directories for SEO
+Allow: /images/favicon_io/
+Allow: /images/logo/
+Allow: /images/about/
+Allow: /images/hero/
+
+# CSS and JS files
+Allow: /css/
+Allow: /js/
+
+# Sitemap location
+Sitemap: https://603-in-focus.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
