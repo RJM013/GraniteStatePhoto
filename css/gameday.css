@@ -83,9 +83,9 @@ main {
     text-align: center;
     color: white;
     max-width: 600px;
-    padding: 0 2rem;
+    padding: 0 4rem;
     align-self: flex-end;
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
 }
 
 /* Large screen treatment with blurred background */
@@ -96,7 +96,7 @@ main {
     }
     
     .hero-content {
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
     }
     
     /* Show blurred background */
@@ -269,7 +269,7 @@ main {
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    padding: 0 2rem 2rem 2rem;
+    padding: 4rem 4rem 2rem 4rem;
 }
 
 .impact-title {
@@ -650,7 +650,7 @@ main {
 
 /* Game Day Gallery Section */
 .gameday-gallery-section {
-    padding: 6rem 0;
+    padding: 8rem 0;
     background: var(--light-color);
     position: relative;
 }
