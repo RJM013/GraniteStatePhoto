@@ -1,0 +1,125 @@
+/* Gallery Launch - Overrides and additions for contact-style layout */
+
+/* Hero image - sports/game photo, lighter overlay so image shows through */
+.gallery-launch-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url('../images/gameday/_Z635466.jpg') !important;
+    background-size: cover !important;
+    background-position: center 15% !important;
+    background-repeat: no-repeat !important;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+}
+
+.gallery-launch-hero h1 {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-launch-hero p {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile hero optimization + hide sidebar (mobile-contact-info shows condensed version) */
+@media screen and (max-width: 768px) {
+    .gallery-launch-info {
+        display: none !important;
+    }
+
+    .gallery-launch-hero {
+        min-height: 45vh;
+        padding: 0 1rem 4rem;
+        background-position: center top !important;
+    }
+
+    .gallery-launch-hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .gallery-launch-hero p {
+        font-size: 1.05rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-launch-hero {
+        min-height: 40vh;
+        padding: 0 1rem 3rem;
+        background-position: center top !important;
+    }
+
+    .gallery-launch-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .gallery-launch-hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Sidebar - header at top, benefits in 2x2 grid */
+.gallery-launch-info {
+    display: block;
+}
+
+.gallery-launch-info h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* 2x2 benefits grid with longer copy */
+.gallery-launch-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 1.5rem;
+}
+
+.gallery-launch-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.gallery-launch-benefit i {
+    color: var(--accent-color);
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.gallery-launch-benefit strong {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+/* Success message - shown after form submission */
+.success-message {
+    display: none;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-message i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.success-message h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.success-message p {
+    color: var(--text-color);
+    margin: 0;
+}

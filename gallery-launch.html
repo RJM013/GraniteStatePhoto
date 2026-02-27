@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never Miss a Game Photo | 603 In Focus</title>
+    <meta name="description" content="Get notified when your team's gallery goes live. Just Game Access. No Spam.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/gallery-launch.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/nav.css">
+
+    <script src="js/navigation.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "r51cbyw7en");
+    </script>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header class="enhanced-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo/603_orange_logo.png" alt="603 In Focus Logo" class="logo-image">
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle Navigation">
+                    <span class="hamburger">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                </button>
+                
+                <div class="nav-overlay"></div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="senior.html" class="nav-link">Seniors</a></li>
+                    <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
+                    <li class="nav-item"><a href="mediaday.html" class="nav-link">Media Day</a></li>
+                    <li class="nav-item"><a href="portrait.html" class="nav-link">Headshots</a></li>
+                    <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+                    <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="page-header gallery-launch-hero">
+        <h1>Never Miss a Game Photo.</h1>
+        <p>Get notified when your team's gallery goes live.</p>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info gallery-launch-info">
+                <h2>Just Game Access.<br>No Spam.</h2>
+                <div class="gallery-launch-benefits">
+                    <div class="gallery-launch-benefit">
+                        <i class="fas fa-bell"></i>
+                        <div>
+                            <strong>We'll email you once.</strong> When your team's photos are ready to view and purchase.
+                        </div>
+                    </div>
+                    <div class="gallery-launch-benefit">
+                        <i class="fas fa-images"></i>
+                        <div>
+                            <strong>Prints & high-res downloads.</strong> Order professional prints and high-resolution digital files when the gallery goes live.
+                        </div>
+                    </div>
+                    <div class="gallery-launch-benefit">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <strong>Always free to view.</strong> Photos are always free to view, no purchase required.
+                        </div>
+                    </div>
+                    <div class="gallery-launch-benefit">
+                        <i class="fas fa-lock"></i>
+                        <div>
+                            <strong>Secure online checkout.</strong> Safe, encrypted payment when you're ready to order.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <h2>Get Notified</h2>
+                
+                <div class="mobile-contact-info">
+                    <p><strong>Just Game Access. No Spam.</strong></p>
+                    <p>Photos are always free to view. No purchase required.</p>
+                    <p>Secure online checkout for prints and high-resolution downloads.</p>
+                </div>
+                
+                <form id="lead-form" class="contact-form" action="https://formspree.io/f/mblovadq" method="POST">
+                    <input type="hidden" name="_subject" value="Gallery Launch - New Lead">
+                    <input type="hidden" name="_next" value="gallery-launch.html?submitted=1">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parent-name">Parent Name *</label>
+                            <input type="text" id="parent-name" name="parent-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="player-name">Player Name</label>
+                            <input type="text" id="player-name" name="player-name" placeholder="Optional">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lead-email">Email *</label>
+                        <input type="email" id="lead-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="team-sport">Team / Sport *</label>
+                        <input type="text" id="team-sport" name="team-sport" placeholder="e.g. CBNA Boys Varsity Basketball..." required>
+                    </div>
+                    <button type="submit">Notify Me</button>
+                </form>
+
+                <div id="success-message" class="success-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>You're on the list!</h3>
+                    <p>We'll email you when your team's gallery goes live. Thanks!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>603 In Focus</h3>
+                <p>Professional photography services capturing New Hampshire's sporting events, senior portraits, and headshots throughout all seasons.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61564338803827" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/603infocus/" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">View Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; 2025 603 In Focus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Show success message if redirected from Formspree
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('submitted') === '1') {
+                document.getElementById('lead-form').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

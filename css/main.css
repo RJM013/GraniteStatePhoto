@@ -378,6 +378,20 @@ h2::after {
     line-height: 1.6;
 }
 
+.gallery-launch-link {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.gallery-launch-link a {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.gallery-launch-link a:hover {
+    text-decoration: underline;
+}
+
 .gallery-form {
     position: relative;
     z-index: 2;
