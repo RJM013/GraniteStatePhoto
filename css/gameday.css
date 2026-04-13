@@ -1,5 +1,10 @@
 /* gameday.css - Custom styles for the game day media page */
 
+/* Keeps vertical scrollbar from stealing width vs centered content */
+html {
+    scrollbar-gutter: stable;
+}
+
 /* Dramatic Hero Section */
 .dramatic-hero {
     position: relative;
@@ -76,15 +81,42 @@ main {
 }
 
 .hero-content {
-    position: relative;
+    /* --hero-x-nudge: optical shift so copy lines up with contained hero image on wide screens */
+    --hero-x-nudge: 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% - var(--hero-x-nudge)), -50%);
     z-index: 3;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     color: white;
-    max-width: 640px;
-    width: 100%;
+    width: min(100%, 40rem);
+    max-width: 40rem;
     padding: 0 1.5rem;
-    margin: 0 auto;
-    align-self: center;
+    margin: 0;
+}
+
+/*
+ * main.css applies .hero-content { animation: fadeIn } which uses transform: translateY()
+ * and would override the centering translate below — use an animation that keeps translate(-50%,-50%).
+ */
+.dramatic-hero .hero-content {
+    animation: dramaticHeroContentIn 0.85s ease-out forwards;
+}
+
+@keyframes dramaticHeroContentIn {
+    from {
+        opacity: 0;
+        transform: translate(calc(-50% - var(--hero-x-nudge, 0px)), calc(-50% + 18px));
+    }
+    to {
+        opacity: 1;
+        transform: translate(calc(-50% - var(--hero-x-nudge, 0px)), -50%);
+    }
 }
 
 /* Large screen treatment with blurred background */
@@ -92,6 +124,11 @@ main {
     .dramatic-hero {
         margin-top: 0;
         padding-top: 80px;
+    }
+
+    /* Shift copy slightly left so it lines up with the subject in a contained portrait */
+    .dramatic-hero .hero-content {
+        --hero-x-nudge: clamp(0.5rem, 1.25vw, 1.25rem);
     }
     
     .hero-content {
@@ -109,7 +146,8 @@ main {
         height: calc(100% - 80px);
         max-width: 100%;
         object-fit: contain;
-        object-position: center center;
+        /* Slight bias left — subject reads more natural vs centered headline */
+        object-position: 46% center;
         margin: 80px auto 0;
         display: block;
     }
@@ -125,43 +163,44 @@ main {
 .hero-title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
-    line-height: 0.9;
-    margin-bottom: 2rem;
+    line-height: 0.95;
+    margin: 0 auto 2rem;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Inline-block stack = width of longest line; both lines share that width so text centers on one axis */
+.hero-title-stack {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    letter-spacing: 0.05em;
+}
+
+.hero-line-1,
+.hero-line-2 {
+    display: block;
+    width: 100%;
 }
 
 .hero-line-1 {
-    display: block;
     color: var(--accent-color);
-    animation: slideInLeft 1s ease-out;
+    animation: heroLineIn 0.75s ease-out;
 }
 
 .hero-line-2 {
-    display: block;
     color: white;
-    animation: slideInRight 1s ease-out 0.3s both;
+    animation: heroLineIn 0.75s ease-out 0.12s both;
 }
 
-@keyframes slideInLeft {
+@keyframes heroLineIn {
     from {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateY(12px);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
@@ -188,6 +227,7 @@ main {
     transition: all 0.3s ease;
     opacity: 0;
     animation: fadeInUp 1s ease-out 0.6s both;
+    align-self: center;
 }
 
 .hero-cta-btn:hover {
