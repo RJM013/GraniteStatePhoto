@@ -50,9 +50,7 @@ main {
     object-fit: cover;
     object-position: center 20%;
     animation: heroZoom 20s ease-in-out infinite alternate;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-quality;
+    image-rendering: auto;
     position: relative;
     z-index: 2;
 }
@@ -82,10 +80,11 @@ main {
     z-index: 3;
     text-align: center;
     color: white;
-    max-width: 600px;
-    padding: 0 4rem;
-    align-self: flex-end;
-    margin-bottom: 7rem;
+    max-width: 640px;
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    align-self: center;
 }
 
 /* Large screen treatment with blurred background */
@@ -96,7 +95,7 @@ main {
     }
     
     .hero-content {
-        margin-bottom: 3rem;
+        margin-bottom: 0;
     }
     
     /* Show blurred background */
@@ -269,14 +268,11 @@ main {
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    padding: 4rem 4rem 2rem 4rem;
+    padding: 4rem 2rem 2rem;
 }
 
 .impact-title {
     margin-top: 0;
-}
-
-.impact-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 900;
     margin-bottom: 2rem;
@@ -295,6 +291,32 @@ main {
     margin-bottom: 3rem;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
+}
+
+/* Longer orange accent underlines (section titles + h2 rules from main.css) */
+.gameday-gallery-section .section-title::after,
+.gameday-process-section .section-title::after {
+    width: min(280px, 72vw);
+}
+
+.impact-statement .impact-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(260px, 78vw);
+}
+
+.warrior-quote-section .warrior-title::after {
+    width: min(220px, 90%);
+}
+
+.power-statement .power-title::after {
+    width: min(240px, 90%);
+}
+
+.final-impact-cta .cta-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(280px, 82vw);
 }
 
 .impact-metrics {
@@ -358,24 +380,30 @@ main {
 
 .warrior-visual {
     position: relative;
+    width: 100%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+/* Full photo visible — must override .power-image if class is wrong on this img */
+.warrior-visual img,
 .warrior-image {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    object-position: center top;
-    transition: transform 0.5s ease;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-quality;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: min(92vh, 960px);
+    image-rendering: auto;
+    transition: box-shadow 0.35s ease;
 }
 
-.warrior-visual:hover .warrior-image {
-    transform: scale(1.05);
+.warrior-visual:hover {
+    box-shadow: 0 28px 56px rgba(0, 0, 0, 0.55);
 }
 
 .warrior-text {
@@ -484,9 +512,7 @@ main {
     object-fit: cover;
     object-position: center top;
     transition: transform 0.5s ease;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-quality;
+    image-rendering: auto;
 }
 
 .power-visual:hover .power-image {
@@ -516,10 +542,8 @@ main {
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    filter: contrast(1.1) brightness(1.1);
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-quality;
+    filter: contrast(1.05) brightness(0.95);
+    image-rendering: auto;
 }
 
 .cta-overlay {
@@ -650,9 +674,24 @@ main {
 
 /* Game Day Gallery Section */
 .gameday-gallery-section {
-    padding: 8rem 0;
+    padding: clamp(4rem, 10vw, 8rem) 0;
     background: var(--light-color);
     position: relative;
+}
+
+.gameday-gallery-section .section-header {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 2.5rem;
+}
+
+.gameday-gallery-section .section-subtitle {
+    max-width: 38rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+    color: var(--text-color);
+    opacity: 0.92;
 }
 
 .gameday-gallery-section::before {
@@ -673,9 +712,9 @@ main {
 /* Gallery Grid Styling - Pure Focus on Dramatic Images */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: clamp(1.25rem, 3vw, 2rem);
+    margin-top: 0;
     padding: 0;
 }
 
@@ -683,12 +722,12 @@ main {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    background-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease;
+    background-color: #111;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.4s ease;
 }
 
 .gallery-item.animate-in {
@@ -697,8 +736,8 @@ main {
 }
 
 .gallery-item:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
 .gallery-item img {
@@ -706,9 +745,8 @@ main {
     height: 250px;
     object-fit: cover;
     transition: transform 0.5s ease;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-quality;
+    image-rendering: auto;
+    vertical-align: middle;
 }
 
 /* Vertical gallery item styling - Enhanced for Drama */
@@ -719,24 +757,33 @@ main {
 .gallery-item.vertical img {
     height: 100%;
     min-height: 500px;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-quality;
+    image-rendering: auto;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
-
-
-
-
 
 /* Game Day Process Section */
 .gameday-process-section {
     background-color: var(--light-color);
-    padding: 6rem 0;
+    padding: clamp(4rem, 8vw, 6rem) 0;
     position: relative;
+}
+
+.gameday-process-section .section-header {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 1rem;
+}
+
+.gameday-process-section .section-subtitle {
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+    color: var(--text-color);
+    opacity: 0.92;
 }
 
 .process-content {
@@ -763,9 +810,7 @@ main {
     object-position: center top;
     display: block;
     transition: transform 0.5s ease;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-quality;
+    image-rendering: auto;
 }
 
 .process-image:hover img {
@@ -875,6 +920,21 @@ main {
     transform: scale(1.1);
 }
 
+/* Footer contact link (mediaday / gameday pages) */
+.footer-contact-link {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-contact-link:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    opacity: 0.92;
+}
+
 /* Animation */
 @keyframes fadeIn {
     from {
@@ -921,10 +981,25 @@ main {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
+    .warrior-visual {
+        max-width: min(100%, 440px);
+        margin-inline: auto;
+    }
+
+    .warrior-quote-section .warrior-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
     
     .warrior-text {
         padding-left: 0;
         text-align: center;
+    }
+
+    .power-statement .power-title::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .warrior-stats {
@@ -968,7 +1043,7 @@ main {
     
     .hero-content {
         padding: 0 1rem;
-        margin-bottom: 10rem;
+        margin-bottom: 0;
     }
     
     .impact-metrics {
