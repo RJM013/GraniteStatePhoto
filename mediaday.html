@@ -42,7 +42,7 @@
         })(window, document, "clarity", "script", "r51cbyw7en");
     </script>
 </head>
-<body>
+<body class="mediaday-page">
     <!-- Enhanced Header and Navigation -->
     <header class="enhanced-header">
         <div class="container header-container">
@@ -256,8 +256,29 @@
                 </div>
             </div>
         </section>
-        
-       
+
+        <!-- AD quote (pull quote) -->
+        <section class="mediaday-quote-section" aria-labelledby="mediaday-quote-heading">
+            <div class="container">
+                <div class="mediaday-quote-inner">
+                    <p class="mediaday-quote-eyebrow" id="mediaday-quote-heading">From an athletic director</p>
+                    <p class="mediaday-quote-context">Spring media day at Coe-Brown Northwood Academy</p>
+                    <blockquote class="mediaday-blockquote">
+                        <span class="mediaday-quote-mark" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+                        <div class="mediaday-quote-body">
+                            <p>I cannot say enough good things about Rob Mulligan and his 603 In Focus business. I hired Rob to do a Media Day with our Spring athletes, and he did a phenomenal job. I would highly recommend him to any Athletic Director or Coach who is looking to have their team(s) done. He is extremely professional and his ability to take pictures and be creative with them is outstanding.</p>
+                            <p>I will certainly use him again in the near future!!</p>
+                        </div>
+                        <footer class="mediaday-quote-footer">
+                            <cite class="mediaday-quote-cite">
+                                <span class="mediaday-quote-name">Sam Struthers</span>
+                                <span class="mediaday-quote-role">Athletic Director, Coe-Brown Northwood Academy</span>
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Final Impact CTA Section -->
@@ -268,15 +289,12 @@
         </div>
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">READY TO BECOME <span class="cta-highlight">LEGENDARY?</span></h2>
-                <p class="cta-text">Transform your athletic moments into powerful visual statements that command respect.</p>
+                <h2 class="cta-title">LET'S PLAN YOUR <span class="cta-highlight">MEDIA DAY</span></h2>
+                <p class="cta-text">Share your sport, roster size, and timeline—we'll follow up with availability and clear next steps.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn-primary-cta">CONTACT FOR CUSTOM PRICING</a>
+                    <a href="contact.html" class="btn-primary-cta">GET A QUOTE</a>
                 </div>
-                <div class="cta-guarantee">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>100% Intensity Guaranteed</span>
-                </div>
+
             </div>
         </div>
     </section>
@@ -398,7 +416,7 @@
         
         // Animate sections on scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.section-title, .section-subtitle, .approach-card, .process-feature, .gallery-item');
+            const elements = document.querySelectorAll('.section-title, .section-subtitle, .approach-card, .process-feature, .gallery-item, .mediaday-quote-inner');
             
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;

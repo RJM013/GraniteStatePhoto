@@ -1162,3 +1162,166 @@ main {
         font-size: 1rem;
     }
 }
+
+/* Media day page: remove cream “seams” between main sections and above the final CTA */
+.mediaday-page main {
+    padding-bottom: 0;
+}
+
+.mediaday-page .gameday-process-section {
+    margin-bottom: 0;
+}
+
+/* Same cream as quote + process — no strip before the site footer */
+.mediaday-page section.final-impact-cta {
+    margin-bottom: 0;
+}
+
+/* Media day: athletic director pull quote (single quote — editorial layout, not a card grid) */
+/* Beats main.css `section:nth-of-type(odd/even)` background + section { opacity/transform } until .in-view */
+section.mediaday-quote-section {
+    background: var(--light-color);
+    opacity: 1;
+    transform: none;
+    margin-bottom: 0;
+    padding: clamp(3.75rem, 8vw, 5.5rem) 0;
+    border-top: none;
+    position: relative;
+    z-index: 2;
+}
+
+.mediaday-quote-inner {
+    max-width: 44rem;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.mediaday-quote-inner.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mediaday-quote-eyebrow {
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin: 0 0 0.5rem;
+    text-align: center;
+}
+
+.mediaday-quote-context {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.75;
+    text-align: center;
+    margin: 0 0 2.25rem;
+    line-height: 1.5;
+}
+
+.mediaday-blockquote {
+    margin: 0;
+    padding: 2rem 2rem 2rem 2.25rem;
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+}
+
+.mediaday-quote-mark {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.35rem;
+    font-size: clamp(2.5rem, 6vw, 3.25rem);
+    line-height: 1;
+    color: var(--accent-color);
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.mediaday-quote-mark i {
+    display: block;
+}
+
+.mediaday-quote-body {
+    position: relative;
+    padding-left: 2.75rem;
+    padding-top: 0.25rem;
+}
+
+.mediaday-quote-body p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+    line-height: 1.75;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0 0 1.25rem;
+}
+
+.mediaday-quote-body p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Reset global main.css `footer { background: dark; }` — applies to ALL footers, including this cite block */
+.mediaday-blockquote footer.mediaday-quote-footer {
+    margin-top: 2rem;
+    padding: 1.5rem 0 0;
+    background: transparent;
+    background-color: transparent;
+    color: var(--text-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mediaday-quote-cite {
+    font-style: normal;
+    display: block;
+    color: inherit;
+}
+
+.mediaday-quote-name {
+    display: block;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-color);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.35rem;
+}
+
+.mediaday-quote-role {
+    display: block;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(32, 31, 36, 0.75);
+    line-height: 1.45;
+}
+
+@media (max-width: 600px) {
+    .mediaday-blockquote {
+        padding: 1.75rem 1.35rem 1.75rem 1.5rem;
+    }
+
+    .mediaday-quote-mark {
+        top: 1rem;
+        left: 1rem;
+        font-size: 2rem;
+    }
+
+    .mediaday-quote-body {
+        padding-left: 2.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mediaday-quote-inner {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
