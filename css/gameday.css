@@ -1325,3 +1325,25 @@ section.mediaday-quote-section {
         transition: none;
     }
 }
+
+/* Senior portraits page — same layout system as media day */
+.senior-page main {
+    padding-bottom: 0;
+}
+
+.senior-page .gameday-process-section {
+    margin-bottom: 0;
+}
+
+.senior-page section.final-impact-cta {
+    margin-bottom: 0;
+}
+
+.senior-page .hero-background::before {
+    background-image: url('../images/gallery/grad/_Z637649.jpg');
+}
+
+.senior-gallery-section .section-title::after,
+.senior-page .gameday-process-section .section-title::after {
+    width: min(280px, 72vw);
+}
