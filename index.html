@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,17 +6,20 @@
     <title>603 In Focus | Professional Photography in New Hampshire</title>
     <meta name="description" content="Professional photography services capturing family portraits, sports, and New Hampshire's natural beauty throughout all seasons.">
     
+    <meta name="theme-color" content="#1a1a1a">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/dividers.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/gameday.css">
     <link rel="stylesheet" href="css/categories.css">
 
-    <script src="js/navigation.js"></script>
-
-    <script src="js/section-scroll.js"></script>
-    <script src="js/categories.js"></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/section-scroll.js" defer></script>
+    <script src="js/categories.js" defer></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +46,7 @@
         })(window, document, "clarity", "script", "r51cbyw7en");
     </script>
 </head>
-<body>
+<body class="home-page">
     <!-- Header and Navigation -->
     <header class="enhanced-header">
         <div class="container header-container">
@@ -66,12 +69,10 @@
                 <div class="nav-overlay"></div>
                 
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="senior.html" class="nav-link">Seniors</a></li>
                     <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
-                    <li class="nav-item"><a href="mediaday.html" class="nav-link">Media Day</a></li>
-                    <li class="nav-item"><a href="portrait.html" class="nav-link">Headshots</a></li>
-                    <!-- <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li> -->
+                    <li class="nav-item"><a href="mediaday.html" class="nav-link">Media Day</a></li>                    <!-- <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li> -->
                     
                     
                     <!-- <li class="nav-item"><a href="seasonal.html" class="nav-link">Seasonal</a></li> -->
@@ -85,20 +86,41 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Where Every Shot Counts</h1>
-            <p>Professional Southern NH Photographer. Sports, Senior Portraits, and Headshots.</p>
-            <!--<a href="contact.html" class="btn">Book a Session</a>-->
+    <!-- Dramatic Hero Section -->
+    <div class="dramatic-hero">
+        <div class="hero-background">
+            <img src="images/about/sports.jpg" alt="Sports photography by 603 In Focus" class="hero-image" width="1920" height="1080" fetchpriority="high" decoding="async">
+            <div class="hero-overlay"></div>
         </div>
-    </section>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-stack">
+                    <span class="hero-line-1">603 IN FOCUS</span>
+                    <span class="hero-line-2">EVERY SHOT COUNTS</span>
+                </span>
+            </h1>
+            <a href="#services" class="hero-cta-btn">EXPLORE OUR WORK</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main>
-        
+
+        <!-- Impact Statement -->
+        <div class="impact-statement">
+            <div class="container">
+                <div class="impact-content">
+                    <h2 class="impact-title">PROFESSIONAL PHOTOGRAPHY IN <span class="highlight">NEW HAMPSHIRE</span></h2>
+                    <p class="impact-text">We capture the energy, skill, and personality of student athletes while delivering portraits families treasure. From senior sessions and headshots to game-day coverage and team media days, we make the experience seamless for parents, schools, and programs across the Granite State.</p>
+                </div>
+            </div>
+        </div>
+
 <!-- Private Gallery Section -->
-<section class="private-gallery">
+<section class="private-gallery home-private-gallery">
     <div class="container">
         <div class="gallery-card">
             <div class="gallery-card-icon">
@@ -117,12 +139,15 @@
 </section>
 
 
- <!-- Updated HTML structure for the Categories Section -->
-<!-- CATEGORIES SECTION - CLEAN VERSION -->
-<div class="gs-categories">
-    <div class="gs-categories-header">
-        <h2>Our Photography Services</h2>
+ <!-- Services / Categories -->
+<section class="home-services-section" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">OUR PHOTOGRAPHY SERVICES</h2>
+            <p class="section-subtitle">Seniors, sports, headshots, and team media daysâ€”explore what we offer across New Hampshire.</p>
+        </div>
     </div>
+<div class="gs-categories">
     
     <!-- Family Category -->
     <!--
@@ -176,6 +201,23 @@
             </div>
         </div>
     </a>
+
+    <!-- Media Day Category -->
+    <a href="mediaday.html" class="gs-category mediaday">
+        <div class="gs-category-image">
+            <img src="images/gameday/_Z635466.jpg" alt="Media day team photography">
+        </div>
+        <div class="gs-category-content">
+            <div class="gs-category-text">
+                <div class="gs-category-tagline">TEAM</div>
+                <h2 class="gs-category-title">MEDIA DAY</h2>
+                <div class="gs-category-tagline">PORTRAITS</div>
+                <div class="gs-category-cta">
+                    <span class="gs-button">Learn More</span>
+                </div>
+            </div>
+        </div>
+    </a>
     
     <!-- Portrait Category -->
     <a href="portrait.html" class="gs-category portrait">
@@ -215,65 +257,53 @@
     </a>
     -->
 </div>
+</section>
 
-<!-- About Section with 3 Columns -->
-<!-- About Section with 3 Columns -->
-<section class="about">
-    <div class="section-header">
-        <h2 class="section-title">About 603 In Focus</h2>
-    </div>
-
-    <!-- Middle Column - Text Content 
-    <div class="container about-container">
-        <div class="about-column about-text">
-            <div class="content-card text-card">
-                <p></p>
+<section class="warrior-quote-section home-about-section">
+    <div class="container">
+        <div class="warrior-content">
+            <div class="warrior-visual">
+                <img src="images/about/aboutus.jpeg" alt="603 In Focus photographer in New Hampshire" class="warrior-image" loading="lazy" decoding="async">
             </div>
-        </div>
-    </div>
--->
-    
-    <div class="container about-container">
-        <div class="about-columns">
-            <!-- Left Column - First Image (Vertical) -->
-            <div class="about-column about-image">
-                <div class="content-card">
-                    <img src="images/about/aboutus.jpeg" alt="Photographer in New Hampshire landscape" class="about-img-direct">
-                </div>
-            </div>
-            
-            <!-- Middle Column - Text Content -->
-            <div class="about-column about-text">
-                <div class="content-card text-card">
-                    <!--<p>603 In Focus is a family friendly professional photography service based in Strafford, New Hampshire. We specialize in capturing portraits, headshots, and exciting sports moments.</p>
-                -->
-                        <p style="text-align: center; font-style: italic;"> <span style="font-weight: bold;"> 603 In Focus </span> captures the energy, skill, and personality of student athletes while delivering professional portraits that families treasure. We make the photography experience seamless for parents and schools alike, because <span style="font-weight: bold;"> every shot counts. </span></p>
-                    <a href="contact.html" class="btn">Contact Us</a>
-                </div>
-            </div>
-            
-            <!-- Right Column - Second Image (Horizontal) -->
-            <div class="about-column about-image">
-                <div class="content-card">
-                    <img src="images/about/in-action.jpg" alt="Photography session in progress" class="about-img-direct2">
+            <div class="warrior-text">
+                <h2 class="warrior-title">ABOUT 603 IN FOCUS</h2>
+                <p class="warrior-quote">Based in Strafford, New Hampshire, we specialize in senior portraits, sports coverage, professional headshots, and team media days. We capture the energy, skill, and personality of student athletes while delivering images families and programs are proud to use.</p>
+                <div class="warrior-stats">
+                    <div class="warrior-stat">
+                        <span class="stat-value">LOCAL</span>
+                        <span class="stat-desc">Granite State</span>
+                    </div>
+                    <div class="warrior-stat">
+                        <span class="stat-value">TRUSTED</span>
+                        <span class="stat-desc">Schools &amp; families</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Mountain background with semi-transparent effect -->
-    <div class="mountain-background">
-        <img src="images/Dividers/mountain.svg" alt="Mountain divider" class="mountain-image">
     </div>
 </section>
 
-    
+<section class="power-statement">
+    <div class="container">
+        <div class="power-content">
+            <div class="power-text">
+                <h2 class="power-title">A SEAMLESS EXPERIENCE FROM BOOKING TO GALLERY</h2>
+                <p class="power-quote">Clear communication, organized sessions, and professional deliveryâ€”whether you are a parent planning senior photos, a coach scheduling media day, or a business updating headshots.</p>
+                <div class="power-signature">â€” 603 In Focus</div>
+            </div>
+            <div class="power-visual">
+                <img src="images/about/in-action.jpg" alt="Photography session in progress" class="power-image" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Testimonials Section -->
 <section class="testimonials">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Client Stories</h2>
-            <p class="section-subtitle">Here's what our clients are saying about their experience with 603 In Focus</p>
+            <h2 class="section-title">CLIENT STORIES</h2>
+            <p class="section-subtitle">What families, athletes, and programs are saying about their experience with 603 In Focus</p>
         </div>
         
         <div class="testimonial-grid">
@@ -371,7 +401,7 @@
 <section class="faq-section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
             <p class="section-subtitle">Everything you need to know about our photography services</p>
         </div>
         
@@ -429,7 +459,7 @@
                     </div>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes! We offer high‑quality prints and digital downloads of your photos.</p>
+                    <p>Yes! We offer highâ€‘quality prints and digital downloads of your photos.</p>
                 </div>
             </div>
             
@@ -478,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Pricing & Session Information Section -->
 <section class="pricing-section" id="pricing">
     <div class="section-header">
-        <h2 class="section-title">Our Photography Sessions</h2>
+        <h2 class="section-title">OUR PHOTOGRAPHY SESSIONS</h2>
         <p class="section-subtitle">Professional photography packages tailored to your needs</p>
     </div>
         <div class="pricing-tabs">
@@ -786,15 +816,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the header element
     const header = document.querySelector('.enhanced-header');
-    
-    // Set the scroll threshold (how far down before the header changes)
     const scrollThreshold = 50;
     
-    // Listen for scroll events
     window.addEventListener('scroll', function() {
-        // Check if we've scrolled past the threshold
         if (window.scrollY > scrollThreshold) {
             header.classList.add('scrolled');
         } else {
@@ -802,12 +827,73 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Check initial scroll position (in case page is refreshed while scrolled down)
     if (window.scrollY > scrollThreshold) {
         header.classList.add('scrolled');
     }
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navOverlay = document.querySelector('.nav-overlay');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+        
+        if (navOverlay) {
+            navOverlay.addEventListener('click', function() {
+                document.body.classList.remove('menu-open');
+            });
+        }
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
+
+    const heroCTA = document.querySelector('.hero-cta-btn');
+    if (heroCTA) {
+        heroCTA.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#services');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
+
+    const galleryCard = document.querySelector('.gallery-card');
+    if (galleryCard) {
+        const showCard = () => {
+            if (galleryCard.getBoundingClientRect().top < window.innerHeight * 0.9) {
+                galleryCard.classList.add('animate-in');
+            }
+        };
+        showCard();
+        window.addEventListener('scroll', showCard);
+    }
 });
 </script>
+
+        <!-- Final Impact CTA -->
+        <section class="final-impact-cta">
+            <div class="cta-background">
+                <img src="images/gallery/grad/_Z637649.jpg" alt="Senior portrait by 603 In Focus" class="cta-bg-image" loading="lazy" decoding="async">
+                <div class="cta-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">READY TO <span class="cta-highlight">GET STARTED</span>?</h2>
+                    <p class="cta-text">Book a senior session, game-day coverage, headshots, or team media day—we will follow up with availability and clear next steps.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn-primary-cta">BOOK A SESSION</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -823,7 +909,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="footer-col">
                 <h3>Contact</h3>
                 <ul>
-                    <p> <a href="contact.html" style="color: var(--accent-color);">Click here to contact us!</a> </p>
+                    <li><a href="contact.html" class="footer-contact-link">Contact us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -840,7 +926,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         </div>
         <div class="copyright container">
-            <p>&copy; 2025 603 In Focus. All rights reserved.</p>
+            <p>&copy; 2026 603 In Focus. All rights reserved.</p>
         </div>
     </footer>
 

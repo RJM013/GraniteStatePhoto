@@ -1347,3 +1347,71 @@ section.mediaday-quote-section {
 .senior-page .gameday-process-section .section-title::after {
     width: min(280px, 72vw);
 }
+
+/* Home page — dramatic layout + existing sections */
+.home-page main {
+    padding-bottom: 0;
+}
+
+.home-page section.final-impact-cta {
+    margin-bottom: 0;
+}
+
+.home-page .hero-background::before {
+    background-image: url('../images/about/sports.jpg');
+}
+
+.home-page .home-private-gallery {
+    margin-top: 0;
+    padding: clamp(2.5rem, 6vw, 4rem) 0;
+    background: var(--light-color);
+}
+
+.home-page .home-private-gallery .gallery-card {
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.home-page .home-services-section {
+    padding: clamp(3rem, 8vw, 5rem) 0 0;
+    background: var(--light-color);
+}
+
+.home-page .home-services-section .section-header {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 1.5rem;
+}
+
+.home-page .home-services-section .section-title::after {
+    width: min(280px, 72vw);
+}
+
+.home-page .gs-categories {
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.home-page .gs-categories-header {
+    display: none;
+}
+
+.home-page .impact-statement .impact-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(260px, 78vw);
+}
+
+.home-page .testimonials,
+.home-page .faq-section,
+.home-page .pricing-section {
+    position: relative;
+    z-index: 2;
+}
+
+.home-page .testimonials .section-title::after,
+.home-page .faq-section .section-title::after,
+.home-page .pricing-section .section-title::after {
+    width: min(240px, 72vw);
+}
