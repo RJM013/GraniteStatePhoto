@@ -1164,6 +1164,10 @@ main {
 }
 
 /* Media day page: remove cream “seams” between main sections and above the final CTA */
+.mediaday-page .hero-background::before {
+    background-image: url('../images/hero/_Z633920.jpg');
+}
+
 .mediaday-page main {
     padding-bottom: 0;
 }
@@ -1414,4 +1418,58 @@ section.mediaday-quote-section {
 .home-page .faq-section .section-title::after,
 .home-page .pricing-section .section-title::after {
     width: min(240px, 72vw);
+}
+
+/* Sports photography page */
+.sports-page main {
+    padding-bottom: 0;
+}
+
+.sports-page section.final-impact-cta {
+    margin-bottom: 0;
+}
+
+.sports-page .gameday-process-section {
+    margin-bottom: 0;
+}
+
+.sports-page .hero-background::before {
+    background-image: url('../images/hero/_Z638174.jpg');
+}
+
+.sports-gallery-section .section-title::after,
+.sports-page .gameday-process-section .section-title::after {
+    width: min(280px, 72vw);
+}
+
+.sports-page .gallery-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 2rem;
+}
+
+.sports-page .filter-btn {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.06);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+
+.sports-page .filter-btn:hover {
+    background-color: rgba(255, 153, 79, 0.15);
+}
+
+.sports-page .filter-btn.active {
+    background: linear-gradient(45deg, var(--accent-color), #ff6b35);
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 153, 79, 0.35);
 }

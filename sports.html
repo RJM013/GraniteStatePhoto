@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Photography | 603 In Focus</title>
-    <meta name="description" content="Professional sports photography capturing athletic achievements across New Hampshire - basketball, soccer, baseball, and hockey.">
+    <meta name="description" content="Professional sports photography across New Hampshire—basketball, soccer, volleyball, and more. Game-day action, emotion, and team coverage.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.603-in-focus.com/sports.html">
+    <meta name="theme-color" content="#1a1a1a">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="603 In Focus">
+    <meta property="og:title" content="Sports Photography | 603 In Focus">
+    <meta property="og:description" content="Professional sports photography capturing athletic achievements across New Hampshire.">
+    <meta property="og:url" content="https://www.603-in-focus.com/sports.html">
+    <meta property="og:image" content="https://www.603-in-focus.com/images/hero/_Z638174.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sports Photography | 603 In Focus">
+    <meta name="twitter:image" content="https://www.603-in-focus.com/images/hero/_Z638174.jpg">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
@@ -12,7 +26,7 @@
     <link rel="stylesheet" href="css/dividers.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/sports.css">
+    <link rel="stylesheet" href="css/gameday.css">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,7 +42,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="images/favicon_io/site.webmanifest">
     <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
-    
+
     <!-- Deferred Scripts -->
     <script src="js/navigation.js" defer></script>
     <script src="js/section-scroll.js" defer></script>
@@ -42,13 +56,11 @@
         })(window, document, "clarity", "script", "r51cbyw7en");
     </script>
 </head>
-<body>
-    <!-- Enhanced Header and Navigation -->
+<body class="sports-page">
     <header class="enhanced-header">
         <div class="container header-container">
             <div class="logo-container">
                 <a href="index.html" class="logo">
-                     <!--<span class="logo-text">603 In Focus</span> -->
                      <img src="images/logo/603_orange_logo.png" alt="603 In Focus Logo" class="logo-image">
                 </a>
             </div>
@@ -67,38 +79,51 @@
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="senior.html" class="nav-link">Seniors</a></li>
-                    <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
-                    <li class="nav-item"><a href="mediaday.html" class="nav-link">Media Day</a></li>                    <!-- <li class="nav-item"><a href="family.html" class="nav-link">Family</a></li> -->
-                    
-                    
-                    <!-- <li class="nav-item"><a href="seasonal.html" class="nav-link">Seasonal</a></li> -->
-                    <!-- <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li> -->
-                   <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
-                   <!-- <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li> -->
-                   <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+                    <li class="nav-item"><a href="sports.html" class="nav-link active">Sports</a></li>
+                    <li class="nav-item"><a href="mediaday.html" class="nav-link">Media Day</a></li>
+                    <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
                     <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <h1>Sports Photography</h1>
-        <p>Capturing the energy, determination, and triumph of athletic achievements across New Hampshire's sporting communities.</p>
-    </section>
+    <div class="dramatic-hero">
+        <div class="hero-background">
+            <img src="images/hero/_Z638174.jpg" alt="High school sports action photography" class="hero-image" width="1920" height="1080" fetchpriority="high" decoding="async">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-stack">
+                    <span class="hero-line-1">SPORTS</span>
+                    <span class="hero-line-2">PHOTOGRAPHY</span>
+                </span>
+            </h1>
+            <a href="#gallery" class="hero-cta-btn">VIEW SAMPLE WORK</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </div>
 
-    <!-- Main Content -->
     <main>
-        <!-- Sports Gallery Section -->
-        <section class="sports-gallery-section">
+        <div class="impact-statement">
+            <div class="container">
+                <div class="impact-content">
+                    <h2 class="impact-title">WHERE <span class="highlight">ACTION</span> MEETS EMOTION</h2>
+                    <p class="impact-text">From tip-off to the final whistle, we capture the speed, skill, and story of New Hampshire athletics. Youth leagues, high school programs, and tournament weekends—delivered in sharp, share-ready galleries parents and teams actually use.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="gameday-gallery-section sports-gallery-section" id="gallery">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Game Day Highlights</h2>
-                    <p class="section-subtitle">Browse our collection of dynamic action shots from New Hampshire's sporting events</p>
+                    <h2 class="section-title">GAME DAY HIGHLIGHTS</h2>
+                    <p class="section-subtitle">Action, emotion, and team moments from basketball, soccer, and more across the Granite State.</p>
                 </div>
 
-                <!-- Gallery Filter -->
                 <div class="gallery-filter">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="rec">Rec Soccer</button>
@@ -107,228 +132,186 @@
                     <button class="filter-btn" data-filter="volley">High School Volleyball</button>
                 </div>
 
-                <!-- Gallery Grid -->
                 <div class="gallery-grid">
-                    <!-- High School Basketball -->
                     <div class="gallery-item vertical" data-category="bball">
-                        <img src="images\gallery\sports\basketball\new\_Z633002.jpeg" alt="Rec Soccer Game">
-                    </div>
-                    <div class="gallery-item vertical" data-category="bball">
-                        <img src="images\gallery\sports\basketball\new\_Z633026.jpeg" alt="Rec Soccer Game">
+                        <img src="images/gallery/sports/basketball/new/_Z633002.jpeg" alt="High school basketball action" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item vertical" data-category="bball">
-                        <img src="images\gallery\sports\basketball\new\_Z633035.jpeg" alt="Rec Soccer Game">
+                        <img src="images/gallery/sports/basketball/new/_Z633026.jpeg" alt="Basketball game action" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item vertical" data-category="bball">
-                        <img src="images\gallery\sports\basketball\new\_Z633103.jpeg" alt="Rec Soccer Game">
+                        <img src="images/gallery/sports/basketball/new/_Z633035.jpeg" alt="Basketball player in motion" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item vertical" data-category="bball">
-                        <img src="images\gallery\sports\basketball\new\_Z633396.jpeg" alt="Rec Soccer Game">
+                        <img src="images/gallery/sports/basketball/new/_Z633103.jpeg" alt="Basketball game moment" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item vertical" data-category="bball">
-                        <img src="images\gallery\sports\basketball\new\_Z633915.jpeg" alt="Rec Soccer Game">
+                        <img src="images/gallery/sports/basketball/new/_Z633396.jpeg" alt="Basketball action shot" loading="lazy" decoding="async">
                     </div>
-
-
-                    <!-- High School Volleyball -->
-
-
-
-                    <!-- High School Soccer -->
-                    <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\0ED448B8-0268-4C36-9076-A7A28972CEF6_1_105_c.jpeg" alt="Rec Soccer Game">
-                    </div>
-                    <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\1F574B8D-5801-4718-8F7E-395DB9F65FDD_1_105_c.jpeg" alt="Basketball Dunk">
-                    </div>
-                    <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\732C9656-1E81-421F-B335-E51CF1935E23_1_201_a.jpeg" alt="Basketball Defense">
-                    </div>
-                    <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\0870E289-1DE6-40CB-B3BD-8E943F6B84B2_1_105_c.jpeg" alt="Youth Soccer Match">
-                    </div>
-                    <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\B411F1AC-596F-4824-97A1-400A4995AFC2_1_105_c.jpeg" alt="Soccer Goal Celebration">
+                    <div class="gallery-item vertical" data-category="bball">
+                        <img src="images/gallery/sports/basketball/new/_Z633915.jpeg" alt="Basketball sports photography" loading="lazy" decoding="async">
                     </div>
 
                     <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\C0A8CC68-64C8-4CB7-8600-4799E867A685_1_105_c.jpeg" alt="Baseball Pitch">
+                        <img src="images/gallery/sports/hs_soccer/0ED448B8-0268-4C36-9076-A7A28972CEF6_1_105_c.jpeg" alt="High school soccer action" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\C6CF1D75-CF7F-4443-9426-975678B8C008_1_105_c.jpeg" alt="Baseball Team Victory">
+                        <img src="images/gallery/sports/hs_soccer/1F574B8D-5801-4718-8F7E-395DB9F65FDD_1_105_c.jpeg" alt="High school soccer play" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item" data-category="high">
-                        <img src="images\gallery\sports\hs_soccer\F0924DC9-154D-4075-8C3A-CB1800246EDE_1_105_c.jpeg" alt="Baseball Team Victory">
+                        <img src="images/gallery/sports/hs_soccer/732C9656-1E81-421F-B335-E51CF1935E23_1_201_a.jpeg" alt="Soccer game coverage" loading="lazy" decoding="async">
                     </div>
-
-
-
-                    <!-- Rec Soccer -->
-                    <div class="gallery-item" data-category="rec">
-                        <img src="images\gallery\sports\rec_soccer\7FBBE470-EE2D-43BC-BC67-0CFB65B34D6B_1_105_c.jpeg" alt="Rec Soccer Game">
+                    <div class="gallery-item" data-category="high">
+                        <img src="images/gallery/sports/hs_soccer/0870E289-1DE6-40CB-B3BD-8E943F6B84B2_1_105_c.jpeg" alt="High school soccer match" loading="lazy" decoding="async">
                     </div>
-                    <div class="gallery-item" data-category="rec">
-                        <img src="images\gallery\sports\rec_soccer\099D9397-4B2E-43C1-9B36-58CE0CB92897_1_105_c.jpeg" alt="Basketball Dunk">
+                    <div class="gallery-item" data-category="high">
+                        <img src="images/gallery/sports/hs_soccer/B411F1AC-596F-4824-97A1-400A4995AFC2_1_105_c.jpeg" alt="Soccer goal celebration" loading="lazy" decoding="async">
                     </div>
-                    <div class="gallery-item" data-category="rec">
-                        <img src="images\gallery\sports\rec_soccer\58096687-1B72-485B-BA58-1AB0FB553924_1_201_a.jpeg" alt="Basketball Defense">
+                    <div class="gallery-item" data-category="high">
+                        <img src="images/gallery/sports/hs_soccer/C0A8CC68-64C8-4CB7-8600-4799E867A685_1_105_c.jpeg" alt="High school soccer moment" loading="lazy" decoding="async">
                     </div>
-                    <div class="gallery-item" data-category="rec">
-                        <img src="images\gallery\sports\rec_soccer\97247830-E7A6-4D90-B81E-C39837A78BE2_1_105_c.jpeg" alt="Youth Soccer Match">
+                    <div class="gallery-item" data-category="high">
+                        <img src="images/gallery/sports/hs_soccer/C6CF1D75-CF7F-4443-9426-975678B8C008_1_105_c.jpeg" alt="Soccer team action" loading="lazy" decoding="async">
                     </div>
-                    <div class="gallery-item" data-category="rec">
-                        <img src="images\gallery\sports\rec_soccer\EB96F388-CC1C-44C5-B289-C5049318CD8C_1_105_c.jpeg" alt="Soccer Goal Celebration">
+                    <div class="gallery-item" data-category="high">
+                        <img src="images/gallery/sports/hs_soccer/F0924DC9-154D-4075-8C3A-CB1800246EDE_1_105_c.jpeg" alt="High school soccer coverage" loading="lazy" decoding="async">
                     </div>
 
                     <div class="gallery-item" data-category="rec">
-                        <img src="images\gallery\sports\rec_soccer\F92C39ED-8AA7-4189-8CD5-ADB8A53ED007_1_105_c.jpeg" alt="Baseball Pitch">
+                        <img src="images/gallery/sports/rec_soccer/7FBBE470-EE2D-43BC-BC67-0CFB65B34D6B_1_105_c.jpeg" alt="Rec soccer game" loading="lazy" decoding="async">
                     </div>
-        
-
-
+                    <div class="gallery-item" data-category="rec">
+                        <img src="images/gallery/sports/rec_soccer/099D9397-4B2E-43C1-9B36-58CE0CB92897_1_105_c.jpeg" alt="Youth soccer action" loading="lazy" decoding="async">
+                    </div>
+                    <div class="gallery-item" data-category="rec">
+                        <img src="images/gallery/sports/rec_soccer/58096687-1B72-485B-BA58-1AB0FB553924_1_201_a.jpeg" alt="Rec soccer match" loading="lazy" decoding="async">
+                    </div>
+                    <div class="gallery-item" data-category="rec">
+                        <img src="images/gallery/sports/rec_soccer/97247830-E7A6-4D90-B81E-C39837A78BE2_1_105_c.jpeg" alt="Youth soccer game" loading="lazy" decoding="async">
+                    </div>
+                    <div class="gallery-item" data-category="rec">
+                        <img src="images/gallery/sports/rec_soccer/EB96F388-CC1C-44C5-B289-C5049318CD8C_1_105_c.jpeg" alt="Rec soccer celebration" loading="lazy" decoding="async">
+                    </div>
+                    <div class="gallery-item" data-category="rec">
+                        <img src="images/gallery/sports/rec_soccer/F92C39ED-8AA7-4189-8CD5-ADB8A53ED007_1_105_c.jpeg" alt="Rec soccer coverage" loading="lazy" decoding="async">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sports Coverage Section -->
-        <section class="sports-coverage-section">
+        <section class="warrior-quote-section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Our Sports Coverage</h2>
-                    <p class="section-subtitle">Specialized photography for various sports across New Hampshire</p>
-                </div>
-                
-                <div class="sports-grid">
-                    <div class="sport-card">
-                        <div class="sport-icon">
-                            <i class="fas fa-basketball"></i>
-                        </div>
-                        <h3>Basketball</h3>
-                        <p>From fast breaks to clutch three-pointers, we capture the intensity and emotion of basketball games at all levels. Our high-speed photography freezes the action at the perfect moment.</p>
-                        <ul class="sport-features">
-                            <li>Youth leagues</li>
-                            <li>High school</li>
-                            <li>College</li>
-                            <li>Championship events</li>
-                        </ul>
+                <div class="warrior-content">
+                    <div class="warrior-visual">
+                        <img src="images/hero/bball_game_winner.JPG" alt="Basketball celebration moment" class="warrior-image" loading="lazy" decoding="async">
                     </div>
-                    
-                    <div class="sport-card">
-                        <div class="sport-icon">
-                            <i class="fas fa-futbol"></i>
+                    <div class="warrior-text">
+                        <h2 class="warrior-title">COVERAGE ACROSS THE SPORTS YOU LOVE</h2>
+                        <p class="warrior-quote">Basketball, soccer, volleyball, baseball, and hockey—we know where to stand, when to shoot, and how to deliver images that freeze the play and the emotion around it. Youth leagues through high school championships and tournament weekends.</p>
+                        <div class="warrior-stats">
+                            <div class="warrior-stat">
+                                <span class="stat-value">FAST</span>
+                                <span class="stat-desc">Action frozen</span>
+                            </div>
+                            <div class="warrior-stat">
+                                <span class="stat-value">FULL</span>
+                                <span class="stat-desc">Game stories</span>
+                            </div>
                         </div>
-                        <h3>Soccer</h3>
-                        <p>We follow the action across the field to document every goal, save, and celebration. Our photography captures both the technical skill and the passion that makes soccer so exciting.</p>
-                        <ul class="sport-features">
-                            <li>Youth development</li>
-                            <li>Club teams</li>
-                            <li>School competitions</li>
-                            <li>Tournament coverage</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sport-card">
-                        <div class="sport-icon">
-                            <i class="fas fa-baseball-ball"></i>
-                        </div>
-                        <h3>Baseball</h3>
-                        <p>America's pastime deserves special attention to detail. We capture the perfect pitch, the clutch hit, and the game-saving catch with crisp, clear imagery that preserves the moment.</p>
-                        <ul class="sport-features">
-                            <li>Little League</li>
-                            <li>High school varsity</li>
-                            <li>American Legion</li>
-                            <li>Collegiate summer leagues</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sport-card">
-                        <div class="sport-icon">
-                            <i class="fas fa-hockey-puck"></i>
-                        </div>
-                        <h3>Hockey</h3>
-                        <p>The speed and intensity of hockey demands specialized photography skills. We're positioned to capture the breakaways, the saves, and the celebrations that make hockey so exciting.</p>
-                        <ul class="sport-features">
-                            <li>Youth hockey</li>
-                            <li>High school</li>
-                            <li>Adult leagues</li>
-                            <li>Tournament events</li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Game Day Experience Section -->
-        <section class="gameday-section">
+
+        <section class="power-statement">
+            <div class="container">
+                <div class="power-content">
+                    <div class="power-text">
+                        <h2 class="power-title">MORE THAN THE PLAY ITSELF</h2>
+                        <p class="power-quote">We document celebrations, determination, bench reactions, and team chemistry—the moments families and programs want to remember alongside the big plays.</p>
+                        <div class="power-signature">— 603 In Focus</div>
+                    </div>
+                    <div class="power-visual">
+                        <img src="images/about/in-action.jpg" alt="Sports photographer at a game" class="power-image" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gameday-process-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">The Game Day Experience</h2>
-                    <p class="section-subtitle">How we capture the complete story of your sporting event</p>
+                    <h2 class="section-title">HOW IT WORKS</h2>
+                    <p class="section-subtitle">What you can expect when we cover your game, tournament, or athlete spotlight session.</p>
                 </div>
                 
-                <div class="gameday-content">
-                    <div class="gameday-image">
-                        <img src="images\hero\_Z638174.jpg" alt="Photographer at sporting event">
+                <div class="process-content">
+                    <div class="process-image">
+                        <img src="images/about/sports.jpg" alt="Basketball tip-off action" loading="lazy" decoding="async">
                     </div>
                     
-                    <div class="gameday-info">
-                        <div class="gameday-feature">
+                    <div class="process-info">
+                        <div class="process-feature">
                             <div class="feature-icon">
                                 <i class="fas fa-bolt"></i>
                             </div>
                             <div class="feature-content">
-                                <h3>Action Shots</h3>
-                                <p>We position ourselves to capture the key moments of play using high-speed cameras that freeze the action with crystal clarity.</p>
+                                <h3>Action shots</h3>
+                                <p>We position for key moments of play using high-speed capture so motion stays sharp—drives, saves, goals, and the plays that define the game.</p>
                             </div>
                         </div>
                         
-                        <div class="gameday-feature">
+                        <div class="process-feature">
                             <div class="feature-icon">
                                 <i class="fas fa-smile"></i>
                             </div>
                             <div class="feature-content">
-                                <h3>Emotion & Reactions</h3>
-                                <p>Beyond just the play itself, we document the emotionâ€”the celebrations, determination, and team camaraderie that make sports special.</p>
+                                <h3>Emotion &amp; reactions</h3>
+                                <p>Beyond the play itself, we capture celebrations, focus between plays, and the camaraderie that makes sports meaningful for athletes and families.</p>
                             </div>
                         </div>
                         
-                        <div class="gameday-feature">
+                        <div class="process-feature">
                             <div class="feature-icon">
                                 <i class="fas fa-users"></i>
                             </div>
                             <div class="feature-content">
-                                <h3>Team Photography</h3>
-                                <p>Before or after the game, we capture professional team photos, individual player portraits, and coach/player interactions.</p>
+                                <h3>Team &amp; player moments</h3>
+                                <p>When schedules allow, we photograph team groups, individual athletes, and coach interactions—great for programs and personal keepsakes.</p>
                             </div>
                         </div>
                         
-                        <div class="gameday-feature">
+                        <div class="process-feature">
                             <div class="feature-icon">
                                 <i class="fas fa-trophy"></i>
                             </div>
                             <div class="feature-content">
-                                <h3>Award Ceremonies</h3>
-                                <p>For tournament and championship events, we stay to document the awards, trophies, and recognition of achievement.</p>
+                                <h3>Tournaments &amp; awards</h3>
+                                <p>For championship and tournament events, we stay through recognition moments so milestones are documented alongside the action.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-       
+
+        <section class="final-impact-cta">
+            <div class="cta-background">
+                <img src="images/gallery/sports/basketball/new/_Z633396.jpeg" alt="Basketball sports action" class="cta-bg-image" loading="lazy" decoding="async">
+                <div class="cta-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">LET'S COVER YOUR <span class="cta-highlight">NEXT GAME</span></h2>
+                    <p class="cta-text">Share your sport, date, and what you need—single-game coverage, athlete spotlight, or a full tournament. We will follow up with availability and next steps.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn-primary-cta">BOOK SPORTS COVERAGE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- CTA Section with Fixed Styling -->
-    <section class="cta-section cta-gradient">
-        <div class="container">
-            <h2>Showcase Your Athletes' Achievements</h2>
-            <p>From youth leagues to high school championships, we capture the defining moments of athletic excellence. Custom packages available for teams, individual players, and tournaments.</p>
-            <a href="contact.html" class="btn">Book Sports Coverage</a>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox-content">
             <button class="lightbox-close">&times;</button>
@@ -337,7 +320,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container footer-container">
             <div class="footer-col">
@@ -351,7 +333,7 @@
             <div class="footer-col">
                 <h3>Contact</h3>
                 <ul>
-                    <p> <a href="contact.html" style="color: var(--accent-color);">Click here to contact us!</a> </p>
+                    <li><a href="contact.html" class="footer-contact-link">Contact us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -361,21 +343,17 @@
                     <li><a href="senior.html">Seniors</a></li>
                     <li><a href="sports.html">Sports</a></li>
                     <li><a href="mediaday.html">Media Day</a></li>
-                    <li><a href="portrait.html">Headshots</a></li>
                     <li><a href="packages.html">Packages</a></li>
                 </ul>
             </div>
-
         </div>
         <div class="copyright container">
-            <p>&copy; 2025 603 In Focus. All rights reserved.</p>
+            <p>&copy; 2026 603 In Focus. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Header scroll effect
         const enhancedHeader = document.querySelector('.enhanced-header');
         
         window.addEventListener('scroll', function() {
@@ -386,7 +364,6 @@
             }
         });
         
-        // Mobile navigation toggle
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
         const navOverlay = document.querySelector('.nav-overlay');
@@ -402,32 +379,27 @@
                 });
             }
             
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
+            document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', function() {
                     document.body.classList.remove('menu-open');
                 });
             });
         }
-        
-        // Gallery filter
+
         const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item, .gallery-item.vertical');
+        const galleryItems = document.querySelectorAll('.gallery-item');
         
         if (filterBtns.length > 0 && galleryItems.length > 0) {
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
                     filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
                     btn.classList.add('active');
                     
                     const filter = btn.getAttribute('data-filter');
                     
                     galleryItems.forEach(item => {
                         if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
+                            item.style.display = '';
                         } else {
                             item.style.display = 'none';
                         }
@@ -436,7 +408,6 @@
             });
         }
         
-        // Lightbox functionality
         const galleryImages = document.querySelectorAll('.gallery-item img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -448,17 +419,7 @@
             galleryImages.forEach(img => {
                 img.addEventListener('click', () => {
                     lightboxImg.src = img.src;
-                    
-                    const overlay = img.nextElementSibling;
-                    if (overlay) {
-                        const title = overlay.querySelector('h3');
-                        const description = overlay.querySelector('p');
-                        
-                        if (title && description) {
-                            lightboxCaption.textContent = `${title.textContent} - ${description.textContent}`;
-                        }
-                    }
-                    
+                    lightboxCaption.textContent = img.alt || 'Sports action photo';
                     lightbox.style.display = 'flex';
                 });
             });
@@ -476,9 +437,8 @@
             });
         }
         
-        // Animate sections on scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.section-title, .section-subtitle, .sport-card, .gameday-feature, .package-card, .gallery-item');
+            const elements = document.querySelectorAll('.section-title, .section-subtitle, .process-feature, .gallery-item');
             
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
@@ -490,9 +450,19 @@
             });
         };
         
-        // Run animation check on load and scroll
         animateOnScroll();
         window.addEventListener('scroll', animateOnScroll);
+        
+        const heroCTA = document.querySelector('.hero-cta-btn');
+        if (heroCTA) {
+            heroCTA.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector('#gallery');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
     });
     </script>
 </body>
