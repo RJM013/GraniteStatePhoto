@@ -1473,3 +1473,31 @@ section.mediaday-quote-section {
     color: white;
     box-shadow: 0 4px 12px rgba(255, 153, 79, 0.35);
 }
+
+/* Packages page */
+.packages-page main {
+    padding-bottom: 0;
+}
+
+.packages-page section.final-impact-cta {
+    margin-bottom: 0;
+}
+
+.packages-page .hero-background::before {
+    background-image: url('../images/gallery/grad/_Z637676.jpg');
+}
+
+.packages-page .pricing-section {
+    position: relative;
+    z-index: 2;
+}
+
+.packages-page .pricing-section .section-title::after {
+    width: min(280px, 72vw);
+}
+
+.packages-page .impact-statement .impact-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(260px, 78vw);
+}

@@ -1,5 +1,45 @@
 /* Packages Page Specific Styles */
 
+.packages-page .pricing-tabs {
+    gap: 0.5rem;
+}
+
+.packages-page .pricing-tab {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0.25rem 0.5rem;
+}
+
+.packages-page .pricing-tab:hover {
+    background-color: rgba(255, 153, 79, 0.15);
+}
+
+.packages-page .pricing-tab.active {
+    background: linear-gradient(45deg, var(--accent-color), #ff6b35);
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 153, 79, 0.35);
+}
+
+.packages-page .pricing-section {
+    padding-top: clamp(3rem, 8vw, 5rem);
+}
+
+.packages-page .pricing-header .btn {
+    font-size: clamp(0.72rem, 2.2vw, 0.82rem);
+    padding: 0.7rem 0.85rem;
+}
+
+.packages-page .pricing-note {
+    background-color: white;
+    border-left: 4px solid var(--accent-color);
+}
+
 /* Package Categories Section */
 .packages-intro {
     padding: 5rem 0;

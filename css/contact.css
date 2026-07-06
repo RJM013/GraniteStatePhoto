@@ -1,4 +1,16 @@
-/* Contact Section — editorial / athletic tone aligned with site CTAs */
+/* Contact page hero */
+.contact-page .hero-background::before {
+    background-image: url('../images/gallery/grad/_Z637752.jpg');
+}
+
+.contact-page main {
+    padding-bottom: 0;
+}
+
+.contact-page .contact-section {
+    position: relative;
+    z-index: 2;
+}
 .contact-section {
     padding: 4rem 0;
     background-color: white;
@@ -102,7 +114,7 @@
 }
 
 .contact-form-container > h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--dark-color);
     font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
@@ -110,6 +122,34 @@
 .contact-form-container > h2::after {
     width: 72px;
     background-color: var(--accent-color);
+}
+
+.contact-intro {
+    margin: 0 0 2rem;
+    color: rgba(0, 0, 0, 0.72);
+    line-height: 1.65;
+    max-width: 38rem;
+}
+
+/* Pixieset embed container */
+.pixieset-form-wrapper {
+    background-color: var(--light-color);
+    padding: 2.25rem 2.5rem 2.5rem;
+    border-radius: 4px;
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    min-height: 200px;
+}
+
+.pixieset-form-wrapper #pixieset-contact-form {
+    width: 100%;
+    max-width: 100%;
+}
+
+.pixieset-form-wrapper iframe {
+    width: 100% !important;
+    max-width: 100%;
+    border: none;
 }
 
 /* Form card — blockquote-style left accent */
@@ -345,6 +385,11 @@
         flex-direction: column;
         gap: 0;
         padding: 0 1rem;
+    }
+
+    .pixieset-form-wrapper {
+        padding: 1.75rem 1.5rem 2rem;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
     }
 
     .contact-form {

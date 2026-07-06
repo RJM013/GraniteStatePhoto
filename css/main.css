@@ -1600,13 +1600,21 @@ textarea {
 }
 
 .pricing-header .btn {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     position: relative;
     margin-top: 1.5rem;
     z-index: 3;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 0.75rem 2rem;
-    font-size: 0.95rem;
-    white-space: nowrap;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    white-space: normal;
+    text-align: center;
 }
 
 .pricing-header .btn:hover {
@@ -1632,6 +1640,25 @@ textarea {
     font-size: 1.5rem;
     vertical-align: super;
     opacity: 0.7;
+}
+
+.pricing-best-for {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 1.45;
+    margin: -0.25rem auto 1rem;
+    max-width: 22rem;
+    font-weight: 400;
+}
+
+.pricing-price--from .price-prefix {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    opacity: 0.75;
+    margin-bottom: 0.25rem;
 }
 
 /* Pricing Features */
@@ -1704,6 +1731,20 @@ textarea {
 /* Pricing Footer */
 .pricing-footer {
     display: none;
+}
+
+.pricing-footer .btn {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    white-space: normal;
+    text-align: center;
 }
 
 /* Pricing Note */

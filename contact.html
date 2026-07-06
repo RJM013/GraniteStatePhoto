@@ -1,7 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SNKFXE822"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5SNKFXE822');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | 603 In Focus</title>
     <meta name="description" content="Contact 603 In Focus for professional photography services including family portraits, sports photography, and portrait photography throughout New Hampshire.">
@@ -11,8 +19,10 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/gameday.css">
     
-    <script src="js/navigation.js"></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/section-scroll.js" defer></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +44,7 @@
     <link rel="manifest" href="images/favicon_io/site.webmanifest">
     <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="contact-page">
     <header class="enhanced-header">
         <div class="container header-container">
             <div class="logo-container">
@@ -67,6 +77,7 @@
                     <!-- <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li> -->
                    <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
                    <!-- <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li> -->
+                   <li class="nav-item"><a href="https://gallery.603-in-focus.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Client Galleries</a></li>
                    <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
                     <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
                 </ul>
@@ -74,14 +85,29 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <h1>Book a Session</h1>
-        <p>Reach out to discuss capturing your senior portraits, sports photography, headshots, or other photography needs.</p>
-    </section>
+    <!-- Dramatic Hero Section -->
+    <div class="dramatic-hero">
+        <div class="hero-background">
+            <img src="images/gallery/grad/_Z637752.jpg" alt="Senior portrait on location in New Hampshire" class="hero-image" width="1920" height="1080" fetchpriority="high" decoding="async">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-stack">
+                    <span class="hero-line-1">GET IN</span>
+                    <span class="hero-line-2">TOUCH</span>
+                </span>
+            </h1>
+            <a href="#contact" class="hero-cta-btn">SEND A MESSAGE</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </div>
 
+    <main>
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="container contact-container">
             <div class="contact-info">
                 <h2>Contact Information</h2>
@@ -95,7 +121,8 @@
             </div>
             <div class="contact-form-container">
                 <p class="contact-eyebrow">Get In Touch</p>
-                <h2>Send Us a Message</h2>
+                <h2>Contact Intake Form</h2>
+                <p class="contact-intro">Tell us about your session goals—sports coverage, media day, headshots, or anything else. We'll follow up with availability and next steps.</p>
                 
                 <!-- Mobile contact info -->
                 <div class="mobile-contact-info">
@@ -103,59 +130,14 @@
                     <p><strong>Location:</strong> Strafford, NH 03884</p>
                 </div>
                 
-                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mblovadq" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="first-name">First Name *</label>
-                            <input type="text" id="first-name" name="first-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="last-name">Last Name *</label>
-                            <input type="text" id="last-name" name="last-name" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service-type">Service Interested In *</label>
-                        <select id="service-type" name="service-type" required>
-                            <option value="">Please select...</option>
-                            <option value="senior">Senior Portraits</option>
-                            <option value="sports">Sports Photography</option>
-                            <option value="gameday">Game Day Media</option>
-                            <option value="headshots">Headshots</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="package-type">Package Interested In</label>
-                        <select id="package-type" name="package-type">
-                            <option value="">Please select a service first...</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your session goals, dates, or any questions..."></textarea>
-                    </div>
-                    <div class="form-actions">
-                        <button type="submit">Send Message</button>
-                    </div>
-                </form>
+                <div class="pixieset-form-wrapper">
+                    <div id="pixieset-contact-form"></div>
+                    <script type="text/javascript" src="https://603infocus74.pixieset.com/contact-form/cf_LEFReju1rlf22gOqRtt1E7r66Mkm/embed"></script>
+                </div>
             </div>
         </div>
     </section>
+    </main>
 
 
     <!-- Footer -->
@@ -192,67 +174,5 @@
             <p>&copy; 2025 603 In Focus. All rights reserved.</p>
         </div>
     </footer>
-    <!-- JavaScript -->
-    <script src="js/navigation.js"></script>
-    <script>
-        // Package data structure matching packages.html
-        const packageData = {
-            senior: [
-                { value: 'mini-session', text: 'Mini Session - $150', price: 150 },
-                { value: 'standard-session', text: 'Standard Session - $225', price: 225 },
-                { value: 'premium-session', text: 'Premium Session - $350', price: 350 }
-            ],
-            sports: [
-                { value: 'athlete-spotlight', text: 'Athlete Spotlight - $199', price: 199 },
-                { value: 'game-day-coverage', text: 'Game Day Coverage - $299', price: 299 },
-                { value: 'media-day', text: 'Media Day - $499', price: 499 }
-            ],
-            headshots: [
-                { value: 'professional-headshots', text: 'Professional Headshots - $175', price: 175 },
-                { value: 'business-branding', text: 'Business Branding - $350', price: 350 }
-            ],
-            other: [
-                { value: 'custom', text: 'Custom Package - Contact for Pricing', price: 0 }
-            ]
-        };
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const serviceSelect = document.getElementById('service-type');
-            const packageSelect = document.getElementById('package-type');
-
-            serviceSelect.addEventListener('change', function() {
-                const selectedService = this.value;
-                
-                // Clear existing options
-                packageSelect.innerHTML = '';
-                
-                if (selectedService === '') {
-                    // No service selected
-                    packageSelect.innerHTML = '<option value="">Please select a service first...</option>';
-                    packageSelect.disabled = true;
-                } else if (packageData[selectedService]) {
-                    // Add default option
-                    packageSelect.innerHTML = '<option value="">Please select a package...</option>';
-                    
-                    // Add packages for selected service
-                    packageData[selectedService].forEach(pkg => {
-                        const option = document.createElement('option');
-                        option.value = pkg.value;
-                        option.textContent = pkg.text;
-                        packageSelect.appendChild(option);
-                    });
-                    
-                    packageSelect.disabled = false;
-                } else {
-                    // Fallback for unknown services
-                    packageSelect.innerHTML = '<option value="">No packages available</option>';
-                    packageSelect.disabled = true;
-                }
-            });
-
-            // Initialize package select as disabled
-            packageSelect.disabled = true;
-        });
-    </script>
 </body>
 </html>
