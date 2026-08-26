@@ -464,9 +464,34 @@ main {
     font-size: 1.3rem;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-weight: 300;
     font-style: italic;
+}
+
+.warrior-blockquote {
+    margin: 0;
+}
+
+.warrior-cite {
+    margin: 0;
+    font-style: normal;
+}
+
+.warrior-cite-name {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.warrior-cite-role {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.04em;
 }
 
 .warrior-stats {
@@ -717,6 +742,9 @@ main {
     padding: clamp(4rem, 10vw, 8rem) 0;
     background: var(--light-color);
     position: relative;
+    /* Beat main.css `section { opacity: 0.8 }` — that composites photos into the cream page */
+    opacity: 1;
+    transform: none;
 }
 
 .gameday-gallery-section .section-header {
@@ -741,10 +769,16 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
     background-image: 
         radial-gradient(circle at 10% 20%, rgba(106, 138, 115, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 90% 80%, rgba(255, 153, 79, 0.05) 0%, transparent 50%);
     pointer-events: none;
+}
+
+.gameday-gallery-section > .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Gallery Filter Removed - Pure Focus on Images */
@@ -1343,6 +1377,10 @@ section.mediaday-quote-section {
     margin-bottom: 0;
 }
 
+.senior-page .cta-bg-image {
+    object-position: center 20%;
+}
+
 .senior-page .hero-background::before {
     background-image: url('../images/gallery/grad/_Z637649.jpg');
 }
@@ -1350,6 +1388,10 @@ section.mediaday-quote-section {
 .senior-gallery-section .section-title::after,
 .senior-page .gameday-process-section .section-title::after {
     width: min(280px, 72vw);
+}
+
+.senior-page .power-image {
+    object-position: center 50%;
 }
 
 /* Home page — dramatic layout + existing sections */
