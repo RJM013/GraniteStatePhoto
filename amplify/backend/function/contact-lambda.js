@@ -12,7 +12,7 @@ const ses = new AWS.SES({ region: process.env.REGION });
 
 // Environment variables
 const TABLE_NAME = process.env.STORAGE_CONTACTSUBMISSIONS_NAME || 'ContactSubmissions';
-const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || 'info@granitestatePhoto.com';
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || 'rob@603-in-focus.com';
 const EMAIL_SENDER = process.env.EMAIL_SENDER || 'no-reply@granitestatePhoto.com';
 
 exports.handler = async (event) => {
