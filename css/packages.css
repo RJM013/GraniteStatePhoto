@@ -1,5 +1,9 @@
 /* Packages Page Specific Styles */
 
+.packages-page .dramatic-hero .hero-content {
+    top: 60%;
+}
+
 .packages-page .pricing-tabs {
     gap: 0.5rem;
 }
