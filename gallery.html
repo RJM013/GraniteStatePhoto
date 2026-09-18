@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SNKFXE822"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5SNKFXE822');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-5SNKFXE822');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Gallery | 603 In Focus</title>
@@ -23,13 +24,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Georgia:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "r51cbyw7en");
     </script>
 
@@ -46,28 +48,35 @@
     <!-- Add basic styles for the gallery page here or in gallery-page.css -->
     <style>
         .private-gallery-content {
-            padding: 3rem 1rem; /* Add padding for mobile */
+            padding: 3rem 1rem;
+            /* Add padding for mobile */
         }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1rem;
             margin-top: 2rem;
         }
+
         .gallery-item {
             position: relative;
             overflow: hidden;
             border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            cursor: pointer; /* Add cursor pointer to indicate clickable */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            /* Add cursor pointer to indicate clickable */
         }
+
         .gallery-item img {
             display: block;
             width: 100%;
             height: auto;
-            aspect-ratio: 1 / 1; /* Make images square-ish */
+            aspect-ratio: 1 / 1;
+            /* Make images square-ish */
             object-fit: cover;
         }
+
         .download-btn-individual {
             position: absolute;
             bottom: 10px;
@@ -75,29 +84,36 @@
             z-index: 2;
             padding: 0.4rem 0.8rem;
             font-size: 0.8rem;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
             border: none;
             border-radius: 3px;
             opacity: 0;
             transition: opacity 0.3s ease;
-            text-decoration: none; /* Ensure it looks like a button */
-            display: inline-flex; /* Align icon and text */
+            text-decoration: none;
+            /* Ensure it looks like a button */
+            display: inline-flex;
+            /* Align icon and text */
             align-items: center;
         }
+
         .gallery-item:hover .download-btn-individual {
             opacity: 1;
         }
+
         .download-btn-individual i {
             margin-right: 0.3em;
         }
+
         #gallery-status p {
             text-align: center;
             font-size: 1.1rem;
             margin-top: 2rem;
         }
+
         .error-message {
-            color: #c0392b; /* Red color for errors */
+            color: #c0392b;
+            /* Red color for errors */
             font-weight: bold;
         }
 
@@ -302,9 +318,17 @@
 
             /* Add a subtle animation to draw attention */
             @keyframes pulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.02); }
-                100% { transform: scale(1); }
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.02);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
             }
 
             .big-picture-btn {
@@ -383,14 +407,15 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header and Navigation -->
     <header class="enhanced-header">
         <div class="container header-container">
             <div class="logo-container">
                 <a href="index.html" class="logo">
-                     <!--<span class="logo-text">603 In Focus</span> -->
-                     <img src="images/logo/603_orange_logo.png" alt="603 In Focus Logo" class="logo-image">
+                    <!--<span class="logo-text">603 In Focus</span> -->
+                    <img src="images/logo/603_orange_logo.png" alt="603 In Focus Logo" class="logo-image">
                 </a>
             </div>
 
@@ -406,9 +431,11 @@
                 <div class="nav-overlay"></div>
 
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>                    <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="sports.html" class="nav-link">Sports</a></li>
                     <li class="nav-item"><a href="favorites.html" class="nav-link">Favorites</a></li>
-                    <li class="nav-item"><a href="https://gallery.603-in-focus.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Client Galleries</a></li>
+                    <li class="nav-item"><a href="https://gallery.603-in-focus.com/" class="nav-link" target="_blank"
+                            rel="noopener noreferrer">Client Galleries</a></li>
                     <li class="nav-item nav-cta"><a href="contact.html" class="btn-nav">Book a Session</a></li>
                 </ul>
             </nav>
@@ -420,7 +447,7 @@
         <section class="private-gallery-content">
             <div class="container">
                 <h1 id="gallery-title">Your Private Gallery</h1>
-                
+
                 <button class="big-picture-btn" id="big-picture-btn">
                     <i class="fas fa-expand"></i>
                     Click Here for Big Picture Mode
@@ -443,7 +470,8 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <h3>603 In Focus</h3>
-                <p>Professional photography services capturing New Hampshire's families, sporting events, and portraits throughout all seasons.</p>
+                <p>Professional photography services capturing New Hampshire's families, sporting events, and portraits
+                    throughout all seasons.</p>
                 <div class="social-links">
                     <a href="#" class="social-link">FB</a>
                     <a href="#" class="social-link">IG</a>
@@ -462,6 +490,7 @@
             <div class="footer-col">
                 <h3>Contact</h3>
                 <ul>
+                    <li><a href="tel:+16039739546">(603) 973-9546</a></li>
                     <li>Email: rob@603-in-focus.com</li>
                     <li>Address: Strafford, NH</li>
                 </ul>
@@ -635,13 +664,13 @@
                     e.stopPropagation(); // Prevent lightbox from closing
                     const currentImageUrl = photoUrls[currentPhotoIndex];
                     const fileName = currentImageUrl.split('/').pop();
-                    
+
                     // Create a temporary link element
                     const link = document.createElement('a');
                     link.href = currentImageUrl;
                     link.download = fileName;
                     link.target = '_blank';
-                    
+
                     // Append to body, click, and remove
                     document.body.appendChild(link);
                     link.click();
@@ -652,8 +681,8 @@
             // Keyboard navigation
             document.addEventListener('keydown', (e) => {
                 if (!lightbox.classList.contains('active')) return;
-                
-                switch(e.key) {
+
+                switch (e.key) {
                     case 'ArrowLeft':
                         showPrevPhoto();
                         break;
@@ -712,4 +741,5 @@
         });
     </script>
 </body>
+
 </html>
