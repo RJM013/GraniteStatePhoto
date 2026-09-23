@@ -333,6 +333,48 @@ main {
     font-weight: 300;
 }
 
+.pricing-note {
+    width: fit-content;
+    max-width: 90%;
+    margin: 30px auto 0;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: rgba(255, 138, 67, 0.1);
+    border: 1px solid rgba(255, 138, 67, 0.65);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pricing-label {
+    color: #f5f1eb;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.pricing-note strong {
+    color: #ff8a43;
+    font-size: 1.5rem;
+}
+
+.pricing-note a {
+    color: #ff8a43;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+    .pricing-note {
+        flex-direction: column;
+        gap: 7px;
+        padding: 18px 22px;
+    }
+}
+
 /* Longer orange accent underlines (section titles + h2 rules from main.css) */
 .gameday-gallery-section .section-title::after,
 .gameday-process-section .section-title::after {
