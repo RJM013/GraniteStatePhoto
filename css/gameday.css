@@ -1278,6 +1278,11 @@ section.mediaday-quote-section {
     transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
+.sports-testimonial-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
 .mediaday-quote-inner.animate-in {
     opacity: 1;
     transform: translateY(0);
