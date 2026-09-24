@@ -3,10 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "No build commands required for static site"
+        - npm install
     build:
       commands:
-        - echo "Build completed"
+        - npm run build:blog
   artifacts:
     baseDirectory: .
     files:

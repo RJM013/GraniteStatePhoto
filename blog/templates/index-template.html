@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 603 In Focus Photography</title>
+    <meta name="description"
+        content="Behind-the-scenes stories, lighting breakdowns, and location guides from 603 In Focus — senior portraits, sports, and Media Day photography in New Hampshire.">
+    <link rel="canonical" href="https://www.603-in-focus.com/blog/index.html">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/js/navigation.js" defer></script>
+</head>
+
+<body>
+
+    <header class="enhanced-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="/index.html" class="logo">
+                    <img src="/images/logo/603_orange_logo.png" alt="603 In Focus Logo" class="logo-image">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle Navigation">
+                    <span class="hamburger">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                </button>
+
+                <div class="nav-overlay"></div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/senior.html" class="nav-link">Seniors</a></li>
+                    <li class="nav-item"><a href="/sports.html" class="nav-link">Sports</a></li>
+                    <li class="nav-item"><a href="/mediaday.html" class="nav-link">Media Day</a></li>
+                    <li class="nav-item"><a href="https://gallery.603-in-focus.com/" class="nav-link" target="_blank"
+                            rel="noopener noreferrer">Client Galleries</a></li>
+                    <li class="nav-item"><a href="/packages.html" class="nav-link">Packages</a></li>
+                    <li class="nav-item nav-cta"><a href="/contact.html" class="btn-nav">Book a Session</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-index">
+        <h1>From the field</h1>
+        <div class="blog-post-grid">
+            {{postCards}}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>603 In Focus</h3>
+                <p>Professional photography services capturing New Hampshire's sporting events, senior portraits, and
+                    headshots throughout all seasons.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61564338803827" class="social-link"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/603infocus/" class="social-link"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="/contact.html" class="footer-contact-link">Contact us</a></li>
+                    <li><a href="tel:+16039739546" class="footer-contact-link">(603) 973-9546</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/senior.html">Seniors</a></li>
+                    <li><a href="/sports.html">Sports</a></li>
+                    <li><a href="/mediaday.html">Media Day</a></li>
+                    <li><a href="/portrait.html">Headshots</a></li>
+                    <li><a href="/packages.html">Packages</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; {{year}} 603 In Focus. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
