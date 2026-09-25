@@ -11,7 +11,7 @@ internalLink: "/mediaday.html"
 gallery:
   - src: "/images/media/_Z630657.jpg"
     alt: "Coe-Brown Northwood Academy volleyball team photo, two rows"
-  - src: "/images/media/Media day setup1051.jpg"
+  - src: "/images/media/media-day-setup-1051.jpg"
     alt: "Rob Mulligan testing red accent lighting in the garage before Coe-Brown Media Day"
   - src: "/images/media/_Z630661.jpg"
     alt: "Coe-Brown Northwood Academy volleyball team in V-formation media day photo"
@@ -19,9 +19,9 @@ gallery:
     alt: "Coe-Brown volleyball team and coach team photo"
   - src: "/images/media/_Z630676.jpg"
     alt: "Coe-Brown volleyball players in a creative chin-stack pose"
-  - src: "/images/media/Media day setup1136.jpg"
+  - src: "/images/media/media-day-setup-1136.jpg"
     alt: "Coe-Brown volleyball player individual portrait with red accent lighting"
-  - src: "/images/media/Media day setup1166.jpg"
+  - src: "/images/media/media-day-setup-1166.jpg"
     alt: "Coe-Brown volleyball player individual portrait with red accent lighting, pointing at camera"
 ---
 
@@ -51,7 +51,7 @@ There was definitely some trial and error involved, but by the time Media Day ar
 
 Then it was time to see if all that practice would translate to the real thing.
 
-![Rob Mulligan testing red accent lighting in the garage before Coe-Brown Media Day](/images/media/Media day setup1051.jpg)
+![Rob Mulligan testing red accent lighting in the garage before Coe-Brown Media Day](/images/media/media-day-setup-1051.jpg)
 
 ## Starting With the Individual Athletes
 
@@ -123,9 +123,9 @@ Sometimes you buy equipment thinking something will be useful someday.
 
 This was one of those times where I could actually see that decision paying off.
 
-![Coe-Brown volleyball player individual portrait with red accent lighting](/images/media/Media day setup1136.jpg)
+![Coe-Brown volleyball player individual portrait with red accent lighting](/images/media/media-day-setup-1136.jpg)
 
-![Coe-Brown volleyball player individual portrait with red accent lighting, pointing at camera](/images/media/Media day setup1166.jpg)
+![Coe-Brown volleyball player individual portrait with red accent lighting, pointing at camera](/images/media/media-day-setup-1166.jpg)
 
 ## Time for the Team Photos
 
