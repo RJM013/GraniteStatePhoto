@@ -61,8 +61,13 @@ main {
 }
 
 @keyframes heroZoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.05); }
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 .hero-overlay {
@@ -71,12 +76,10 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.2) 50%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.2) 50%,
+            rgba(0, 0, 0, 0.6) 100%);
     z-index: 2;
 }
 
@@ -113,6 +116,7 @@ main {
         opacity: 0;
         transform: translate(calc(-50% - var(--hero-x-nudge, 0px)), calc(-50% + 18px));
     }
+
     to {
         opacity: 1;
         transform: translate(calc(-50% - var(--hero-x-nudge, 0px)), -50%);
@@ -130,16 +134,16 @@ main {
     .dramatic-hero .hero-content {
         --hero-x-nudge: clamp(0.5rem, 1.25vw, 1.25rem);
     }
-    
+
     .hero-content {
         margin-bottom: 0;
     }
-    
+
     /* Show blurred background */
     .hero-background::before {
         display: block;
     }
-    
+
     /* Make main image fit vertically and center horizontally */
     .hero-image {
         width: auto;
@@ -151,7 +155,7 @@ main {
         margin: 80px auto 0;
         display: block;
     }
-    
+
     /* Adjust hero background container */
     .hero-background {
         display: flex;
@@ -198,6 +202,7 @@ main {
         opacity: 0;
         transform: translateY(12px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -257,12 +262,19 @@ main {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0) rotate(45deg);
     }
+
     40% {
         transform: translateY(-10px) rotate(45deg);
     }
+
     60% {
         transform: translateY(-5px) rotate(45deg);
     }
@@ -273,6 +285,7 @@ main {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -296,7 +309,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 50%, rgba(255, 153, 79, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(106, 138, 115, 0.1) 0%, transparent 50%);
     pointer-events: none;
@@ -367,11 +380,91 @@ main {
     text-underline-offset: 4px;
 }
 
+.media-day-packages-section {
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background: #fff;
+}
+
+.media-day-packages-section .section-header {
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.media-day-package-table-wrap {
+    overflow-x: auto;
+    border: 1px solid rgba(26, 26, 26, 0.14);
+    border-radius: 8px;
+}
+
+.media-day-package-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.media-day-package-table th,
+.media-day-package-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+}
+
+.media-day-package-table thead th {
+    color: #fff;
+    background: #1a1a1a;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.media-day-package-table tbody th {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.media-day-package-table tbody td:last-child {
+    color: #9d4d2f;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.media-day-package-table tbody tr:last-child th,
+.media-day-package-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.media-day-inclusions {
+    max-width: 58rem;
+    margin: 2rem auto 0;
+}
+
+.media-day-inclusions h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.media-day-inclusions ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 2rem;
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.55;
+}
+
 @media (max-width: 700px) {
     .pricing-note {
         flex-direction: column;
         gap: 7px;
         padding: 18px 22px;
+    }
+
+    .media-day-package-table {
+        min-width: 600px;
+    }
+
+    .media-day-inclusions ul {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -445,7 +538,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         radial-gradient(circle at 30% 40%, rgba(255, 153, 79, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 70% 60%, rgba(106, 138, 115, 0.08) 0%, transparent 50%);
     pointer-events: none;
@@ -659,12 +752,10 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.8) 0%,
-        rgba(0, 0, 0, 0.6) 50%,
-        rgba(0, 0, 0, 0.9) 100%
-    );
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgba(0, 0, 0, 0.9) 100%);
     z-index: 2;
 }
 
@@ -812,15 +903,52 @@ main {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 10% 20%, rgba(106, 138, 115, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 90% 80%, rgba(255, 153, 79, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
-.gameday-gallery-section > .container {
+.gameday-gallery-section>.container {
     position: relative;
     z-index: 1;
+}
+
+/* Media Day details */
+.media-day-details-section {
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background: #fff;
+}
+
+.media-day-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.media-day-detail h2 {
+    margin: 0 0 1rem;
+    color: var(--primary-color);
+    font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+
+.media-day-detail p {
+    line-height: 1.7;
+}
+
+.media-day-sports-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem 1.5rem;
+    margin: 1rem 0 1.25rem;
+    padding-left: 1.25rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .media-day-details-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Gallery Filter Removed - Pure Focus on Images */
@@ -1057,6 +1185,7 @@ main {
         opacity: 0;
         transform: translateY(15px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1069,30 +1198,30 @@ main {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .process-image {
         max-width: 100%;
     }
-    
-    
+
+
     .impact-metrics {
         gap: 2rem;
     }
-    
+
     .metric-number {
         font-size: 2.5rem;
     }
-    
+
     .power-content {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .power-text {
         padding-right: 0;
         text-align: center;
     }
-    
+
     .warrior-content {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1107,7 +1236,7 @@ main {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .warrior-text {
         padding-left: 0;
         text-align: center;
@@ -1117,11 +1246,11 @@ main {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .warrior-stats {
         justify-content: center;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -1134,7 +1263,7 @@ main {
         gap: 1.5rem;
         padding: 0 0.5rem;
     }
-    
+
     .gameday-gallery-section,
     .gameday-process-section,
     .impact-statement,
@@ -1142,96 +1271,96 @@ main {
     .warrior-quote-section {
         padding: 4rem 0;
     }
-    
-    
-    
+
+
+
     .process-feature {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 1rem;
     }
-    
+
     .feature-content {
         width: 100%;
     }
-    
-    
+
+
     .hero-content {
         padding: 0 1rem;
         margin-bottom: 0;
     }
-    
+
     .impact-metrics {
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     .dramatic-hero {
         min-height: 70vh;
     }
-    
+
     .final-impact-cta {
         min-height: 60vh;
     }
-    
+
 }
 
 @media screen and (max-width: 576px) {
-    
-    
+
+
     .lightbox-img {
         max-height: 70vh;
     }
-    
+
     .hero-title {
         font-size: 2rem;
         margin-bottom: 1.5rem;
     }
-    
+
     .hero-cta-btn {
         padding: 0.9rem 2rem;
         font-size: 0.9rem;
     }
-    
+
     .impact-title {
         font-size: 2rem;
     }
-    
+
     .impact-text {
         font-size: 1.1rem;
     }
-    
+
     .power-title {
         font-size: 1.8rem;
     }
-    
+
     .power-quote {
         font-size: 1.1rem;
     }
-    
+
     .warrior-title {
         font-size: 1.8rem;
     }
-    
+
     .warrior-quote {
         font-size: 1.1rem;
     }
-    
+
     .warrior-stats {
         flex-direction: column;
         gap: 1.5rem;
     }
-    
-    
+
+
     .cta-title {
         font-size: 2rem;
     }
-    
+
     .cta-text {
         font-size: 1.1rem;
     }
-    
+
     .btn-primary-cta,
     .btn-secondary-cta {
         padding: 1.2rem 2rem;
