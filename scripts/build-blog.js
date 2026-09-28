@@ -40,6 +40,15 @@ function formatDisplayDate(dateStr) {
     return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+function getFileLastMod(filePath) {
+    try {
+        const stats = fs.statSync(filePath);
+        return stats.mtime.toISOString().split('T')[0];
+    } catch (err) {
+        return new Date().toISOString().split('T')[0];
+    }
+}
+
 function buildArticleSchema(fm, contentText) {
     return JSON.stringify({
         '@context': 'https://schema.org',
@@ -111,15 +120,26 @@ function buildIndex(posts) {
 }
 
 function buildSitemap(posts) {
-    const staticUrls = STATIC_PAGES.map((p) => `${SITE_URL}/${p}`.replace(/\/$/, p ? undefined : '/'));
-    const blogUrls = posts.map((fm) => fm.canonical);
-    const blogIndexUrl = `${SITE_URL}/blog/index.html`;
+    const staticEntries = STATIC_PAGES.map((page) => ({
+        url: `${SITE_URL}/${page}`.replace(/\/$/, page ? undefined : '/'),
+        lastmod: getFileLastMod(path.join(ROOT, page || 'index.html')),
+    }));
+    const blogEntries = [
+        {
+            url: `${SITE_URL}/blog/index.html`,
+            lastmod: getFileLastMod(path.join(OUTPUT_DIR, 'index.html')),
+        },
+        ...posts.map((fm) => ({
+            url: fm.canonical,
+            lastmod: fm.date,
+        })),
+    ];
 
-    const allUrls = [...staticUrls, blogIndexUrl, ...blogUrls];
+    const allEntries = [...staticEntries, ...blogEntries];
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}
+${allEntries.map(({ url, lastmod }) => `  <url><loc>${url}</loc><lastmod>${lastmod}</lastmod></url>`).join('\n')}
 </urlset>
 `;
 
