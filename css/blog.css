@@ -95,6 +95,7 @@
     max-height: 560px;
     margin-bottom: 2.5rem;
     object-fit: cover;
+    object-position: top;
 }
 
 .blog-content {
