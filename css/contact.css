@@ -11,6 +11,7 @@
     position: relative;
     z-index: 2;
 }
+
 .contact-section {
     padding: 4rem 0;
     background-color: white;
@@ -113,13 +114,13 @@
     margin: 0 0 0.4rem;
 }
 
-.contact-form-container > h2 {
+.contact-form-container>h2 {
     margin-bottom: 1rem;
     color: var(--dark-color);
     font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
 
-.contact-form-container > h2::after {
+.contact-form-container>h2::after {
     width: 72px;
     background-color: var(--accent-color);
 }
@@ -150,6 +151,38 @@
     width: 100% !important;
     max-width: 100%;
     border: none;
+}
+
+.whats-next {
+    margin-top: 2rem;
+    padding: 1.75rem 2rem;
+    background-color: var(--light-color);
+    border-left: 5px solid var(--accent-color);
+}
+
+.whats-next h2 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}
+
+.whats-next h2::after {
+    width: 60px;
+    background-color: var(--accent-color);
+}
+
+.whats-next ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.whats-next li {
+    padding-left: 0.35rem;
+    line-height: 1.65;
+}
+
+.whats-next li+li {
+    margin-top: 0.65rem;
 }
 
 /* Form card — blockquote-style left accent */
@@ -453,7 +486,7 @@
         padding: 1.35rem 1.15rem 1.75rem;
     }
 
-    .contact-form-container > h2 {
+    .contact-form-container>h2 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }

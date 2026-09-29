@@ -2,19 +2,25 @@
 
 /* Global Styles */
 :root {
-    --primary-color: #6A8A73; /* Muted Forest Green */
-    --secondary-color: #14527B; /* Deep Blue */
-    --accent-color: #FF994F; /* Warm Sunset Orange */
-    --dark-color: #201F24; /* Deep Charcoal Black */
-    --light-color: #F8F1E9; /* Soft Cream White */
-    --neutral-color: #A9A9A9; /* Soft Gray */
-    --text-color: #201F24; /* Deep Charcoal for text */
+    --primary-color: #6A8A73;
+    /* Muted Forest Green */
+    --secondary-color: #14527B;
+    /* Deep Blue */
+    --accent-color: #FF994F;
+    /* Warm Sunset Orange */
+    --dark-color: #201F24;
+    /* Deep Charcoal Black */
+    --light-color: #F8F1E9;
+    /* Soft Cream White */
+    --neutral-color: #A9A9A9;
+    /* Soft Gray */
+    --text-color: #201F24;
+    /* Deep Charcoal for text */
     --spacing: 2rem;
 }
 
-/*  --dark-color: #201F24; /* Deep Charcoal Black */ */
-
-* {
+/*  --dark-color: #201F24; /* Deep Charcoal Black */
+*/ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,11 +38,19 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    padding-top: 120px; /* Space for fixed header */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    padding-top: 120px;
+    /* Space for fixed header */
 }
 
-h1, h2, h3, h4, h5, h6, .logo {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-weight: 700;
 }
@@ -69,9 +83,12 @@ header {
     background-color: var(--dark-color);
     color: white;
     padding: 1rem 0;
-    /* position: sticky; */ /* Commented out - Handled by enhanced-header */
-    /* top: 0; */ /* Commented out - Handled by enhanced-header */
-    /* z-index: 100; */ /* Commented out - Handled by enhanced-header */
+    /* position: sticky; */
+    /* Commented out - Handled by enhanced-header */
+    /* top: 0; */
+    /* Commented out - Handled by enhanced-header */
+    /* z-index: 100; */
+    /* Commented out - Handled by enhanced-header */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -117,14 +134,15 @@ nav ul li a.active {
 /* Hero Section */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero/bwhero.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero/bwhero.jpg') center/cover no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
     color: white;
     padding-bottom: 3rem;
-    margin-top: -12px; /* Negative margin to make flush with fixed header */
+    margin-top: -12px;
+    /* Negative margin to make flush with fixed header */
 }
 
 .hero-content {
@@ -132,8 +150,15 @@ nav ul li a.active {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h1 {
@@ -284,7 +309,7 @@ h2::after {
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
-    height: 3px; 
+    height: 3px;
     background-color: var(--accent-color);
 }
 
@@ -745,7 +770,8 @@ h2::after {
 }
 
 .cta-section .btn:hover {
-    background-color: #e88e40; /* Slightly darker than var(--accent-color) */
+    background-color: #e88e40;
+    /* Slightly darker than var(--accent-color) */
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
@@ -770,11 +796,12 @@ h2::after {
     .cta-section {
         padding: 3rem 1rem;
     }
-    
+
     .cta-section h2 {
         font-size: 1.8rem;
     }
 }
+
 /* Footer */
 footer {
     background-color: var(--dark-color);
@@ -897,7 +924,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 1rem;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
     color: white;
     z-index: 10;
     pointer-events: none;
@@ -909,7 +936,7 @@ footer {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .categories-header h2::after {
@@ -923,8 +950,8 @@ footer {
     overflow: hidden;
     text-decoration: none;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-left: 1px solid rgba(255,255,255,0.1);
-    border-right: 1px solid rgba(0,0,0,0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .category-slice:first-child {
@@ -974,12 +1001,12 @@ footer {
 }
 
 .slice-text-wrapper {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
     border-radius: 4px;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transform: translateY(20px);
     opacity: 0;
     transition: all 0.5s ease;
@@ -993,15 +1020,15 @@ footer {
     color: white;
     margin: 0.5rem 0;
     letter-spacing: 4px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .decorative-text {
     font-family: 'Lato', sans-serif;
     font-size: 0.95rem;
     letter-spacing: 3px;
-    color: rgba(255,255,255,0.85);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
 }
 
@@ -1014,9 +1041,9 @@ footer {
 }
 
 .slice-cta .btn-slice {
-    background-color: rgba(255,255,255,0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     color: white;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -1078,7 +1105,9 @@ label {
     font-weight: 600;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
@@ -1250,7 +1279,7 @@ textarea {
         gap: 3rem;
         padding: 3rem 0;
     }
-    
+
     .testimonial-card {
         padding: 2.5rem;
         min-height: 450px;
@@ -1274,7 +1303,7 @@ textarea {
         gap: 2rem;
         padding: 2.5rem 0;
     }
-    
+
     .testimonial-card {
         padding: 2.25rem;
         min-height: 425px;
@@ -1538,6 +1567,54 @@ textarea {
     margin-bottom: 2rem;
 }
 
+.home-service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.home-service-cards .pricing-card {
+    min-width: 0;
+    max-width: none;
+}
+
+.all-packages-action {
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.pricing-section .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.pricing-section .btn-primary:hover,
+.pricing-section .btn-primary:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+    .home-service-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .home-service-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Individual Pricing Card */
 .pricing-card {
     flex: 1;
@@ -1772,6 +1849,20 @@ textarea {
     font-size: 0.95rem;
 }
 
+.blog-crosslink {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.blog-crosslink a {
+    color: #ff8a43;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 /* Instagram Feed Section */
 .instagram-section {
     padding: 5rem 0;
@@ -1936,7 +2027,7 @@ textarea {
 
 /* Fade transition */
 .fade-transition {
-    background: linear-gradient(180deg, var(--light-color) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(180deg, var(--light-color) 0%, rgba(255, 255, 255, 0) 100%);
     height: 100px;
     width: 100%;
     position: relative;
@@ -2001,7 +2092,7 @@ textarea {
 /* Small Tablet (576px - 768px) */
 @media screen and (max-width: 768px) {
     /* Logo sizing handled in nav.css */
-    
+
     .header-container {
         padding: 0.2rem 0;
     }
@@ -2010,11 +2101,11 @@ textarea {
 /* Mobile (575px and below) */
 @media screen and (max-width: 575px) {
     /* Logo sizing handled in nav.css */
-    
+
     .header-container {
         padding: 0.15rem 0;
     }
-    
+
     /* Ensure logo container doesn't get too big on small screens */
     .logo-container {
         max-width: 75%;
@@ -2025,12 +2116,19 @@ textarea {
 /* Logo sizing handled in nav.css */
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0) translateX(-50%);
     }
+
     40% {
         transform: translateY(-10px) translateX(-50%);
     }
+
     60% {
         transform: translateY(-5px) translateX(-50%);
     }
@@ -2041,11 +2139,11 @@ textarea {
     .instagram-feed {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
     .pricing-card.featured {
         transform: scale(1.02);
     }
-    
+
     .pricing-card.featured:hover {
         transform: scale(1.02) translateY(-10px);
     }
@@ -2055,37 +2153,40 @@ textarea {
     .about-column {
         flex-basis: 48%;
     }
-    
+
     .about-text {
         flex-basis: 100%;
         margin-top: 1rem;
-        order: -1; /* Move text to top on tablets */
+        order: -1;
+        /* Move text to top on tablets */
     }
-    
+
     .about {
         padding-bottom: 10rem;
     }
-    
+
     .about-columns {
-        gap: 1.5rem; /* Tighter spacing on tablets */
+        gap: 1.5rem;
+        /* Tighter spacing on tablets */
     }
-    
+
     .content-card {
-        padding: 1.25rem; /* Slightly reduced padding */
+        padding: 1.25rem;
+        /* Slightly reduced padding */
     }
-    
+
     .text-card {
         padding: 1.5rem;
     }
-    
+
     .fullscreen-categories {
         height: 70vh;
     }
-    
+
     .slice-title {
         font-size: 2.4rem;
     }
-    
+
     .pricing-card {
         flex-basis: calc(50% - 2rem);
         max-width: 450px;
@@ -2096,12 +2197,12 @@ textarea {
     .about-column {
         flex-basis: 48%;
     }
-    
+
     .about-text {
         flex-basis: 100%;
         order: -1;
     }
-    
+
     .about-column:first-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct2 {
@@ -2118,7 +2219,7 @@ textarea {
         margin: 0 auto;
         padding: 2rem 0;
     }
-    
+
     .testimonial-card {
         max-width: 100%;
         padding: 2rem;
@@ -2132,169 +2233,170 @@ textarea {
         background-position: center 20%;
         min-height: 400px;
     }
-    
+
     .hero h1 {
         font-size: calc(1.8rem + 1vw);
     }
-    
+
     .hero-content {
         width: 100%;
         padding: 0 1.5rem;
     }
-    
+
     /* Mobile menu button styles handled in nav.css */
-    
+
     section {
         padding: 3.5rem 0;
     }
-    
+
     /* About section mobile improvements */
     .about {
         padding: 4rem 0 8rem;
     }
-    
+
     .about-columns {
         gap: 1rem;
         margin: 1.5rem 0;
     }
-    
+
     .about-column {
         flex-basis: 100%;
         margin-bottom: 1rem;
     }
-    
+
     .about-text {
         order: -1;
         margin-bottom: 1.5rem;
     }
-    
+
     .content-card {
         padding: 1rem;
     }
-    
+
     .text-card {
         padding: 1.5rem;
     }
-    
+
     .about-text p {
         font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 1.25rem;
     }
-    
+
     .about-text .btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.95rem;
     }
-    
+
     .section-divider {
         height: 60px;
         margin-top: -30px;
         margin-bottom: -30px;
     }
-    
+
     .testimonials {
         margin-top: -5rem;
         padding-top: 7rem;
     }
-    
-    
+
+
     .fullscreen-categories {
         flex-direction: column;
         height: auto !important;
     }
-    
+
     .category-slice {
         height: 300px !important;
         flex: none !important;
     }
-    
+
     .category-slice:hover {
         flex: 1;
         height: 350px;
     }
-    
+
     .slice-text-wrapper,
     .slice-cta {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
-    
+
     .gallery-card {
         padding: 2rem;
     }
-    
+
     .input-group {
         flex-direction: column;
     }
-    
+
     .input-group input {
         border-radius: 4px;
         border-right: 2px solid #e0e0e0;
         margin-bottom: 1rem;
     }
-    
+
     .input-group .btn {
         border-radius: 4px;
         width: 100%;
     }
-    
+
     .pricing-tab {
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
     }
-    
+
     .pricing-card {
         flex-basis: 100%;
         max-width: 450px;
     }
-    
+
     .pricing-card.featured {
         transform: none;
         order: -1;
     }
-    
+
     .pricing-card.featured:hover {
         transform: translateY(-10px);
     }
-    
+
     .faq-question {
         padding: 1rem;
     }
-    
+
     .faq-question h3 {
         font-size: 1rem;
     }
-    
+
     .faq-answer {
         padding: 0 1rem;
     }
-    
+
     .testimonial-card {
         padding: 1.5rem;
         max-width: 100%;
     }
-    
+
     .testimonial-text {
         font-size: 1rem;
     }
-    
+
     .testimonial-navigation {
         margin: 1.5rem 0 1rem;
     }
-    
+
     .testimonial-nav-btn {
         width: 35px;
         height: 35px;
         font-size: 0.9rem;
     }
-    
+
     .instagram-feed {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 801px) {
+
     /* Testimonial mobile improvements */
     .testimonial-grid {
         grid-template-columns: 1fr;
@@ -2303,7 +2405,7 @@ textarea {
         max-width: none;
         width: 100%;
     }
-    
+
     .testimonial-card {
         padding: 1.5rem;
         border-radius: 12px;
@@ -2314,24 +2416,25 @@ textarea {
 
 
 @media screen and (max-width: 768px) {
+
     /* About section small mobile improvements */
     .about {
         padding: 3rem 0 6rem;
     }
-    
+
     .about-columns {
         gap: 0.5rem;
         margin: 0.75rem 0;
     }
-    
+
     .content-card {
         padding: 0.5rem;
     }
-    
+
     .text-card {
         padding: 1rem;
     }
-    
+
     /* Testimonial small mobile improvements */
     .testimonial-grid {
         grid-template-columns: 1fr;
@@ -2340,7 +2443,7 @@ textarea {
         max-width: none;
         width: 100%;
     }
-    
+
     .testimonial-card {
         padding: 1.25rem;
         min-height: 300px;
@@ -2356,51 +2459,52 @@ textarea {
         max-width: none;
         width: 100%;
     }
-    
+
     .testimonial-card {
         padding: 1rem;
         min-height: 280px;
         border-radius: 10px;
         width: 100%;
     }
-    
+
     .about-text p {
         font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 1rem;
     }
-    
+
     .about-text .btn {
         padding: 0.7rem 1.25rem;
         font-size: 0.9rem;
     }
-    
+
     .about-column:first-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct2 {
-        max-height: 250px; /* Smaller images on very small screens */
+        max-height: 250px;
+        /* Smaller images on very small screens */
     }
-    
+
     .category-slice {
         height: 250px;
     }
-    
+
     .category-slice:hover {
         height: 300px;
     }
-    
+
     .slice-title {
         font-size: 1.8rem;
     }
-    
+
     .instagram-feed {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .instagram-section {
         padding: 3rem 0;
     }
-    
+
     section,
     .section-title,
     .section-subtitle,
@@ -2416,6 +2520,7 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     section,
     .section-title,
     .section-subtitle,
@@ -2429,4 +2534,3 @@ textarea {
         transition: box-shadow 0.3s ease;
     }
 }
-
