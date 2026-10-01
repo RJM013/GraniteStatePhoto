@@ -153,6 +153,115 @@
     border: none;
 }
 
+.consent-page .consent-form-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.consent-page .consent-form-section .container {
+    max-width: 920px;
+}
+
+.consent-page .section-header {
+    margin-bottom: 2.5rem;
+}
+
+.consent-page .section-header h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 0.75rem;
+    padding-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.consent-page .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80px;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+}
+
+.consent-page .eyebrow {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.consent-page .section-header>p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.consent-info {
+    max-width: 850px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+.consent-info h2,
+.consent-questions h2 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}
+
+.consent-info p+p {
+    margin-top: 1rem;
+}
+
+.consent-info a,
+.consent-questions a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.consent-page .pixieset-form-wrapper {
+    width: 100%;
+    max-width: 850px;
+    min-height: 200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.consent-page .pixieset-form-wrapper iframe {
+    height: auto;
+}
+
+.consent-questions {
+    max-width: 850px;
+    margin: 2rem auto 0;
+}
+
+.consent-questions h2 {
+    margin-bottom: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    .consent-page .consent-form-section {
+        padding: 2rem 0;
+    }
+
+    .consent-page .section-header h2 {
+        font-size: 1.65rem;
+    }
+
+    .consent-page .pixieset-form-wrapper {
+        padding: 1.5rem 1rem;
+    }
+}
+
 .whats-next {
     margin-top: 2rem;
     padding: 1.75rem 2rem;
