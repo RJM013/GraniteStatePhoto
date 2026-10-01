@@ -158,6 +158,10 @@
     background-color: white;
 }
 
+.consent-page {
+    padding-top: 120px;
+}
+
 .consent-page .consent-form-section .container {
     max-width: 920px;
 }
