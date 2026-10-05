@@ -2622,8 +2622,8 @@ textarea {
     line-height: 1.75;
 }
 
-.about-intro-copy p + p,
-.about-section p + p {
+.about-intro-copy p+p,
+.about-section p+p {
     margin-top: 1rem;
 }
 

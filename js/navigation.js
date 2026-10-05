@@ -1,9 +1,9 @@
 /**
  * Enhanced Navigation JavaScript - Complete Working Version
  */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM loaded - Navigation script initialized');
-    
+
     // Elements
     const header = document.querySelector('.enhanced-header');
     const navToggle = document.querySelector('.nav-toggle');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navOverlay = document.querySelector('.nav-overlay');
     const dropdownItems = document.querySelectorAll('.has-dropdown');
     const body = document.body;
-    
+
     // Debug info
     console.log('Navigation elements loaded:', {
         header: !!header,
@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
         navOverlay: !!navOverlay,
         dropdownItems: dropdownItems.length
     });
-    
+
     // 1. Shrink header on scroll
-    
+
     // Debounce utility function
     function debounce(func, wait, immediate) {
         let timeout;
         return function executedFunction() {
             const context = this;
             const args = arguments;
-            const later = function() {
+            const later = function () {
                 timeout = null;
                 if (!immediate) func.apply(context, args);
             };
@@ -49,28 +49,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     // Initial call and event listener for scroll (debounced)
     handleScroll();
     window.addEventListener('scroll', debounce(handleScroll, 15)); // Debounce scroll handler (15ms delay)
-    
+
     // 2. FIXED Mobile menu toggle - Replace with new implementation
     // Clone and replace to remove any existing event listeners
     if (navToggle) {
         const newToggle = navToggle.cloneNode(true);
         navToggle.parentNode.replaceChild(newToggle, navToggle);
-        
+
         // Add the event listener to the new button
-        newToggle.addEventListener('click', function(e) {
+        newToggle.addEventListener('click', function (e) {
             // Critical: Stop event propagation
             e.preventDefault();
             e.stopPropagation();
-            
+
             console.log('Hamburger clicked - toggling menu');
-            
+
             // Simple toggle
             const isCurrentlyOpen = body.classList.contains('menu-open');
-            
+
             if (isCurrentlyOpen) {
                 body.classList.remove('menu-open');
                 console.log('Menu closed');
@@ -82,39 +82,39 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Navigation toggle button not found!');
     }
-    
+
     // Ensure overlay closes menu when clicked
     if (navOverlay) {
-        navOverlay.addEventListener('click', function(e) {
+        navOverlay.addEventListener('click', function (e) {
             // Prevent event bubbling
             e.stopPropagation();
-            
+
             console.log('Overlay clicked - closing menu');
             body.classList.remove('menu-open');
         });
     }
-    
+
     // 3. Mobile dropdown toggle
     dropdownItems.forEach(item => {
         const link = item.querySelector('.nav-link');
-        
+
         if (link) {
             // For mobile: treat click on dropdown parent as toggle
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 // Only for mobile view
                 if (window.innerWidth <= 992) {
                     e.preventDefault();
                     e.stopPropagation(); // Stop bubbling to prevent menu close
-                    
+
                     console.log('Dropdown toggle clicked');
                     const isOpen = item.classList.toggle('dropdown-open');
                     this.setAttribute('aria-expanded', String(isOpen));
-                    
+
                     // Toggle dropdown indicator rotation
                     const indicator = this.querySelector('.dropdown-indicator');
                     if (indicator) {
-                        indicator.style.transform = item.classList.contains('dropdown-open') 
-                            ? 'rotate(180deg)' 
+                        indicator.style.transform = item.classList.contains('dropdown-open')
+                            ? 'rotate(180deg)'
                             : 'rotate(0)';
                     }
                 } else {
@@ -124,16 +124,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-    
+
     // 4. Close mobile menu on window resize (if going to desktop)
     let resizeTimer;
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
+        resizeTimer = setTimeout(function () {
             if (window.innerWidth > 992 && body.classList.contains('menu-open')) {
                 console.log('Window resized to desktop - closing mobile menu');
                 body.classList.remove('menu-open');
-                
+
                 // Reset any open dropdowns
                 dropdownItems.forEach(item => {
                     item.classList.remove('dropdown-open');
@@ -149,27 +149,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 250);
     });
-    
+
     // 5. Active menu item based on current page
     function setActiveMenuItem() {
         const currentPath = window.location.pathname;
         const currentPage = currentPath.split('/').pop() || 'index.html';
         console.log('Current page:', currentPage);
-        
+
         const navLinks = document.querySelectorAll('.nav-link, .dropdown-link');
-        
+
         navLinks.forEach(link => {
             // Handle both direct links and dropdown links
             const href = link.getAttribute('href');
             if (href && href !== '#') {
                 // Match either exact path or just the filename
                 const isActive = href === currentPage ||
-                               currentPath.endsWith(href.startsWith('/') ? href : '/' + href);
-                
+                    currentPath.endsWith(href.startsWith('/') ? href : '/' + href);
+
                 if (isActive) {
                     console.log('Setting active link:', href);
                     link.classList.add('active');
-                    
+
                     // If it's in a dropdown, highlight parent too
                     const parentItem = link.closest('.has-dropdown');
                     if (parentItem) {
@@ -182,19 +182,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     setActiveMenuItem();
-    
+
     // 6. Close mobile menu when clicking on a regular link
     const allNavLinks = document.querySelectorAll('.nav-link, .dropdown-link');
-    
+
     allNavLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             // Don't close if it's a dropdown toggle
             if (window.innerWidth <= 992) {
-                const isDropdownToggle = this.closest('.has-dropdown') && 
-                                        this.closest('.has-dropdown').querySelector('.nav-link') === this;
-                
+                const isDropdownToggle = this.closest('.has-dropdown') &&
+                    this.closest('.has-dropdown').querySelector('.nav-link') === this;
+
                 // Only close menu if it's not a dropdown toggle
                 if (!isDropdownToggle) {
                     console.log('Link clicked - closing menu');
@@ -203,11 +203,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // 7. Add hover functionality for desktop
     dropdownItems.forEach(item => {
         // For desktop only
-        item.addEventListener('mouseenter', function() {
+        item.addEventListener('mouseenter', function () {
             if (window.innerWidth > 992) {
                 const indicator = this.querySelector('.dropdown-indicator');
                 if (indicator) {
@@ -215,8 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-        
-        item.addEventListener('mouseleave', function() {
+
+        item.addEventListener('mouseleave', function () {
             if (window.innerWidth > 992) {
                 const indicator = this.querySelector('.dropdown-indicator');
                 if (indicator) {
@@ -225,19 +225,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // 8. Handle keyboard navigation for accessibility
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         // Escape key to close mobile menu
         if (e.key === 'Escape' && body.classList.contains('menu-open')) {
             console.log('Escape key pressed - closing menu');
             body.classList.remove('menu-open');
         }
     });
-    
+
     // 9. Check for outside clicks to close menu
     // Using capture phase to handle events before they reach other handlers
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         // Only handle if menu is open
         if (body.classList.contains('menu-open')) {
             // If click is outside menu and not on toggle button
@@ -247,11 +247,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }, true); // Use capture phase
-    
+
     // 10. Enable active states on mobile touch devices
-    document.addEventListener('touchstart', function() {
+    document.addEventListener('touchstart', function () {
         // This empty handler enables :active pseudo-classes on mobile
     }, false);
-    
+
     console.log('Navigation initialization complete');
 });
