@@ -156,6 +156,58 @@ html, body {
     color: var(--accent-color);
 }
 
+.dropdown-toggle {
+    border: 0;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dropdown-indicator::after {
+    content: "+";
+    display: inline-block;
+    margin-left: 0.4rem;
+    transition: transform 0.2s ease;
+}
+
+.has-dropdown.dropdown-open .dropdown-indicator::after {
+    content: "-";
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    min-width: 190px;
+    margin: 0;
+    padding: 0.4rem 0;
+    list-style: none;
+    background-color: var(--dark-color);
+    border-top: 2px solid var(--accent-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu,
+.has-dropdown.dropdown-open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus-visible {
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
 /* CTA Button in Navigation */
 .btn-nav {
     display: inline-block;
@@ -320,6 +372,11 @@ body.menu-open .nav-toggle::before {
         padding: 1rem 1.5rem;
         color: white;
     }
+
+    .has-dropdown .dropdown-toggle {
+        width: 100%;
+        text-align: left;
+    }
     
     .nav-link::after {
         display: none;
@@ -329,6 +386,28 @@ body.menu-open .nav-toggle::before {
     .nav-link.active {
         background-color: rgba(255, 255, 255, 0.1);
         color: var(--accent-color);
+    }
+
+    .dropdown-menu {
+        position: static;
+        min-width: 0;
+        padding: 0;
+        border-top: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .has-dropdown:not(.dropdown-open) .dropdown-menu {
+        display: none;
+    }
+
+    .has-dropdown.dropdown-open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-link {
+        padding: 0.85rem 1.5rem 0.85rem 2.5rem;
+        white-space: normal;
     }
     
     /* CTA Button in Mobile Menu */

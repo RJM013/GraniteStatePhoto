@@ -2534,3 +2534,482 @@ textarea {
         transition: box-shadow 0.3s ease;
     }
 }
+
+/* ===== About page ===== */
+.about-page {
+    padding-top: 120px;
+}
+
+.about-main {
+    padding: 0;
+}
+
+.about-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #4a4a4a;
+    font-size: 0.9rem;
+}
+
+.about-breadcrumb a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.about-intro {
+    margin: 0;
+    padding: 2rem 0 4.5rem;
+    background: white;
+    color: var(--text-color);
+    box-shadow: none;
+}
+
+.about-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+}
+
+.about-intro-photo,
+.about-story-photo,
+.about-portrait-grid figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #e8e7e4;
+}
+
+.about-intro-photo {
+    aspect-ratio: 4 / 5;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.14);
+}
+
+.about-intro-photo img,
+.about-story-photo img,
+.about-portrait-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-intro-copy h1 {
+    margin: 0 0 1.25rem;
+    color: var(--dark-color);
+    font-size: 3rem;
+    line-height: 1.12;
+}
+
+.about-intro-copy h1::after {
+    content: '';
+    display: block;
+    width: 76px;
+    height: 4px;
+    margin-top: 1rem;
+    background: var(--accent-color);
+}
+
+.about-intro-copy p,
+.about-section p,
+.about-cta p {
+    max-width: 72ch;
+    line-height: 1.75;
+}
+
+.about-intro-copy p + p,
+.about-section p + p {
+    margin-top: 1rem;
+}
+
+.about-lead {
+    color: var(--primary-color);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.about-section {
+    margin: 0;
+    padding: 5rem 0;
+    opacity: 1;
+    transform: none;
+}
+
+.about-section:nth-of-type(odd) {
+    background: white;
+}
+
+.about-story {
+    background: var(--light-color) !important;
+}
+
+.about-copy-column {
+    width: min(100%, 820px);
+    margin: 0 auto;
+}
+
+.about-eyebrow {
+    margin-bottom: 0.6rem;
+    color: #9b4714;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.about-section h2,
+.about-cta h2 {
+    margin: 0 0 1.5rem;
+    color: var(--dark-color);
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+.about-section h2::after,
+.about-cta h2::after {
+    content: '';
+    display: block;
+    width: 68px;
+    height: 3px;
+    margin-top: 0.75rem;
+    background: var(--accent-color);
+}
+
+.about-pullquote {
+    margin: 2rem 0;
+    padding: 1.75rem 2rem;
+    border-left: 5px solid var(--accent-color);
+    background: white;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+}
+
+.about-pullquote blockquote,
+.about-testimonial-card blockquote {
+    margin: 0;
+}
+
+.about-pullquote blockquote p {
+    margin: 0;
+    color: var(--dark-color);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.about-pullquote figcaption {
+    margin-top: 0.9rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.about-story-photo {
+    width: min(100%, 760px);
+    aspect-ratio: 3 / 2;
+    margin: 2.5rem auto 0;
+}
+
+.about-conversation {
+    background: white;
+}
+
+.about-conversation .about-pullquote {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+    background: var(--light-color);
+}
+
+.about-name {
+    background: var(--dark-color) !important;
+}
+
+.about-name .about-eyebrow {
+    color: #ffb477;
+}
+
+.about-name h2 {
+    color: white;
+}
+
+.about-name-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.about-name-card {
+    min-width: 0;
+    padding: 1.75rem;
+    border-top: 4px solid var(--accent-color);
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.about-name-card h3 {
+    margin: 0 0 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.45rem;
+}
+
+.about-name-card p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.about-portraits {
+    background: var(--light-color) !important;
+}
+
+.about-portrait-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: min(100%, 850px);
+    margin: 2rem auto 0;
+}
+
+.about-portrait-grid figure {
+    aspect-ratio: 4 / 5;
+}
+
+.about-work {
+    background: white !important;
+}
+
+.about-work-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-values {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-values li {
+    position: relative;
+    padding-left: 2rem;
+    color: #222;
+    line-height: 1.6;
+}
+
+.about-values li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e8713a;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.about-work-note {
+    padding: 2rem;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 4px;
+    background: var(--light-color);
+}
+
+.about-note-mark {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.about-work-note p {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.about-testimonial {
+    background: var(--light-color) !important;
+}
+
+.about-testimonial-card {
+    min-height: 0;
+    margin: 0;
+    border-radius: 4px;
+    border-top: 5px solid var(--primary-color);
+}
+
+.about-testimonial-card .testimonial-text {
+    margin: 0 0 1.25rem;
+    font-size: 1.2rem;
+}
+
+.about-testimonial-card .testimonial-author {
+    color: var(--dark-color);
+    font-size: 0.95rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.about-cta {
+    margin: 0;
+    padding: 4.5rem 0;
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+}
+
+.about-cta .about-eyebrow {
+    color: #ffb477;
+}
+
+.about-cta h2 {
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+}
+
+.about-cta h2::after {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-cta p {
+    margin: 0 auto 1.5rem;
+    color: #f5f3f0;
+}
+
+.about-cta p a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 0.2em;
+}
+
+.about-book-button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+}
+
+.about-service-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    margin-top: 1.25rem;
+}
+
+.about-service-links a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 0.25em;
+}
+
+.about-page a:focus-visible {
+    outline: 3px solid #e8713a;
+    outline-offset: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-page {
+        padding-top: 105px;
+    }
+
+    .about-breadcrumb {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .about-intro {
+        padding: 1rem 0 3rem;
+    }
+
+    .about-intro-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem;
+    }
+
+    .about-intro-photo {
+        width: min(100%, 420px);
+        justify-self: center;
+    }
+
+    .about-intro-copy h1 {
+        font-size: 2.4rem;
+    }
+
+    .about-section {
+        padding: 3.5rem 0;
+    }
+
+    .about-name-cards,
+    .about-portrait-grid,
+    .about-work-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-work-grid {
+        gap: 1.75rem;
+    }
+
+    .about-work-note {
+        max-width: none;
+    }
+
+    .about-pullquote {
+        padding: 1.35rem;
+    }
+
+    .about-pullquote blockquote p {
+        font-size: 1.3rem;
+    }
+
+    .about-cta {
+        padding: 3.5rem 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about-page .container {
+        width: 100%;
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .about-intro-copy h1 {
+        font-size: 2.1rem;
+    }
+
+    .about-section h2,
+    .about-cta h2 {
+        font-size: 1.7rem;
+    }
+
+    .about-name-card,
+    .about-work-note {
+        padding: 1.25rem;
+    }
+}

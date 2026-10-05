@@ -22,8 +22,16 @@ const SITEMAP_PATH = path.join(ROOT, 'sitemap.xml');
 // Static pages to include in the sitemap alongside blog posts.
 const STATIC_PAGES = [
     '', 'senior.html', 'sports.html', 'mediaday.html',
-    'portrait.html', 'packages.html', 'contact.html',
+    'portrait.html', 'packages.html', 'contact.html', 'about.html',
 ];
+
+const STATIC_PAGE_METADATA = {
+    'about.html': {
+        lastmod: '2026-10-02',
+        changefreq: 'yearly',
+        priority: '0.7',
+    },
+};
 
 function readTemplate(name) {
     return fs.readFileSync(path.join(TEMPLATES_DIR, name), 'utf8');
@@ -122,7 +130,8 @@ function buildIndex(posts) {
 function buildSitemap(posts) {
     const staticEntries = STATIC_PAGES.map((page) => ({
         url: `${SITE_URL}/${page}`.replace(/\/$/, page ? undefined : '/'),
-        lastmod: getFileLastMod(path.join(ROOT, page || 'index.html')),
+        lastmod: STATIC_PAGE_METADATA[page]?.lastmod || getFileLastMod(path.join(ROOT, page || 'index.html')),
+        ...STATIC_PAGE_METADATA[page],
     }));
     const blogEntries = [
         {
@@ -139,7 +148,14 @@ function buildSitemap(posts) {
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allEntries.map(({ url, lastmod }) => `  <url><loc>${url}</loc><lastmod>${lastmod}</lastmod></url>`).join('\n')}
+${allEntries.map(({ url, lastmod, changefreq, priority }) => [
+        '  <url>',
+        `    <loc>${url}</loc>`,
+        `    <lastmod>${lastmod}</lastmod>`,
+        ...(changefreq ? [`    <changefreq>${changefreq}</changefreq>`] : []),
+        ...(priority ? [`    <priority>${priority}</priority>`] : []),
+        '  </url>',
+    ].join('\n')).join('\n')}
 </urlset>
 `;
 

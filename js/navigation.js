@@ -107,7 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     e.stopPropagation(); // Stop bubbling to prevent menu close
                     
                     console.log('Dropdown toggle clicked');
-                    item.classList.toggle('dropdown-open');
+                    const isOpen = item.classList.toggle('dropdown-open');
+                    this.setAttribute('aria-expanded', String(isOpen));
                     
                     // Toggle dropdown indicator rotation
                     const indicator = this.querySelector('.dropdown-indicator');
@@ -116,6 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             ? 'rotate(180deg)' 
                             : 'rotate(0)';
                     }
+                } else {
+                    const isOpen = item.classList.toggle('dropdown-open');
+                    this.setAttribute('aria-expanded', String(isOpen));
                 }
             });
         }
@@ -133,6 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset any open dropdowns
                 dropdownItems.forEach(item => {
                     item.classList.remove('dropdown-open');
+                    const link = item.querySelector('.nav-link');
+                    if (link) {
+                        link.setAttribute('aria-expanded', 'false');
+                    }
                     const indicator = item.querySelector('.dropdown-indicator');
                     if (indicator) {
                         indicator.style.transform = 'rotate(0)';
@@ -148,15 +156,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentPage = currentPath.split('/').pop() || 'index.html';
         console.log('Current page:', currentPage);
         
-        const navLinks = document.querySelectorAll('.nav-link');
+        const navLinks = document.querySelectorAll('.nav-link, .dropdown-link');
         
         navLinks.forEach(link => {
             // Handle both direct links and dropdown links
             const href = link.getAttribute('href');
             if (href && href !== '#') {
                 // Match either exact path or just the filename
-                const isActive = href === currentPage || 
-                               currentPath.endsWith('/' + href);
+                const isActive = href === currentPage ||
+                               currentPath.endsWith(href.startsWith('/') ? href : '/' + href);
                 
                 if (isActive) {
                     console.log('Setting active link:', href);
