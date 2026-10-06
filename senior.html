@@ -100,6 +100,7 @@
     <!-- Deferred Scripts -->
     <script src="js/navigation.js" defer></script>
     <script src="js/section-scroll.js" defer></script>
+    <script src="js/faq.js" defer></script>
 
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
@@ -360,8 +361,8 @@
                             <div class="feature-icon"><i class="fas fa-images"></i></div>
                             <div class="feature-content">
                                 <h3>Review your proof gallery</h3>
-                                <p>Your watermarked gallery will include 40+ images for a Mini session and up to 60+ for
-                                    the largest package.</p>
+                                <p>Depending on your package, your proof gallery will include 40+ carefully selected
+                                    images to review.</p>
                             </div>
                         </div>
                         <div class="process-feature">
@@ -376,9 +377,10 @@
                             <div class="feature-icon"><i class="fas fa-download"></i></div>
                             <div class="feature-content">
                                 <h3>Professionally finished and ready to download</h3>
-                                <p>I'll fully edit your selected images and add them to your final gallery, typically
-                                    within 1–2 weeks. You can download the finished photos without watermarks and print
-                                    them using the included print release.</p>
+                                <p>Once you've submitted your favorites, I'll professionally edit those selections and
+                                    add them to your final gallery, typically within 1-2 weeks. You can download the
+                                    finished photos without watermarks and print them using the included print release.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -430,7 +432,7 @@
                         <div class="pricing-features">
                             <ul>
                                 <li>45-minute session</li>
-                                <li>2 outfit changes, 1 location</li>
+                                <li>2 outfits, 1 location</li>
                                 <li>Choose 15 favorites from 50+ proofs</li>
                                 <li>Digital gallery &amp; print release</li>
                             </ul>
@@ -453,7 +455,7 @@
                         <div class="pricing-features">
                             <ul>
                                 <li>90-minute session</li>
-                                <li>3 outfit changes, 2 locations</li>
+                                <li>3 outfits, 2 locations</li>
                                 <li>Choose 25 favorites from 60+ proofs</li>
                                 <li>Digital gallery &amp; print release</li>
                             </ul>
@@ -541,70 +543,84 @@
                     <h2 class="section-title">Senior Session FAQ</h2>
                 </div>
                 <div class="faq-container">
-                    <details class="faq-item" open>
-                        <summary class="faq-question">
-                            <h3>When should we book senior portraits?</h3><span class="faq-icon"><i
-                                    class="fas fa-plus"></i><i class="fas fa-minus"></i></span>
-                        </summary>
-                        <div class="faq-answer">
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"
+                            aria-controls="senior-faq-answer-1">
+                            <span class="faq-question-title">When should we book senior portraits?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i><i
+                                    class="fas fa-minus"></i></span>
+                        </button>
+                        <div class="faq-answer" id="senior-faq-answer-1">
                             <p>Earlier than most people think. Many schools have yearbook photo deadlines in early fall
                                 (some as early as October 1), so the best time to shoot is late spring through summer of
                                 junior-to-senior year. Book a month or two ahead for the best choice of dates, and tell
                                 me your school's deadline when you book.</p>
                         </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <h3>What should I wear?</h3><span class="faq-icon"><i class="fas fa-plus"></i><i
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"
+                            aria-controls="senior-faq-answer-2">
+                            <span class="faq-question-title">What should I wear?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i><i
                                     class="fas fa-minus"></i></span>
-                        </summary>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="senior-faq-answer-2">
                             <p>Bring outfits that feel like you: one classic look, one casual, and one that shows your
                                 personality. Solid colors and simple patterns photograph best. You'll get a full prep
                                 guide after booking.</p>
                         </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <h3>Can I bring sports gear or props?</h3><span class="faq-icon"><i
-                                    class="fas fa-plus"></i><i class="fas fa-minus"></i></span>
-                        </summary>
-                        <div class="faq-answer">
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"
+                            aria-controls="senior-faq-answer-3">
+                            <span class="faq-question-title">Can I bring sports gear or props?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i><i
+                                    class="fas fa-minus"></i></span>
+                        </button>
+                        <div class="faq-answer" id="senior-faq-answer-3">
                             <p>Absolutely. Jerseys, balls, sticks, instruments, and letterman jackets all make the
                                 photos more personal. Many of my seniors are athletes, and I love making these shots
                                 look great.</p>
                         </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <h3>What happens if the weather doesn't cooperate?</h3><span class="faq-icon"><i
-                                    class="fas fa-plus"></i><i class="fas fa-minus"></i></span>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>[YOUR WEATHER/RESCHEDULE POLICY: copy the answer from the homepage FAQ]</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <h3>How do I get my yearbook photo?</h3><span class="faq-icon"><i class="fas fa-plus"></i><i
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"
+                            aria-controls="senior-faq-answer-4">
+                            <span class="faq-question-title">What happens if the weather doesn't cooperate?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i><i
                                     class="fas fa-minus"></i></span>
-                        </summary>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="senior-faq-answer-4">
+                            <p>New Hampshire weather can be unpredictable! I keep a close eye on the forecast and will
+                                reach out 24–48 hours before your session if it looks questionable. If the weather
+                                doesn't cooperate, we'll reschedule for the next date that works for both of us.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"
+                            aria-controls="senior-faq-answer-5">
+                            <span class="faq-question-title">How do I get my yearbook photo?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i><i
+                                    class="fas fa-minus"></i></span>
+                        </button>
+                        <div class="faq-answer" id="senior-faq-answer-5">
                             <p>Your gallery includes high-resolution downloads you can submit directly. Check your
                                 school's yearbook requirements (size, orientation, deadline) and send them to me before
                                 your session so we plan for it.</p>
                         </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <h3>How do I reserve my date?</h3><span class="faq-icon"><i class="fas fa-plus"></i><i
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"
+                            aria-controls="senior-faq-answer-6">
+                            <span class="faq-question-title">How do I reserve my date?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i><i
                                     class="fas fa-minus"></i></span>
-                        </summary>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="senior-faq-answer-6">
                             <p>Choose a package and book online. A $50 retainer holds your date and goes toward your
                                 session.</p>
                         </div>
-                    </details>
+                    </div>
                 </div>
             </div>
         </section>

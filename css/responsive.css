@@ -10,7 +10,7 @@ html {
 }
 
 /* Improve performance with hardware acceleration */
-.category-slice, 
+.category-slice,
 .btn,
 .gallery-card,
 .content-card,
@@ -25,11 +25,11 @@ html {
     .container {
         max-width: 960px;
     }
-    
+
     .instagram-feed {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
     .slice-title {
         font-size: 2.7rem;
     }
@@ -37,225 +37,239 @@ html {
 
 /* Medium Screens (tablets, less than 992px) */
 @media (max-width: 992px) {
+
     /* Container adjustments */
     .container {
         max-width: 720px;
     }
-    
+
     /* Typography adjustments */
-    h2, .section-title {
+    h2,
+    .section-title {
         font-size: 1.9rem;
     }
-    
+
     .hero h1,
     .page-header h1 {
         font-size: 2.7rem;
     }
-    
+
     /* Category section adjustments */
     .fullscreen-categories {
         height: auto;
         max-height: none;
     }
-    
+
     .category-slice {
-        height: 350px; /* Taller on tablets */
+        height: 350px;
+        /* Taller on tablets */
     }
-    
+
     .slice-title {
         font-size: 2.5rem;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Better readability */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /* Better readability */
     }
-    
+
     /* Layout adjustments */
     .about-columns {
-        gap: 1.5rem; /* Tighter spacing on smaller screens */
+        gap: 1.5rem;
+        /* Tighter spacing on smaller screens */
     }
-    
+
     .about-column {
         flex-basis: 48%;
     }
-    
+
     .about-text {
         flex-basis: 100%;
         margin-top: 1rem;
     }
-    
+
     /* Card adjustments */
     .gallery-card {
         max-width: 500px;
         padding: 2rem;
     }
-    
+
     .pricing-card {
         flex-basis: calc(50% - 2rem);
         max-width: 450px;
     }
-    
+
     .pricing-card.featured {
         transform: scale(1.02);
     }
-    
+
     .pricing-card.featured:hover {
         transform: scale(1.02) translateY(-10px);
     }
-    
+
     /* Section spacing */
     .about {
         padding-bottom: 10rem;
     }
-    
+
     /* Image adjustments */
     .about-column:first-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct2 {
-        max-height: 350px; /* Consistent height on medium screens */
+        max-height: 350px;
+        /* Consistent height on medium screens */
     }
 }
 
 /* Small Screens (mobile landscape, less than 768px) */
 @media (max-width: 768px) {
+
     /* Container adjustments */
     .container {
         max-width: 540px;
     }
-    
+
     /* Typography adjustments */
-    h2, .section-title {
+    h2,
+    .section-title {
         font-size: 1.8rem;
     }
-    
+
     .hero h1,
     .page-header h1 {
         font-size: 2.5rem;
     }
-    
+
     /* Hero section improvements */
     .hero {
         height: 70vh;
-        background-position: center 30%; /* Better positioning for mobile */
+        background-position: center 30%;
+        /* Better positioning for mobile */
     }
-    
+
     .hero-content {
-        padding: 0 1rem; /* Add side padding */
+        padding: 0 1rem;
+        /* Add side padding */
         width: 100%;
     }
-    
+
     /* Navigation improvements */
     nav ul.show {
-        max-height: 400px; /* Increase height for better menu visibility */
+        max-height: 400px;
+        /* Increase height for better menu visibility */
         padding: 0.5rem 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
     nav ul li a {
-        padding: 0.85rem; /* Larger touch target */
+        padding: 0.85rem;
+        /* Larger touch target */
     }
-    
+
     /* Category section adjustments */
     .fullscreen-categories {
         flex-direction: column;
         height: auto;
         max-height: none;
     }
-    
+
     .category-slice {
         height: 300px;
         transition: height 0.4s ease-in-out;
     }
-    
+
     .category-slice:hover {
         flex: 1;
-        height: 320px; /* Slightly more expansion */
+        height: 320px;
+        /* Slightly more expansion */
     }
-    
+
     .slice-title {
         font-size: 2rem;
     }
-    
+
     .slice-text-wrapper {
         opacity: 1;
         transform: translateY(0);
-        background: rgba(0,0,0,0.3);
+        background: rgba(0, 0, 0, 0.3);
     }
-    
+
     .decorative-text {
         font-size: 0.85rem;
     }
-    
+
     .slice-cta {
         opacity: 1;
         transform: translateY(0);
     }
-    
+
     /* Layout adjustments */
     .form-row {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .input-group {
         flex-direction: column;
     }
-    
+
     .input-group input {
         border-radius: 4px;
         border-right: 2px solid #e0e0e0;
         margin-bottom: 1rem;
     }
-    
+
     .input-group .btn {
         border-radius: 4px;
         width: 100%;
-        padding: 0.85rem 1.2rem; /* Larger touch target */
+        padding: 0.85rem 1.2rem;
+        /* Larger touch target */
     }
-    
+
     /* Section spacing */
     section {
         padding: 3.5rem 0;
     }
-    
+
     /* About section mobile improvements */
     .about {
         padding: 4rem 0 8rem;
     }
-    
+
     .about-columns {
         gap: 1rem;
         margin: 1.5rem 0;
     }
-    
+
     .about-column {
         flex-basis: 100%;
         margin-bottom: 1rem;
     }
-    
+
     .about-text {
         order: -1;
         margin-bottom: 1.5rem;
     }
-    
+
     .content-card {
         padding: 1rem;
     }
-    
+
     .text-card {
         padding: 1.5rem;
     }
-    
+
     .about-text p {
         font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 1.25rem;
     }
-    
+
     .about-text .btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.95rem;
         width: auto;
         max-width: none;
     }
-    
+
     .about-column:first-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct2 {
@@ -263,59 +277,59 @@ html {
         width: 100%;
         object-fit: cover;
     }
-    
+
     .section-divider {
         height: 60px;
         margin-top: -30px;
         margin-bottom: -30px;
     }
-    
+
     .testimonials {
         margin-top: -5rem;
         padding-top: 7rem;
     }
-    
+
     /* Card adjustments */
     .pricing-card {
         flex-basis: 100%;
         max-width: 450px;
     }
-    
+
     .pricing-card.featured {
         transform: none;
         order: -1;
     }
-    
+
     .pricing-card.featured:hover {
         transform: translateY(-10px);
     }
-    
+
     .pricing-tab {
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
     }
-    
+
     .testimonial-card {
         padding: 1.5rem;
     }
-    
+
     .testimonial-text {
         font-size: 1rem;
     }
-    
+
     /* FAQ adjustments */
     .faq-question {
         padding: 1rem;
     }
-    
-    .faq-question h3 {
+
+    .faq-question-title {
         font-size: 1rem;
     }
-    
+
     .faq-answer {
         padding: 0 1rem;
     }
-    
+
     /* Instagram feed */
     .instagram-feed {
         grid-template-columns: repeat(3, 1fr);
@@ -324,122 +338,127 @@ html {
 
 /* Extra Small Screens (mobile portrait, less than 576px) */
 @media (max-width: 576px) {
+
     /* Container adjustments */
     .container {
         width: 100%;
         padding: 0 15px;
     }
-    
+
     /* Typography adjustments */
     body {
-        font-size: 17px; /* Slightly larger for better readability */
+        font-size: 17px;
+        /* Slightly larger for better readability */
     }
-    
+
     .hero h1,
     .page-header h1 {
         font-size: calc(1.5rem + 2vw);
     }
-    
-    h2, .section-title {
+
+    h2,
+    .section-title {
         font-size: calc(1.2rem + 1vw);
     }
-    
+
     /* Category section adjustments */
     .category-slice {
         height: 250px;
     }
-    
+
     .category-slice:hover {
         height: 300px;
     }
-    
+
     .slice-title {
         font-size: 1.8rem;
     }
-    
+
     /* Improved touch targets */
-    .btn, 
+    .btn,
     .social-link,
     .season-tab,
     input[type="submit"] {
-        min-height: 48px; /* Even larger tap area for accessibility */
+        min-height: 48px;
+        /* Even larger tap area for accessibility */
     }
-    
+
     /* Layout adjustments */
     .about-column {
         flex-basis: 100%;
     }
-    
+
     .about {
         padding-bottom: 7rem;
     }
-    
+
     .about-title {
         width: 80%;
     }
-    
+
     /* About section mobile enhancements */
     .about-columns {
         gap: 0.75rem;
         margin: 1rem 0;
     }
-    
+
     .content-card {
         padding: 0.75rem;
     }
-    
+
     .text-card {
         padding: 1.25rem;
     }
-    
+
     .about-text p {
         font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 1rem;
     }
-    
+
     .about-text .btn {
         padding: 0.7rem 1.25rem;
         font-size: 0.9rem;
         width: 100%;
         max-width: 200px;
     }
-    
+
     .about-column:first-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct,
     .about-column:last-of-type .about-img-direct2 {
-        max-height: 250px; /* Smaller images on very small screens */
+        max-height: 250px;
+        /* Smaller images on very small screens */
         width: 100%;
         object-fit: cover;
     }
-    
+
     /* Mountain background fix */
     .mountain-image {
         transform: translateX(-50%) scale(1.5);
     }
-    
+
     /* Footer spacing */
     .footer-container {
         gap: 2.5rem;
     }
-    
+
     .footer-col {
         flex: 0 0 100%;
     }
-    
+
     /* Gallery and card adjustments */
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-    
+
     .instagram-feed {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .testimonial-card {
         width: calc(100% - 2rem);
     }
-    
+
     /* Skip animations for small screens */
     section,
     .section-title,
@@ -463,7 +482,7 @@ html {
         transition-duration: 0.001ms !important;
         scroll-behavior: auto !important;
     }
-    
+
     section,
     .section-title,
     .section-subtitle,
@@ -476,7 +495,7 @@ html {
         transform: none;
         transition: none;
     }
-    
+
     .scroll-indicator {
         animation: none;
     }
