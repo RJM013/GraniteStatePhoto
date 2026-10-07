@@ -198,7 +198,7 @@ Q: What happens if the weather doesn't cooperate?
 A: New Hampshire weather can be unpredictable! I keep a close eye on the forecast and will reach out 24–48 hours before your session if it looks questionable. If the weather doesn't cooperate, we'll reschedule for the next date that works for both of us.
 
 Q: How do I view and order sports photos?
-A: Sports galleries are shared online after the event. Use your gallery link to view, download, and order images from your team or game coverage.
+A: Sports galleries are shared online after the event. In the navigation bar, expand "More +" and select "Client Galleries" this will open the gallery link to view, download, and order images from your team or game coverage.
 ```
 In the "How do I book" answer, link "online booking page" to the Pixieset booking URL and "contact page" to `contact.html`.
 
