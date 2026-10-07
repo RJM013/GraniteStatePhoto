@@ -1928,6 +1928,7 @@ section.mediaday-quote-section {
 }
 
 @media (max-width: 992px) {
+
     .featured-work-grid,
     .home-process-content {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1939,6 +1940,7 @@ section.mediaday-quote-section {
 }
 
 @media (max-width: 640px) {
+
     .featured-work-grid,
     .home-process-content {
         grid-template-columns: 1fr;
