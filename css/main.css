@@ -162,6 +162,15 @@ nav ul li a.active {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+.home-page .dramatic-hero .hero-content {
+    background: none;
+    border-radius: 0;
+}
+
+.home-page .dramatic-hero .hero-overlay {
+    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.45) 100%);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
