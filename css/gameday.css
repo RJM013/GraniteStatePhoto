@@ -99,8 +99,10 @@ main {
     color: white;
     width: min(100%, 40rem);
     max-width: 40rem;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 1rem;
     margin: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 100%);
+    border-radius: 0 0 18px 18px;
 }
 
 /*
@@ -211,6 +213,12 @@ main {
     min-height: 52px;
     font-size: 0.9rem;
     line-height: 1.2;
+}
+
+.hero-actions .btn-secondary-cta {
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.08);
 }
 
 @keyframes heroLineIn {
@@ -342,7 +350,8 @@ main {
 
 .impact-title {
     margin-top: 0;
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #F5EFE6;
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
     font-weight: 900;
     margin-bottom: 2rem;
     line-height: 1.1;
@@ -785,6 +794,7 @@ main {
 }
 
 .cta-title {
+    color: #F5EFE6;
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 900;
     margin-bottom: 2rem;
@@ -851,7 +861,7 @@ main {
 
 .btn-secondary-cta:hover {
     background: white;
-    color: var(--secondary-color);
+    color: #222222;
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
@@ -1611,7 +1621,8 @@ section.mediaday-quote-section {
 }
 
 .home-page .home-services-section {
-    padding: clamp(3rem, 8vw, 5rem) 0 0;
+    padding: clamp(3rem, 8vw, 5rem) 0 var(--section-pad-y);
+    margin-bottom: 0;
     background: var(--light-color);
 }
 
@@ -1628,7 +1639,6 @@ section.mediaday-quote-section {
 .home-page .gs-categories {
     margin-top: 0;
     margin-bottom: 0;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .home-page .gs-categories-header {
@@ -1644,6 +1654,10 @@ section.mediaday-quote-section {
 .featured-work-section {
     background: #fff;
     padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.home-page .featured-work-section {
+    padding-top: 0;
 }
 
 .featured-work-grid {
@@ -1735,10 +1749,10 @@ section.mediaday-quote-section {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 0.9rem;
-    background: rgba(255, 153, 79, 0.12);
-    border: 1px solid rgba(255, 153, 79, 0.4);
+    background: rgba(255, 153, 79, 0.08);
+    border: 1px solid #E8713A;
     border-radius: 999px;
-    color: var(--secondary-color);
+    color: #222222;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -1890,7 +1904,7 @@ section.mediaday-quote-section {
 
 .home-blog-date {
     margin: 0 0 0.6rem;
-    color: var(--secondary-color);
+    color: #666666;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;

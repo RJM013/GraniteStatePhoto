@@ -854,6 +854,8 @@ footer {
 
 .footer-col ul {
     list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 .footer-col ul li {
@@ -1283,7 +1285,7 @@ textarea {
 .testimonial-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
+    border-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Large screen optimizations */
@@ -1324,18 +1326,36 @@ textarea {
 }
 
 .quote-icon {
-    color: var(--primary-color);
+    color: #E8713A;
     font-size: 1.8rem;
-    opacity: 0.15;
+    opacity: 0.9;
     margin-bottom: 1rem;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .testimonial-text {
     font-size: 1.1rem;
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--text-color);
     font-style: italic;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 0.2rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    color: #E8713A;
+}
+
+.testimonial-author {
+    margin-top: auto;
 }
 
 .testimonial-rating {
@@ -1392,14 +1412,7 @@ textarea {
 }
 
 .faq-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    opacity: 0.6;
+    display: none;
 }
 
 .faq-container {
@@ -1418,7 +1431,7 @@ textarea {
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
     will-change: transform, opacity;
-    min-height: 100px;
+    min-height: 0;
 }
 
 .faq-item.animate-in {
@@ -1432,7 +1445,7 @@ textarea {
 
 .faq-question {
     width: 100%;
-    padding: 1.2rem 1.5rem;
+    padding: 1.25rem 1.5rem;
     border: 0;
     border-left: 4px solid transparent;
     background: transparent;
@@ -1443,6 +1456,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -1485,7 +1499,7 @@ textarea {
 
 .faq-answer p {
     margin: 0;
-    padding: 0.5rem 0 1.5rem;
+    padding: 0 0 1.25rem;
     line-height: 1.6;
 }
 

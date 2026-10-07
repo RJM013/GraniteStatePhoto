@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const categories = document.querySelectorAll('.gs-category');
     
     // Skip if no categories found
-    if (!categories.length) return;
+    if (!categories.length || document.querySelector('.home-services-section')) return;
     
     // Check if this is a touch-enabled device
     const isTouchDevice = ('ontouchstart' in window) || 
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Fix for bottom spacing issues
 document.addEventListener('DOMContentLoaded', function() {
     const categoriesSection = document.querySelector('.gs-categories');
-    if (!categoriesSection) return;
+    if (!categoriesSection || document.querySelector('.home-services-section')) return;
     
     // Fix bottom spacing issues
     function fixSpacing() {
