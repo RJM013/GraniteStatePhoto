@@ -358,6 +358,27 @@ main {
     letter-spacing: 1px;
 }
 
+.home-page .impact-title {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(2rem, 3.2vw, 2.9rem);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.br-desktop {
+    display: inline;
+}
+
+@media (max-width: 767px) {
+    .br-desktop {
+        display: none;
+    }
+}
+
 .highlight {
     color: var(--accent-color);
     text-shadow: 0 0 20px rgba(255, 153, 79, 0.5);
