@@ -205,6 +205,38 @@
     cursor: pointer;
 }
 
+.gs-category-text h3 {
+    margin: 0.35rem 0 0.75rem;
+    color: white;
+    font-size: clamp(1.6rem, 2vw, 2.1rem);
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.gs-category-text p {
+    margin: 0 0 0.75rem;
+    color: rgba(255,255,255,0.92);
+    font-size: 0.96rem;
+    line-height: 1.5;
+}
+
+.gs-category-price {
+    display: block;
+    margin-bottom: 0.85rem;
+    color: #fff2e6;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: none;
+}
+
+.gs-category:focus-visible,
+.gs-category:hover {
+    outline: 3px solid rgba(255, 153, 79, 0.9);
+    outline-offset: -3px;
+}
+
 .gs-button:hover {
     background-color: rgba(255, 153, 79, 0.8);
     border-color: rgba(255, 153, 79, 0.8);
