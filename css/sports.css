@@ -92,7 +92,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2), transparent);
     color: white;
     padding: 1.5rem 1rem 1rem;
     transition: all 0.3s ease;
@@ -106,14 +106,14 @@
 .gallery-item .overlay h3 {
     margin: 0 0 0.3rem;
     font-size: 1.2rem;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-item .overlay p {
     margin: 0;
     font-size: 0.9rem;
     opacity: 0.95;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Sports Coverage Section */
@@ -477,6 +477,7 @@
         opacity: 0;
         transform: translateY(15px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -489,15 +490,15 @@
         flex-direction: column;
         align-items: center;
     }
-    
+
     .gameday-image {
         max-width: 100%;
     }
-    
+
     .package-card.featured {
         transform: scale(1.02);
     }
-    
+
     .package-card.featured:hover {
         transform: scale(1.02) translateY(-10px);
     }
@@ -507,30 +508,30 @@
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-    
+
     .sports-gallery-section,
     .sports-coverage-section,
     .gameday-section,
     .team-packages-section {
         padding: 3rem 0;
     }
-    
+
     .filter-btn {
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
     }
-    
+
     .sports-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
-    
+
     .gameday-feature {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 1rem;
     }
-    
+
     .feature-content {
         width: 100%;
     }
@@ -543,34 +544,34 @@
         padding-bottom: 1rem;
         justify-content: flex-start;
     }
-    
+
     .filter-btn {
         white-space: nowrap;
         padding: 0.7rem 1rem;
         font-size: 0.85rem;
     }
-    
+
     .sports-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .sport-card {
         padding: 1.5rem;
     }
-    
+
     .package-card {
         min-width: 100%;
     }
-    
+
     .package-card.featured {
         transform: none;
         order: -1;
     }
-    
+
     .package-card.featured:hover {
         transform: translateY(-10px);
     }
-    
+
     .lightbox-img {
         max-height: 70vh;
     }

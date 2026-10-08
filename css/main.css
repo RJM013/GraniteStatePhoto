@@ -1948,6 +1948,86 @@ textarea {
     margin-bottom: 2rem;
 }
 
+.pricing-cards.sports-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 350px));
+    grid-auto-rows: 1fr;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.pricing-cards.sports-pricing-grid .pricing-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.pricing-cards.sports-pricing-grid .pricing-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pricing-cards.sports-pricing-grid .pricing-best-for {
+    min-height: 2.9em;
+}
+
+.pricing-cards.sports-pricing-grid .pricing-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.12em;
+    min-height: 2.5rem;
+}
+
+.pricing-cards.sports-pricing-grid .pricing-price .currency {
+    position: relative;
+    top: -0.35em;
+}
+
+.pricing-cards.sports-pricing-grid .price-suffix {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.pricing-cards.sports-pricing-grid .pricing-features {
+    flex: 1;
+    width: 100%;
+}
+
+.sports-page #packages,
+.sports-page #faq {
+    scroll-margin-top: 219px;
+}
+
+@media screen and (max-width: 992px) {
+
+    .sports-page #packages,
+    .sports-page #faq {
+        scroll-margin-top: 128px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pricing-cards.sports-pricing-grid {
+        grid-template-columns: minmax(0, 350px);
+        grid-auto-rows: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .sports-page #packages,
+    .sports-page #faq {
+        scroll-margin-top: 118px;
+    }
+}
+
 .home-service-cards {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

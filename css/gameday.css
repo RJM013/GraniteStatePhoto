@@ -1939,6 +1939,85 @@ section.mediaday-quote-section {
     line-height: 1.35;
 }
 
+.sports-stories-section {
+    padding: var(--section-pad-y) 0;
+    background: #ffffff;
+}
+
+.sports-stories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-top: 2rem;
+}
+
+.sports-stories-section .blog-post-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: inherit;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.sports-stories-section .blog-post-card:hover,
+.sports-stories-section .blog-post-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.sports-stories-section .blog-post-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.sports-stories-section .blog-post-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.sports-stories-section .blog-category {
+    margin: 0 0 0.5rem;
+    color: #b85c38;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sports-stories-section .blog-post-card h2 {
+    margin: 0 0 0.75rem;
+    color: #1a1a1a;
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.sports-stories-section .blog-post-subtitle {
+    margin: 0 0 0.75rem;
+    color: #444444;
+    line-height: 1.5;
+}
+
+.sports-stories-section .blog-date {
+    margin: auto 0 0;
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+    .sports-stories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .home-blog-link {
     color: var(--primary-color);
     font-weight: 700;
