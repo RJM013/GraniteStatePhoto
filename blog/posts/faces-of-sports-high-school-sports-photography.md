@@ -9,6 +9,11 @@ featuredImage: "/images/blog/faces-of-sports/06-celebration.jpg"
 featuredImageAlt: "High school teammates celebrating together after a big play"
 featuredImageWidth: 1600
 featuredImageHeight: 1280
+postImage: "/images/blog/faces-of-sports/01_bball_surprise.jpg"
+postImageAlt: "Basketball player in black going up for a layup as a defender reacts"
+postImageWidth: 1280
+postImageHeight: 1600
+authorName: "Rob Mulligan"
 category: "Sports"
 internalLink: "/sports.html"
 h1: "Faces of Sports: The Blooper Reel Nobody Usually Gets to See"

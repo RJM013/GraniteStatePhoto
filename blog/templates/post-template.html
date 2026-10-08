@@ -81,10 +81,10 @@
         <div class="blog-post-header">
             <p class="blog-category">{{category}}</p>
             <h1>{{h1}}</h1>
-            <p class="blog-date">{{displayDate}}</p>
+            <p class="blog-date">{{postByline}}{{displayDate}}</p>
         </div>
 
-        <img class="blog-featured-image" src="{{featuredImage}}" alt="{{featuredImageAlt}}" {{featuredImageDimensions}}>
+        <img class="blog-featured-image" src="{{postImage}}" alt="{{postImageAlt}}" {{postImageDimensions}}>
 
         <article class="blog-content">
             {{content}}

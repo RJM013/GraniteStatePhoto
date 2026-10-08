@@ -22,7 +22,7 @@ const SITEMAP_PATH = path.join(ROOT, 'sitemap.xml');
 // Static pages to include in the sitemap alongside blog posts.
 const STATIC_PAGES = [
     '', 'gallery.html', 'senior.html', 'sports.html', 'mediaday.html',
-    'portrait.html', 'packages.html', 'contact.html', 'about.html',
+    'portrait.html', 'family.html', 'packages.html', 'contact.html', 'about.html',
 ];
 
 const STATIC_PAGE_METADATA = {
@@ -100,11 +100,19 @@ function buildPost(filePath) {
         canonical: fm.canonical,
         featuredImage: fm.featuredImage,
         featuredImageAlt: fm.featuredImageAlt,
+        postImage: fm.postImage || fm.featuredImage,
+        postImageAlt: fm.postImageAlt || fm.featuredImageAlt,
         category: fm.category,
         internalLink: fm.internalLink,
         featuredImageDimensions: fm.featuredImageWidth && fm.featuredImageHeight
             ? `width="${fm.featuredImageWidth}" height="${fm.featuredImageHeight}"`
             : '',
+        postImageDimensions: fm.postImageWidth && fm.postImageHeight
+            ? `width="${fm.postImageWidth}" height="${fm.postImageHeight}"`
+            : fm.featuredImageWidth && fm.featuredImageHeight
+                ? `width="${fm.featuredImageWidth}" height="${fm.featuredImageHeight}"`
+                : '',
+        postByline: fm.authorName ? `<a href="../about.html">By ${fm.authorName}</a> &middot; ` : '',
         ctaContent: fm.ctaContent || `<a href="${fm.internalLink}" class="btn btn-primary">Learn more about ${fm.category} photography &rarr;</a>`,
         h1: fm.h1 || fm.title.split('|')[0].trim(),
         displayDate: formatDisplayDate(fm.date),
