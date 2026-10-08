@@ -21,11 +21,15 @@ const SITEMAP_PATH = path.join(ROOT, 'sitemap.xml');
 
 // Static pages to include in the sitemap alongside blog posts.
 const STATIC_PAGES = [
-    '', 'senior.html', 'sports.html', 'mediaday.html',
+    '', 'gallery.html', 'senior.html', 'sports.html', 'mediaday.html',
     'portrait.html', 'packages.html', 'contact.html', 'about.html',
 ];
 
 const STATIC_PAGE_METADATA = {
+    'gallery.html': {
+        changefreq: 'daily',
+        priority: '0.8',
+    },
     'about.html': {
         lastmod: '2026-10-02',
         changefreq: 'yearly',
@@ -61,12 +65,18 @@ function buildArticleSchema(fm, contentText) {
     return JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
-        headline: fm.title,
+        headline: fm.h1 || fm.title,
         description: fm.description,
         datePublished: fm.date,
+        dateModified: fm.dateModified || fm.date,
         image: `${SITE_URL}${fm.featuredImage}`,
-        author: { '@type': 'Person', name: 'Rob Mulligan' },
-        publisher: { '@type': 'Organization', name: '603 In Focus' },
+        author: {
+            '@type': 'Person',
+            '@id': `${SITE_URL}/#rob`,
+            name: 'Rob Mulligan',
+            url: `${SITE_URL}/about.html`,
+        },
+        publisher: { '@id': `${SITE_URL}/#organization` },
         mainEntityOfPage: fm.canonical,
     }, null, 2);
 }
@@ -92,10 +102,14 @@ function buildPost(filePath) {
         featuredImageAlt: fm.featuredImageAlt,
         category: fm.category,
         internalLink: fm.internalLink,
+        featuredImageDimensions: fm.featuredImageWidth && fm.featuredImageHeight
+            ? `width="${fm.featuredImageWidth}" height="${fm.featuredImageHeight}"`
+            : '',
+        ctaContent: fm.ctaContent || `<a href="${fm.internalLink}" class="btn btn-primary">Learn more about ${fm.category} photography &rarr;</a>`,
         h1: fm.h1 || fm.title.split('|')[0].trim(),
         displayDate: formatDisplayDate(fm.date),
         content: htmlContent,
-        articleSchema: buildArticleSchema(fm, content),
+        articleSchema: buildArticleSchema(fm),
         year: new Date().getFullYear(),
     });
 

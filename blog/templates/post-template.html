@@ -38,7 +38,8 @@
         <div class="container header-container">
             <div class="logo-container">
                 <a href="/index.html" class="logo">
-                    <img src="/images/logo/603_orange_logo.png" alt="603 In Focus Logo" class="logo-image">
+                    <img src="/images/logo/603_orange_logo.png" alt="603 In Focus Logo" class="logo-image" width="473"
+                        height="280">
                 </a>
             </div>
 
@@ -83,14 +84,14 @@
             <p class="blog-date">{{displayDate}}</p>
         </div>
 
-        <img class="blog-featured-image" src="{{featuredImage}}" alt="{{featuredImageAlt}}">
+        <img class="blog-featured-image" src="{{featuredImage}}" alt="{{featuredImageAlt}}" {{featuredImageDimensions}}>
 
         <article class="blog-content">
             {{content}}
         </article>
 
         <div class="blog-post-cta">
-            <a href="{{internalLink}}" class="btn btn-primary">Learn more about {{category}} photography &rarr;</a>
+            {{ctaContent}}
         </div>
     </main>
 
@@ -102,14 +103,14 @@
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=61564338803827" class="social-link"
                         aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/603infocus/" class="social-link"
-                        aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/603infocus/" class="social-link" aria-label="Instagram"><i
+                            class="fab fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h3>Contact</h3>
                 <ul>
-                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="/contact.html">Contact us</a></li>
                     <li><a href="tel:+16039739546">(603) 973-9546</a></li>
                     <li><a href="mailto:rob@603-in-focus.com">rob@603-in-focus.com</a></li>
                     <li>Strafford, NH</li>
@@ -118,14 +119,14 @@
             <div class="footer-col">
                 <h3>Explore</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="senior.html">Seniors</a></li>
-                    <li><a href="sports.html">Sports</a></li>
-                    <li><a href="mediaday.html">Media Day</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portrait.html">Headshots</a></li>
-                    <li><a href="packages.html">Packages</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/senior.html">Seniors</a></li>
+                    <li><a href="/sports.html">Sports</a></li>
+                    <li><a href="/mediaday.html">Media Day</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/portrait.html">Headshots</a></li>
+                    <li><a href="/packages.html">Packages</a></li>
+                    <li><a href="/blog/index.html">Blog</a></li>
                 </ul>
             </div>
         </div>

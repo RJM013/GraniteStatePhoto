@@ -1,51 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://603-in-focus.com/index.html</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.603-in-focus.com/</loc>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://603-in-focus.com/gallery.html</loc>
-    <lastmod>2025-01-25</lastmod>
+    <loc>https://www.603-in-focus.com/gallery.html</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://603-in-focus.com/packages.html</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.603-in-focus.com/senior.html</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
-    <loc>https://603-in-focus.com/portrait.html</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.603-in-focus.com/sports.html</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
-    <loc>https://603-in-focus.com/sports.html</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.603-in-focus.com/mediaday.html</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
-    <loc>https://603-in-focus.com/senior.html</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.603-in-focus.com/portrait.html</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
-    <loc>https://603-in-focus.com/contact.html</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.603-in-focus.com/packages.html</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.603-in-focus.com/contact.html</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
     <loc>https://www.603-in-focus.com/about.html</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.603-in-focus.com/blog/index.html</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.603-in-focus.com/blog/basketball-dad-photographer-championship-game.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.603-in-focus.com/blog/coe-brown-girls-volleyball-media-day.html</loc>
+    <lastmod>2026-09-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.603-in-focus.com/blog/faces-of-sports-high-school-sports-photography.html</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.603-in-focus.com/blog/fort-foster-kittery-senior-portraits.html</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
 </urlset>
