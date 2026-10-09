@@ -437,6 +437,100 @@ main {
     text-align: center;
 }
 
+.media-day-packages-section .pricing-cards {
+    justify-content: center;
+    align-items: stretch;
+}
+
+.media-day-packages-section .pricing-card {
+    flex: 0 1 840px;
+    width: min(100%, 880px);
+    max-width: 880px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(26, 26, 26, 0.1);
+    border-top: 5px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+}
+
+.media-day-packages-section .pricing-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(190px, 230px);
+    grid-template-areas:
+        "title price"
+        "tagline button";
+    align-items: center;
+    gap: 0.75rem 2rem;
+    padding: 2rem 2.5rem;
+    text-align: left;
+}
+
+.media-day-packages-section .pricing-header h3 {
+    grid-area: title;
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.media-day-packages-section .pricing-best-for {
+    grid-area: tagline;
+    max-width: none;
+    margin: 0;
+}
+
+.media-day-packages-section .pricing-header .pricing-price {
+    grid-area: price;
+    margin: 0;
+    text-align: center;
+}
+
+.media-day-packages-section .pricing-header .btn {
+    grid-area: button;
+    width: 100%;
+    margin: 0;
+}
+
+.media-day-packages-section .pricing-features {
+    padding: 1.75rem 2.5rem 2.25rem;
+    border-top: 1px solid rgba(26, 26, 26, 0.12);
+}
+
+.media-day-packages-section .pricing-features ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 2rem;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .media-day-packages-section .pricing-header {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "tagline"
+            "price"
+            "button";
+        gap: 0.75rem;
+        padding: 1.5rem;
+    }
+
+    .media-day-packages-section .pricing-header .pricing-price {
+        text-align: left;
+    }
+
+    .media-day-packages-section .pricing-features {
+        padding: 1.5rem;
+    }
+
+    .media-day-packages-section .pricing-features ul {
+        grid-template-columns: 1fr;
+    }
+}
+
 .media-day-package-table-wrap {
     overflow-x: auto;
     border: 1px solid rgba(26, 26, 26, 0.14);
