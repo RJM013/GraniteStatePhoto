@@ -2001,14 +2001,16 @@ textarea {
 }
 
 .sports-page #packages,
-.sports-page #faq {
+.sports-page #faq,
+.mediaday-page #packages {
     scroll-margin-top: 219px;
 }
 
 @media screen and (max-width: 992px) {
 
     .sports-page #packages,
-    .sports-page #faq {
+    .sports-page #faq,
+    .mediaday-page #packages {
         scroll-margin-top: 128px;
     }
 }
@@ -2023,7 +2025,8 @@ textarea {
 @media screen and (max-width: 576px) {
 
     .sports-page #packages,
-    .sports-page #faq {
+    .sports-page #faq,
+    .mediaday-page #packages {
         scroll-margin-top: 118px;
     }
 }
