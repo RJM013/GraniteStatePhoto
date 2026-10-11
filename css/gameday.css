@@ -97,9 +97,9 @@ main {
     align-items: center;
     text-align: center;
     color: white;
-    width: min(100%, 40rem);
-    max-width: 40rem;
-    padding: 0 1.5rem 1rem;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+    padding: 0 2.5rem 1rem;
     margin: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 100%);
     border-radius: 0 0 18px 18px;
@@ -111,6 +111,10 @@ main {
  */
 .dramatic-hero .hero-content {
     animation: dramaticHeroContentIn 0.85s ease-out forwards;
+}
+
+.home-page .dramatic-hero .hero-content {
+    top: 55%;
 }
 
 @keyframes dramaticHeroContentIn {
@@ -167,7 +171,7 @@ main {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(1.5rem, 8vw, 4.5rem);
     font-weight: 900;
     line-height: 0.95;
     margin: 0 auto 2rem;
@@ -187,6 +191,15 @@ main {
 .hero-line-2 {
     display: block;
     width: 100%;
+    white-space: normal;
+}
+
+@media screen and (min-width: 768px) {
+
+    .hero-line-1,
+    .hero-line-2 {
+        white-space: nowrap;
+    }
 }
 
 .hero-line-1 {
@@ -215,6 +228,25 @@ main {
     line-height: 1.2;
 }
 
+.home-page .hero-title {
+    margin-bottom: 0;
+}
+
+.home-page .hero-tagline {
+    margin: 0.5rem 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.home-page .hero-actions {
+    margin-top: 1.25rem;
+}
+
 .hero-actions .btn-secondary-cta {
     border: 2px solid rgba(255, 255, 255, 0.95);
     color: #fff;
@@ -231,15 +263,6 @@ main {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    opacity: 0;
-    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .hero-cta-btn {
@@ -363,6 +386,13 @@ main {
     margin-right: auto;
     margin-left: auto;
     font-size: clamp(2rem, 3.2vw, 2.9rem);
+    text-wrap: balance;
+}
+
+@media screen and (max-width: 767px) {
+    .home-page .impact-title-break {
+        display: none;
+    }
 }
 
 .nowrap {
@@ -394,17 +424,22 @@ main {
 
 .pricing-note {
     width: fit-content;
-    max-width: 90%;
+    max-width: 100%;
     margin: 30px auto 0;
     padding: 18px 28px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 14px;
     background: rgba(255, 138, 67, 0.1);
     border: 1px solid rgba(255, 138, 67, 0.65);
     border-radius: 10px;
     text-align: center;
+}
+
+.pricing-note-item {
+    white-space: nowrap;
 }
 
 .pricing-label {
@@ -424,6 +459,7 @@ main {
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 4px;
+    white-space: nowrap;
 }
 
 .media-day-packages-section {
@@ -580,9 +616,16 @@ main {
 
 @media (max-width: 700px) {
     .pricing-note {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         flex-direction: column;
         gap: 7px;
-        padding: 18px 22px;
+        width: max-content;
+        max-width: calc(100vw - 2rem);
+        margin-left: 0;
+        margin-right: 0;
+        padding: 18px 16px;
     }
 
     .media-day-package-table {
@@ -1411,7 +1454,6 @@ main {
 
 
     .hero-content {
-        padding: 0 1rem;
         margin-bottom: 0;
     }
 
@@ -1430,6 +1472,12 @@ main {
 
 }
 
+@media screen and (max-width: 767px) {
+    .hero-content {
+        padding: 0 1.25rem 1rem;
+    }
+}
+
 @media screen and (max-width: 576px) {
 
 
@@ -1438,7 +1486,6 @@ main {
     }
 
     .hero-title {
-        font-size: 2rem;
         margin-bottom: 1.5rem;
     }
 
